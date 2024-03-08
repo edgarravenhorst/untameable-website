@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { PropsWithChildren } from 'react';
 import { Headline } from './components/headline';
 import { Logo } from './components/logo';
@@ -5,6 +6,20 @@ import { LogoIcon } from './decoration/logo-icon';
 import { OverlayStripes } from './decoration/overlay-stripes';
 import { Spotlight } from './decoration/spotlight';
 import { twStyled } from './helper/tw-styled';
+
+export const metadata: Metadata = {
+  title: 'Untameable - User & Developer experiences',
+  description:
+    'Build great Developer and User Experiences for digital products',
+  openGraph: {
+    title: 'Untameable - User & Developer experiences',
+    description:
+      'Build great Developer and User Experiences for digital products',
+    type: 'website',
+    url: 'https://untameable.io',
+    locale: 'en_US',
+  },
+};
 
 export default function Home() {
   return (
