@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { FullScreenContainer } from './components/fullscreen-container';
 import { Headline } from './components/headline';
@@ -96,18 +97,37 @@ export default function Home() {
 
         <Divider orientation='vertical' className={'h-10'} />
 
-        <Box className={'max-w-screen-lg'}>
-          <Title3>About Untameable.</Title3>
-          <p className='gutterBottom'>
-            Meet Edgar Ravenhorst a.k.a. me—a full-stack web developer
-            characterized by its warm approachability, big hearth, funny nose
-            and a great deal of experience, ready to face the tough challenges
-            head-on. Untameable is about ensuring you have a pleasant and fun
-            time doing things you generally don’t like to do.
-          </p>
-          <TLDR>
-            Develop software to make things more pleasant to work with
-          </TLDR>
+        <Box
+          className={[
+            'flex',
+            'flex-col',
+            'gap-10',
+            'items-center',
+            'justify-center',
+            'md:flex-row',
+            'max-w-screen-lg',
+          ]}
+        >
+          <Image
+            src='/edgar.png'
+            alt='Edgar Ravenhorst'
+            width={400}
+            height={400}
+            className='w-[66%] sm:w-[40%] h-full max-w-400'
+          />
+          <Box className={['md:text-left']}>
+            <Title3>About Untameable.</Title3>
+            <p className='gutterBottom'>
+              Meet Edgar Ravenhorst a.k.a. me—a full-stack web developer
+              characterized by its warm approachability, big hearth, funny nose
+              and a great deal of experience, ready to face the tough challenges
+              head-on. Untameable is about ensuring you have a pleasant and fun
+              time doing things you generally don&apos;t like to do.
+            </p>
+            <TLDR>
+              Develop software to make things more pleasant to work with
+            </TLDR>
+          </Box>
         </Box>
 
         <Divider orientation='vertical' className={'h-10'} />
@@ -174,7 +194,7 @@ export default function Home() {
 const Title3 = twStyled('h3')(
   'text-white',
   'text-2xl',
-  'md:text-3xl',
+  'md:text-4xl',
   'font-extrabold',
-  'mb-3'
+  'mb-8'
 );
