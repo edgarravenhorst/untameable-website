@@ -59,7 +59,7 @@ export default function Home() {
         <Headline primary={'Have digital,'} secondary={'work for you'} />
         <div className='pb-8 text-center'>
           <h2 className='text-white text-1xl md:text-xl font-extrabold gutterBottom'>
-            Build great Developer and User Experiences for online applicatons.
+            Great user and developer experience for online applicatons.
           </h2>
           <TLDR>Software Development</TLDR>
         </div>
@@ -137,8 +137,10 @@ export default function Home() {
           <p className='gutterBottom'>
             The goal is to develop digital products that are more pleasant to
             work with by improving the user and developer experience. This can
-            be achieved by focusing on the user interface, user experience, and
-            the developer experience.
+            be achieved by focusing on the user interface{' '}
+            <strong className='text-white'>(UI)</strong>, user experience{' '}
+            <strong className='text-white'>(UX)</strong>, and the developer
+            experience <strong className='text-white'>(DX)</strong>.
           </p>
           <p className='paragraph'>
             Why DX? Improving developer experience can lead to better-designed,
@@ -148,7 +150,7 @@ export default function Home() {
             equipped to create products that meet user needs and expectations.
           </p>
           <TLDR>
-            Develop software that is pleasant to work with for users and
+            Develop software that is pleasant to work with for both users and
             developers.
           </TLDR>
         </Box>
@@ -161,8 +163,8 @@ export default function Home() {
 
           <p className={'mb-16'}>
             Got questions or interested in exploring a partnership?
-            <br className='hidden sm:block' /> Reach out and let&apos;s discover
-            how to become Untameable
+            <br className='hidden sm:block' />
+            Reach out and let&apos;s discover how to become Untameable
           </p>
 
           <h4 className='text-white font-bold gutterBottom'>
