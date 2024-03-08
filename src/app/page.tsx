@@ -134,11 +134,17 @@ export default function Home() {
               Improve user and developer experiences.
             </strong>
           </p>
+          <p className='gutterBottom'>
+            The goal is to make digital products more pleasant to work with by
+            improving the user and developer experience. This can be achieved by
+            focusing on the user interface, user experience, and the developer
+            experience.
+          </p>
           <p className='paragraph'>
-            Improving developer experience can lead to better-designed, more
-            efficient, and higher-quality products, which can positively impact
-            user experience. When developers have access to user-friendly tools,
-            clear documentation, and efficient workflows, they are better
+            Why DX? Improving developer experience can lead to better-designed,
+            more efficient, and higher-quality products, which can positively
+            impact user experience. When developers have access to user-friendly
+            tools, clear documentation, and efficient workflows, they are better
             equipped to create products that meet user needs and expectations.
           </p>
 
