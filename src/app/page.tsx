@@ -156,7 +156,10 @@ export default function Home() {
             Develop software to make things more pleasant to work with
           </TLDR>
         </Box>
-        <Divider orientation='vertical' className={'h-10'} />
+
+        {/* <Divider orientation='vertical' className={'h-10'} /> */}
+        <Box className={'max-w-screen-lg h-10'} />
+
         <Box className={'max-w-screen-md'}>
           <Headline primary='Coffee time' className={'mb-16'} />
           <p className={'mb-16'}>
