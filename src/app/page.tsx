@@ -159,7 +159,8 @@ export default function Home() {
 
           <p className={'mb-16'}>
             Got questions or interested in exploring a partnership?
-            <br /> Reach out and let&apos;s discover how to become Untameable
+            <br className='hidden sm:block' /> Reach out and let&apos;s discover
+            how to become Untameable
           </p>
 
           <h4 className='text-white font-bold gutterBottom'>
