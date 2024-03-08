@@ -4,8 +4,10 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background: #111b2b;
+  --background-stripes: rgba(10, 17, 28, 40%);
+  --spotlight: rgb(46, 70, 111);
+  --color-primary: rgb(247, 213, 96);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,16 +20,24 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .bg-stripes {
+    background: linear-gradient(
+      -45deg,
+      transparent 25%,
+      var(--background-stripes) 25%,
+      var(--background-stripes) 50%,
+      transparent 50%,
+      transparent 75%,
+      var(--background-stripes) 75%
+    );
+    background-size: 10px 10.1px;
   }
 }
