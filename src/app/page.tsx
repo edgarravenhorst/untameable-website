@@ -28,10 +28,10 @@ export default function Home() {
       <HeaderBGIcon />
       <OverlayStripes />
       <FullScreenContainer>
-        <Logo />
+        <Logo className='w-[40vw]' />
         <Headline primary={'Have digital,'} secondary={'work for you'} />
-        <div className='pb-8'>
-          <h3 className='text-white text-2xl font-extrabold mb-3'>
+        <div className='pb-8 text-center'>
+          <h3 className='text-white text-1xl md:text-2xl font-extrabold mb-3'>
             Build great Developer and User Experiences for digital products
           </h3>
           <TLDR>Software Development</TLDR>
@@ -51,7 +51,8 @@ const HeaderBGIcon = twStyled(LogoIcon)(
 
 const FullScreenContainer = twStyled('div')(
   'relative',
-  'p-16',
+  'p-8',
+  'md:p-16',
   'flex',
   'w-[100%]',
   'h-[100vh]',
