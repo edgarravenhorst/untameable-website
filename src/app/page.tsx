@@ -35,19 +35,14 @@ export default function Home() {
           'lg:top-[-8%]',
           'translate-y-[-50%]',
           'sm:translate-y-[-50%]',
-          'lg:translate-y-[-60%]',
+          'lg:translate-y-[-50%]',
+          'xl:translate-y-[-60%]',
         ]}
       />
 
-      <Spotlight
-        className={[
-          'top-[70%]',
-          'left-[-10%]',
-          'translate-y-[-40%]',
-          'sm:translate-y-[-50%]',
-          'lg:translate-y-[-60%]',
-        ]}
-      />
+      <Spotlight className={['top-[40%]', 'right-[-40%]', 'sm:hidden']} />
+
+      <Spotlight className={['top-[70%]', 'left-[-10%]']} />
 
       <LogoIcon
         className={[
@@ -158,10 +153,11 @@ export default function Home() {
         </Box>
 
         {/* <Divider orientation='vertical' className={'h-10'} /> */}
-        <Box className={'max-w-screen-lg h-10'} />
+        <Box className={'max-w-screen-lg h-10 hidden md:block'} />
 
         <Box className={'max-w-screen-md'}>
-          <Headline primary='Coffee time' className={'mb-16'} />
+          <Headline primary='Coffee time!' className={'mb-16'} />
+
           <p className={'mb-16'}>
             Got questions or interested in exploring a partnership?
             <br /> Reach out and let&apos;s discover how to become Untameable

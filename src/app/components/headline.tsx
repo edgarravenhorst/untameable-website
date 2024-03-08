@@ -21,7 +21,7 @@ export const Headline: React.FC<HeadlineProps> = twStyled(
           'lg:max-w-[800px]',
           'xl:max-w-[1100px]',
           'whitespace-nowrap',
-          'text-4xl',
+          'text-[10vw]',
           'sm:text-6xl',
           'md:text-7xl',
           'lg:text-8xl',
