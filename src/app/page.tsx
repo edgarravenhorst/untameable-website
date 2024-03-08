@@ -1,7 +1,11 @@
 import { Metadata } from 'next';
-import { PropsWithChildren } from 'react';
+import Link from 'next/link';
+import { FullScreenContainer } from './components/fullscreen-container';
 import { Headline } from './components/headline';
+import { Box } from './components/helpers';
 import { Logo } from './components/logo';
+import { TLDR } from './components/tldr';
+import { Divider } from './decoration/divider';
 import { LogoIcon } from './decoration/logo-icon';
 import { OverlayStripes } from './decoration/overlay-stripes';
 import { Spotlight } from './decoration/spotlight';
@@ -23,55 +27,154 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
+    <main className='relative text-white text-opacity-80 text-lg'>
       <Spotlight
         className={[
           'top-0',
+          'lg:top-[-8%]',
+          'translate-y-[-50%]',
+          'sm:translate-y-[-50%]',
+          'lg:translate-y-[-60%]',
+        ]}
+      />
+
+      <Spotlight
+        className={[
+          'top-[70%]',
+          'left-[-10%]',
           'translate-y-[-40%]',
           'sm:translate-y-[-50%]',
           'lg:translate-y-[-60%]',
         ]}
       />
-      <HeaderBGIcon />
+
+      <LogoIcon
+        className={[
+          'absolute',
+          'w-[50%]',
+          'left-[50%]',
+          'translate-x-[-50%]',
+          'translate-y-[-10%]',
+        ]}
+      />
+
       <OverlayStripes />
       <FullScreenContainer>
         <Logo className='w-[40vw]' />
         <Headline primary={'Have digital,'} secondary={'work for you'} />
         <div className='pb-8 text-center'>
-          <h3 className='text-white text-1xl md:text-2xl font-extrabold mb-3'>
-            Build great Developer and User Experiences for digital products
-          </h3>
+          <h2 className='text-white text-1xl md:text-xl font-extrabold gutterBottom'>
+            Build great Developer and User Experiences for online applicatons.
+          </h2>
           <TLDR>Software Development</TLDR>
         </div>
       </FullScreenContainer>
+      <Box
+        className={[
+          'relative',
+          'flex',
+          'flex-col',
+          'items-center',
+          'text-center',
+          'gap-24',
+          '-mt-16',
+          'p-8',
+        ]}
+      >
+        <Divider orientation='vertical' className={'h-10'} />
+        <Box className={'max-w-screen-lg'}>
+          <Title3>Reliable partner</Title3>
+          <p className='gutterBottom'>
+            A reliable partner that is focused on improving the way your
+            software is build. Knowledge, time and effort will be provided to
+            support you in developing great user and developer experiences.
+            Ideas are rapidly advanced into functional prototypes, ensuring
+            swift realization of innovative concepts.
+          </p>
+          <TLDR>Reliable partner for software development</TLDR>
+        </Box>
+
+        <Divider orientation='vertical' className={'h-10'} />
+
+        <Box className={'max-w-screen-lg'}>
+          <Title3>About Untameable.</Title3>
+          <p className='gutterBottom'>
+            Meet Edgar Ravenhorst a.k.a. me—a full-stack web developer
+            characterized by its warm approachability, big hearth, funny nose
+            and a great deal of experience, ready to face the tough challenges
+            head-on. Untameable is about ensuring you have a pleasant and fun
+            time doing things you generally don’t like to do.
+          </p>
+          <TLDR>
+            Develop software to make things more pleasant to work with
+          </TLDR>
+        </Box>
+
+        <Divider orientation='vertical' className={'h-10'} />
+
+        <Box className={'max-w-screen-lg'}>
+          <Title3>Mission</Title3>
+          <p className='paragraph'>
+            The mission is simple: <br />
+            <strong className='text-white text-opacity-100'>
+              Improve user and developer experiences.
+            </strong>
+          </p>
+          <p className='paragraph'>
+            Improving developer experience can lead to better-designed, more
+            efficient, and higher-quality products, which can positively impact
+            user experience. When developers have access to user-friendly tools,
+            clear documentation, and efficient workflows, they are better
+            equipped to create products that meet user needs and expectations.
+          </p>
+
+          <p className='gutterBottom'>
+            The aim is to simplify and enrich lives through intuitive digital
+            solutions
+          </p>
+          <TLDR>
+            Develop software to make things more pleasant to work with
+          </TLDR>
+        </Box>
+        <Divider orientation='vertical' className={'h-10'} />
+        <Box className={'max-w-screen-md'}>
+          <Headline primary='Coffee time' className={'mb-16'} />
+          <p className={'mb-16'}>
+            Got questions or interested in exploring a partnership?
+            <br /> Reach out and let&apos;s discover how to become Untameable
+          </p>
+
+          <h4 className='text-white font-bold gutterBottom'>
+            Give a call: <Link href={'tel:+31627311410'}>+31 627 311 410</Link>
+          </h4>
+          <h4 className='text-white font-bold gutterBottom'>
+            Send an email:{' '}
+            <Link href={'mailto:info@untameable.io'}>info@untameable.io</Link>
+          </h4>
+          <h4 className='text-white font-bold gutterBottom'>
+            <span className='inline-block gutterBottom'>
+              Connect on social media:
+            </span>
+            <br />
+            <Link href={'https://www.linkedin.com/company/untameable'}>
+              LinkedIn
+            </Link>
+          </h4>
+        </Box>
+      </Box>
+      <Box className={'flex justify-end'}>
+        <LogoIcon
+          className={'fill-[#0A0E14] w-[40vw] h-[50vw] -mt-[35vw] opacity-40'}
+        />
+      </Box>
     </main>
   );
 }
 
-const HeaderBGIcon = twStyled(LogoIcon)(
-  'absolute',
-  'w-[50%]',
-  'left-[50%]',
-  'translate-x-[-50%]',
-  'translate-y-[-10%]'
+const Title3 = twStyled('h3')(
+  'text-white',
+  'text-2xl',
+  'md:text-3xl',
+  'font-extrabold',
+  'mb-3'
 );
-
-const FullScreenContainer = twStyled('div')(
-  'relative',
-  'p-8',
-  'md:p-16',
-  'flex',
-  'w-svw',
-  'h-svh',
-  'justify-between',
-  'items-center',
-  'flex-col'
-);
-
-const TLDR: React.FC<PropsWithChildren> = ({ children }) => {
-  return (
-    <p className='text-[_var(--color-primary)] text-center italic'>
-      <strong>TL;DR</strong> - {children}
-    </p>
-  );
-};

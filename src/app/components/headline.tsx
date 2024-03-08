@@ -7,7 +7,7 @@ interface HeadlineProps extends ComponentProps<typeof Heading1> {
 }
 
 export const Headline: React.FC<HeadlineProps> = twStyled(
-  ({ primary, secondary }) => {
+  ({ primary, secondary, className }) => {
     return (
       <Heading1
         className={[
@@ -15,16 +15,22 @@ export const Headline: React.FC<HeadlineProps> = twStyled(
           'text-white',
           'flex',
           'flex-col',
-          'max-w-[1100px]',
+          'max-w-lg',
+          'max-w-[500px]',
+          'md:max-w-[600px]',
+          'lg:max-w-[800px]',
+          'xl:max-w-[1100px]',
           'whitespace-nowrap',
           'text-4xl',
           'sm:text-6xl',
-          'md:text-8xl',
-          'lg:text-9xl',
+          'md:text-7xl',
+          'lg:text-8xl',
+          'xl:text-9xl',
           'leading-[1]',
           'font-extrabold',
           'justify-center',
           'w-[100%]',
+          className,
         ]}
       >
         <span className='inline-flex flex-1 items-center gap-8'>

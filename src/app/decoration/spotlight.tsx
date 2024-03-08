@@ -7,7 +7,7 @@ export interface SpotlghtProps {
 
 export const Spotlight: React.FC<SpotlghtProps> = ({ className }) => {
   return (
-    <div className='absolute inset-0 overflow-hidden'>
+    <div className='absolute w-full h-full overflow-hidden'>
       <div
         className={twMerge(
           clsx([
