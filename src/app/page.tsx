@@ -61,8 +61,8 @@ const FullScreenContainer = twStyled('div')(
   'p-8',
   'md:p-16',
   'flex',
-  'w-[100%]',
-  'h-[100vh]',
+  'w-svw',
+  'h-svh',
   'justify-between',
   'items-center',
   'flex-col'
