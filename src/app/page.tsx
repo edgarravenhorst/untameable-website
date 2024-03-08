@@ -24,7 +24,14 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <Spotlight className='top-[0] translate-y-[-66%]' />
+      <Spotlight
+        className={[
+          'top-0',
+          'translate-y-[-40%]',
+          'sm:translate-y-[-50%]',
+          'lg:translate-y-[-60%]',
+        ]}
+      />
       <HeaderBGIcon />
       <OverlayStripes />
       <FullScreenContainer>

@@ -1,8 +1,8 @@
-import clsx from 'clsx';
+import clsx, { ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 export interface SpotlghtProps {
-  className: string;
+  className: ClassValue[];
 }
 
 export const Spotlight: React.FC<SpotlghtProps> = ({ className }) => {
@@ -16,6 +16,8 @@ export const Spotlight: React.FC<SpotlghtProps> = ({ className }) => {
             'top-[50vh]',
             'w-[140vw]',
             'h-[140vw]',
+            'min-w-[80vh]',
+            'min-h-[80vh]',
             'translate-x-[-50%]',
             'translate-y-[-50%]',
             `bg-gradient-radial from-[_var(--spotlight)] to-transparent to-70%`,
