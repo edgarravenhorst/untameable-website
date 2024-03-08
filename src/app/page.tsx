@@ -40,8 +40,7 @@ export default function Home() {
         ]}
       />
 
-      <Spotlight className={['top-[40%]', 'right-[-40%]', 'sm:hidden']} />
-
+      <Spotlight className={['top-[35%]', 'left-[75vw]', 'sm:hidden']} />
       <Spotlight className={['top-[70%]', 'left-[-10%]']} />
 
       <LogoIcon
