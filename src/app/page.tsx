@@ -80,11 +80,11 @@ export default function Home() {
         <Box className={'max-w-screen-lg'}>
           <Title3>Reliable partner</Title3>
           <p className='gutterBottom'>
-            A reliable partner that is focused on improving the way your
-            software is build. Knowledge, time and effort will be provided to
-            support you in developing great user and developer experiences.
-            Ideas are rapidly advanced into functional prototypes, ensuring
-            swift realization of innovative concepts.
+            A reliable partner that is focused on developing and improving your
+            software. Knowledge, time and effort will be provided to support you
+            in developing great user and developer experiences. Ideas are
+            rapidly advanced into functional prototypes, ensuring swift
+            realization of innovative concepts.
           </p>
           <TLDR>Reliable partner for software development</TLDR>
         </Box>
