@@ -1,9 +1,9 @@
-import { ComponentProps } from 'react';
+import React, { ComponentProps } from 'react';
 import { tw } from '../helper/tw';
 
 interface HeadlineProps extends ComponentProps<'h1'> {
-  primary: string;
-  secondary?: string;
+  primary: React.ReactNode;
+  secondary?: React.ReactNode;
 }
 
 export const Headline: React.FC<HeadlineProps> = ({
@@ -15,7 +15,6 @@ export const Headline: React.FC<HeadlineProps> = ({
     <h1
       className={tw(
         'not-prose',
-        'text-',
         'text-white',
         'flex',
         'flex-col',
@@ -30,10 +29,11 @@ export const Headline: React.FC<HeadlineProps> = ({
         'md:text-7xl',
         'lg:text-8xl',
         'xl:text-9xl',
-        'leading-[1]',
+        '!leading-none',
         'font-extrabold',
         'justify-center',
         'w-[100%]',
+        'mx-auto',
         className
       )}
     >
