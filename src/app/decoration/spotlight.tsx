@@ -51,7 +51,7 @@ export const Spotlight: React.FC<SpotlghtProps> = ({
       window.removeEventListener('mousemove', onMove);
       window.removeEventListener('scroll', onScroll);
     };
-  }, []);
+  }, [followMouse]);
 
   return (
     <div className='absolute left-0 top-0 w-full h-full overflow-hidden'>
