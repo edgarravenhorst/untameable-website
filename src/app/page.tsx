@@ -31,7 +31,7 @@ export default function Home() {
     <main className='relative text-white text-opacity-80 text-lg'>
       <Spotlight
         className={[
-          'top-0',
+          'top-[5%]',
           'lg:top-[-8%]',
           'translate-y-[-50%]',
           'sm:translate-y-[-50%]',
@@ -42,6 +42,8 @@ export default function Home() {
 
       <Spotlight className={['top-[35%]', 'left-[75vw]', 'sm:hidden']} />
       <Spotlight className={['top-[70%]', 'left-[-10%]']} />
+
+      <Spotlight followMouse className={['opacity-50', 'hidden', 'lg:block']} />
 
       <LogoIcon
         className={[
