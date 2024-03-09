@@ -85,7 +85,7 @@ export default function Home() {
             'flex-col',
             'items-center',
             'text-center',
-            'gap-20',
+            'gap-24',
             '-mt-16',
             'p-8'
           )}
@@ -123,7 +123,13 @@ export default function Home() {
               alt='Edgar Ravenhorst'
               width={400}
               height={400}
-              className={tw('w-[66%]', 'sm:w-[40%]', 'h-full', 'max-w-400')}
+              className={tw(
+                'w-[66%]',
+                'sm:w-[40%]',
+                'h-full',
+                'max-w-400',
+                'not-prose'
+              )}
             />
             <div className={tw('md:text-left')}>
               <h2 className='!mt-0'>About Untameable.</h2>
