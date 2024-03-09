@@ -1,23 +1,23 @@
-import { Box, BoxProps } from '../components/helpers';
+import { tw } from '../helper/tw';
 
 const dividerClasses = {
   vertical: 'w-0 h-full border-l',
   horizontal: 'w-full h-0 border-t',
 };
 
-export interface DividerProps extends BoxProps {
+export interface DividerProps extends React.ComponentProps<'div'> {
   orientation: 'vertical' | 'horizontal';
 }
 
 export const Divider: React.FC<DividerProps> = ({ orientation, ...props }) => {
   return (
-    <Box
+    <div
       {...props}
-      className={[
+      className={tw(
         'border-[_var(--color-primary)]',
         dividerClasses[orientation],
-        props.className,
-      ]}
+        props.className
+      )}
     />
   );
 };

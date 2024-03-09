@@ -1,11 +1,10 @@
 'use client';
 
-import clsx, { ClassValue } from 'clsx';
+import clsx from 'clsx';
 import { useEffect, useRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-export interface SpotlghtProps {
-  className: ClassValue[];
+export interface SpotlghtProps extends React.ComponentProps<'div'> {
   followMouse?: boolean;
 }
 

@@ -1,9 +1,19 @@
-import { PropsWithChildren } from 'react';
+import { ComponentProps } from 'react';
+import { tw } from '../helper/tw';
 
-export const TLDR: React.FC<PropsWithChildren> = ({ children }) => {
+export type TLDRProps = ComponentProps<'p'>;
+
+export const TLDR: React.FC<TLDRProps> = ({
+  children,
+  className,
+  ...props
+}) => {
   return (
-    <p className='text-[_var(--color-primary)]  italic'>
-      <strong>TL;DR</strong> - {children}
+    <p
+      {...props}
+      className={tw('text-[_var(--color-primary)]', 'italic', className)}
+    >
+      <strong className='text-inherit'>TL;DR</strong> - {children}
     </p>
   );
 };

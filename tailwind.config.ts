@@ -8,6 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      typography: () => ({
+        DEFAULT: {
+          css: [
+            {
+              '--tw-prose-invert-links': 'var(--color-primary)',
+              h3: {
+                fontWeight: '100',
+              },
+              strong: {
+                fontWeight: '800',
+              },
+            },
+          ],
+        },
+      }),
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -15,6 +30,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
 export default config;

@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react';
-import { twStyled } from '../helper/tw-styled';
+import { tw } from '../helper/tw';
 
-const _LogoIcon: React.FC<ComponentProps<'svg'>> = (props) => {
+export const LogoIcon: React.FC<ComponentProps<'svg'>> = (props) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -11,7 +11,7 @@ const _LogoIcon: React.FC<ComponentProps<'svg'>> = (props) => {
       fill='#131e2e'
       stroke='#121c2c'
       {...props}
-      className={'mix=blend-darken isolation-isolate ' + props.className}
+      className={tw('mix=blend-darken', 'isolation-isolate ', props.className)}
     >
       <g
         id='Group_1466'
@@ -48,5 +48,3 @@ const _LogoIcon: React.FC<ComponentProps<'svg'>> = (props) => {
     </svg>
   );
 };
-
-export const LogoIcon = twStyled(_LogoIcon)();
