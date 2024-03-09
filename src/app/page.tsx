@@ -138,8 +138,7 @@ export default function Home() {
           </p>
           <p className='gutterBottom'>
             The goal is to develop digital products that are more pleasant to
-            work with by improving the user and developer experience. This can
-            be achieved by focusing on the user interface{' '}
+            work. This can be achieved by focusing on the user interface{' '}
             <strong className='text-white'>(UI)</strong>, user experience{' '}
             <strong className='text-white'>(UX)</strong>, and the developer
             experience <strong className='text-white'>(DX)</strong>.
