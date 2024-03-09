@@ -38,14 +38,14 @@ export const Headline: React.FC<HeadlineProps> = ({
       )}
     >
       <span className='inline-flex flex-1 items-center gap-8'>
-        {!secondary && <hr className='w-1/2 border-[_var(--color-primary)]' />}
+        {!secondary && <hr className='w-1/5 border-[_var(--color-primary)]' />}
         <span>{primary}</span>
-        <hr className='w-1/2 border-[_var(--color-primary)]' />
+        <hr className='w-1/5 border-[_var(--color-primary)]' />
       </span>
 
       {secondary && (
         <span className='inline-flex flex-1 items-center gap-8'>
-          <hr className='w-1/2 border-[_var(--color-primary)]' />
+          <hr className='w-1/5 border-[_var(--color-primary)]' />
           <span>{secondary}</span>
         </span>
       )}

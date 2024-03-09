@@ -70,11 +70,11 @@ export default function Home() {
           <Logo className='w-[40vw]' />
           <Headline primary={'Have digital,'} secondary={'work for you'} />
           <div className='text-center pb-8'>
-            <h4 className='text-white'>
+            <h2 className='!text-lg md:!text-xl'>
               <strong>
                 Great user and developer experience for online applicatons.
               </strong>
-            </h4>
+            </h2>
             <TLDR className='!mb-0'>Software Development</TLDR>
           </div>
         </FullScreenContainer>
