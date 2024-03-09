@@ -61,21 +61,21 @@ export default function Home() {
       <article
         className={tw(
           'prose prose-invert',
-          'prose-lg',
+          'prose-md',
           'md:prose-xl',
           'max-w-full'
         )}
       >
-        <FullScreenContainer className='pb-0'>
+        <FullScreenContainer>
           <Logo className='w-[40vw]' />
           <Headline primary={'Have digital,'} secondary={'work for you'} />
-          <div className='text-center'>
-            <h4 className='text-white '>
+          <div className='text-center pb-8'>
+            <h4 className='text-white'>
               <strong>
                 Great user and developer experience for online applicatons.
               </strong>
             </h4>
-            <TLDR>Software Development</TLDR>
+            <TLDR className='!mb-0'>Software Development</TLDR>
           </div>
         </FullScreenContainer>
         <div
@@ -178,7 +178,7 @@ export default function Home() {
             <Headline primary='Coffee time!' className={'mb-16'} />
 
             <p className={'mb-16'}>
-              Got questions or interested in exploring a partnership?
+              Got questions or interested in exploring a partnership?{' '}
               <br className='hidden sm:block' />
               Reach out and let&apos;s discover how to become Untameable
             </p>
