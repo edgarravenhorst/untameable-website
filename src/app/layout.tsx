@@ -9,7 +9,7 @@ const mulish = Mulish({
 });
 
 export const viewport: Viewport = {
-  themeColor: '#1B2539',
+  themeColor: '#111B2B',
   colorScheme: 'dark',
 };
 
