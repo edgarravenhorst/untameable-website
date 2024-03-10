@@ -1,10 +1,14 @@
+import { BlogApprover } from '@/app/components/blog-approval';
 import { Headline } from '@/app/components/headline';
 import { Logo } from '@/app/components/logo';
+import { TLDR } from '@/app/components/tldr';
 import { LogoIcon } from '@/app/decoration/logo-icon';
 import { StripedOverlay } from '@/app/decoration/overlay-stripes';
 import { Spotlight } from '@/app/decoration/spotlight';
 import { tw } from '@/app/helper/tw';
 import { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Untameable - User & Developer experiences',
@@ -79,7 +83,7 @@ export default function BlogItem() {
             'max-w-screen-lg'
           )}
         >
-          <div className={tw('pt-[15vw] pb-[7vw]', 'max-w-screen-lg')}>
+          <div className={tw('pt-[12vw] pb-[5vw]', 'max-w-screen-lg')}>
             <Headline
               className={tw(
                 'text-[6vw]',
@@ -100,128 +104,119 @@ export default function BlogItem() {
               }
             />
 
-            <div className='p-12 flex justify-center items-center gap-2'>
-              <div className='rounded-full'>
-                <svg
-                  viewBox='0 0 512 512'
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='var(--color-primary)'
-                  width={40}
-                  fillRule='evenodd'
-                  clipRule='evenodd'
-                  strokeLinejoin='round'
-                  strokeMiterlimit='2'
-                >
-                  <path
-                    d='M474.123 209.81c11.525-34.577 7.569-72.423-10.838-103.904-27.696-48.168-83.433-72.94-137.794-61.414a127.14 127.14 0 00-95.475-42.49c-55.564 0-104.936 35.781-122.139 88.593-35.781 7.397-66.574 29.76-84.637 61.414-27.868 48.167-21.503 108.72 15.826 150.007-11.525 34.578-7.569 72.424 10.838 103.733 27.696 48.34 83.433 73.111 137.966 61.585 24.084 27.18 58.833 42.835 95.303 42.663 55.564 0 104.936-35.782 122.139-88.594 35.782-7.397 66.574-29.76 84.465-61.413 28.04-48.168 21.676-108.722-15.654-150.008v-.172zm-39.567-87.218c11.01 19.267 15.139 41.803 11.354 63.65-.688-.516-2.064-1.204-2.924-1.72l-101.152-58.49a16.965 16.965 0 00-16.687 0L206.621 194.5v-50.232l97.883-56.597c45.587-26.32 103.732-10.666 130.052 34.921zm-227.935 104.42l49.888-28.9 49.887 28.9v57.63l-49.887 28.9-49.888-28.9v-57.63zm23.223-191.81c22.364 0 43.867 7.742 61.07 22.02-.688.344-2.064 1.204-3.097 1.72L186.666 117.26c-5.161 2.925-8.258 8.43-8.258 14.45v136.934l-43.523-25.116V130.333c0-52.64 42.491-95.13 95.131-95.302l-.172.172zM52.14 168.697c11.182-19.268 28.557-34.062 49.544-41.803V247.14c0 6.02 3.097 11.354 8.258 14.45l118.354 68.295-43.695 25.288-97.711-56.425c-45.415-26.32-61.07-84.465-34.75-130.052zm26.665 220.71c-11.182-19.095-15.139-41.802-11.354-63.65.688.516 2.064 1.204 2.924 1.72l101.152 58.49a16.965 16.965 0 0016.687 0l118.354-68.467v50.232l-97.883 56.425c-45.587 26.148-103.732 10.665-130.052-34.75h.172zm204.54 87.39c-22.192 0-43.867-7.741-60.898-22.02a62.439 62.439 0 003.097-1.72l101.152-58.317c5.16-2.924 8.429-8.43 8.257-14.45V243.527l43.523 25.116v113.022c0 52.64-42.663 95.303-95.131 95.303v-.172zM461.22 343.303c-11.182 19.267-28.729 34.061-49.544 41.63V264.687c0-6.021-3.097-11.526-8.257-14.45L284.893 181.77l43.523-25.116 97.883 56.424c45.587 26.32 61.07 84.466 34.75 130.053l.172.172z'
-                    fill-rule='nonzero'
+            <div className='p-12 flex justify-center items-center gap-10'>
+              <p className=' text-center'>March 10, 2024</p>
+              <div className='flex items-center gap-3'>
+                <div className='rounded-full'>
+                  <Image
+                    src='/edgar.png'
+                    alt='Avatar Edgar Ravenhorst'
+                    width={45}
+                    height={45}
                   />
-                </svg>
+                </div>
+                <p className='leading-none'>
+                  by: <strong>Edgar Ravenhorst</strong>
+                </p>
               </div>
-              <p className='leading-none'>
-                Written by: <strong>Chat GPT 4</strong>
-              </p>
             </div>
+
+            <BlogApprover blogId={'8d436b4a-d3a6-4934-b93f-56e88a00b878'} />
           </div>
 
           <div className=' max-w-screen-md mx-auto'>
-            <p className='lead text-white !mb-[7vw] text-center  italic'>
-              In the ever-evolving landscape of technology, where the efficacy
-              and speed of software development are paramount, the concept of
-              Developer Experience (DX) has emerged as a critical factor in
-              successful project execution. But what exactly is DX, and why does
-              it hold such significance in the tech industry? Let&apos;s dive
-              into the nuances of Developer Experience and uncover its
-              importance.
-            </p>
+            <TLDR>
+              Developer Experience or DX is about enjoyment through efficiency
+              while creating software and making the work for developers easier
+              so they can be more productive.
+              <br />
+              <br />
+              It&apos;s important for developers, businesses, and the tech
+              industry because it can lead to increased productivity and higher
+              quality products, Developers spend less time troubleshooting and
+              more time focusing on creative solutions and innovation. It also
+              boosts morale and job satisfaction, which are crucial for
+              retaining top talent and fostering a collaborative and innovative
+              work environment.
+            </TLDR>
 
-            <h3>Understanding Developer Experience (DX)</h3>
+            <h3>What is Developer Experience (DX)</h3>
             <p>
-              Developer Experience (DX) refers to the overall experience
-              developers have while interacting with a software product or
-              platform. It encompasses every aspect that can affect their
-              satisfaction and productivity, including the ease of use,
-              documentation quality, tooling, API design, and community support.
-              In essence, DX is about making the life of developers easier,
-              enabling them to be more efficient and effective in their work.
+              For people who write software, DX is about making the work for
+              developers easier and more enjoyable. DX is similar to User
+              Experience (UX), but it focuses on the experience of developers
+              rather than end users. It&apos;s about improving the process
+              creating software, so developers can get in their{' '}
+              <Link
+                target='_blank'
+                href='https://en.wikipedia.org/wiki/Flow_(psychology)'
+              >
+                flow
+              </Link>{' '}
+              where they will be more productive or creative and deliver
+              higher-quality products.
             </p>
-            <h3>Key Components of DX</h3>
 
-            <ul>
-              <li>
-                <p>
-                  <strong>Ease of Setup:</strong>
-                </p>
-                <p>
-                  Quick and straightforward setup processes allow developers to
-                  start working on projects without unnecessary delays.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>Quality Documentation:</strong>
-                </p>
-                <p>
-                  Comprehensive, clear, and up-to-date documentation is crucial
-                  for developers to understand and effectively use software
-                  products.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>API Design: </strong>
-                </p>
-                <p>
-                  Intuitive and well-documented APIs are essential for
-                  developers to easily interact with and build upon a platform.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong> Community Support: </strong>
-                </p>
-                <p>
-                  A strong, active community can provide invaluable support,
-                  resources, and networking opportunities for developers.
-                </p>
-              </li>
-            </ul>
+            <h3> Elements of a Good Developer Experience</h3>
+            <p>
+              <strong>Quick Start:</strong> Developers should be able to jump
+              into a project without lengthy setups. The faster they can start,
+              the quicker they can deliver.{' '}
+            </p>
+            <p>
+              <strong>Clear Documentation:</strong> Like a good map,
+              documentation should guide developers, helping them understand and
+              use your technology efficiently.
+            </p>
+            <p>
+              <strong>Helpful Tools: </strong> The right tools can make a big
+              difference. They should fit seamlessly into the developers&apos;
+              workflow and make their tasks easier, not harder.
+            </p>
+            <p>
+              <strong>Intuitive APIs:</strong> When developers work with APIs,
+              they should feel like they&apos;re having a conversation, not
+              cracking a code. Good API design is clear and logical.
+            </p>
+            <p>
+              <strong>Community and Support:</strong> A supportive community and
+              accessible help can turn frustrating problems into shared
+              solutions and learning opportunities.
+            </p>
 
             <h3>Why Does DX Matter?</h3>
             <h4>For Developers</h4>
             <p>
-              A positive DX can lead to increased productivity, as developers
-              spend less time troubleshooting and more time focusing on creative
-              solutions and innovation. It also boosts morale and job
-              satisfaction, which are crucial for retaining top talent and
-              fostering a collaborative and innovative work environment.
+              Better DX means more motivated developers. When developers can
+              work efficiently and painlessly, they can innovate, solve
+              problems, and produce quality work much faster. This not only
+              makes them happier but also more productive.
             </p>
             <h4>For Businesses</h4>
             <p>
-              Investing in DX can have significant financial implications for
-              businesses. By improving developer efficiency, companies can
-              accelerate time-to-market for new features and products. Moreover,
-              a strong DX can attract more developers to a platform, creating a
-              larger ecosystem and driving innovation and growth.
+              Good DX is like a domino effect: it starts with happy developers
+              and leads to faster development times, higher-quality products,
+              and ultimately, satisfied customers. It also makes your team or
+              platform more attractive to talented developers, which can be a
+              huge advantage in today&apos;s competitive tech landscape.
             </p>
             <h4>For the Tech Industry</h4>
             <p>
-              On a broader scale, DX plays a vital role in the advancement of
-              the technology sector. By prioritizing the needs and experiences
-              of developers, the industry can foster a more vibrant and
-              competitive market, pushing the boundaries of what is possible
-              with software.
+              By improving DX, we can make the tech industry more inclusive and
+              accessible. When we make it easier for developers to create
+              software, we open the door to more diverse voices and ideas. This
+              can lead to more innovative and impactful products that benefit
+              everyone.
             </p>
             <h3>Conclusion</h3>
             <p>
-              Developer Experience is a multifaceted concept that directly
-              impacts the efficiency, satisfaction, and retention of developers.
-              By understanding and investing in DX, companies can not only
-              improve their bottom line but also contribute to a more innovative
-              and dynamic tech industry. As technology continues to advance at a
-              rapid pace, the importance of DX will only grow, highlighting the
-              need for a developer-centric approach in the design and
-              development of software products.
+              Investing in good Developer Experience isn&apos;t just a
+              nice-to-have; it&apos;s a must for any business that relies on
+              technology. It affects everything from your team&apos;s daily mood
+              to your product&apos;s success in the market. By focusing on DX,
+              you&apos;re not just investing in your developers; you&apos;re
+              investing in the future of your company and the technology
+              landscape as a whole.
             </p>
           </div>
         </article>
