@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Mulish } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 
 const mulish = Mulish({
@@ -26,6 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <Script
+        defer
+        data-domain='untameable.io'
+        src='https://plausible.io/js/script.js'
+      />
       <body className={mulish.className}>{children}</body>
     </html>
   );

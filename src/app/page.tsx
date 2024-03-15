@@ -12,13 +12,13 @@ import { Spotlight } from './decoration/spotlight';
 import { tw } from './helper/tw';
 
 export const metadata: Metadata = {
-  title: 'Untameable - User & Developer experiences',
+  title: 'Untameable - Elevate user & developer experiences',
   description:
-    'Build great Developer and User Experiences for digital products',
+    'A reliable partner for elevating user and developer experiences in software application development.',
   openGraph: {
-    title: 'Untameable - User & Developer experiences',
+    title: 'Untameable - Elevate user & developer experiences',
     description:
-      'Build great Developer and User Experiences for digital products',
+      'A reliable partner for elevating user and developer experiences in software application development.',
     type: 'website',
     url: 'https://untameable.io',
     locale: 'en_US',
