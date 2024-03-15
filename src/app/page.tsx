@@ -71,7 +71,8 @@ export default function Home() {
           <Headline primary={'Have digital,'} secondary={'work for you'} />
           <div className='text-center pb-8'>
             <h2 className='!text-lg md:!text-xl text-balance'>
-              Great user and developer experience for online applicatons.
+              User and developer experience development for online software
+              development.
             </h2>
             <TLDR className='!mb-0'>Software Development</TLDR>
           </div>

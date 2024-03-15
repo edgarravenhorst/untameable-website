@@ -157,11 +157,11 @@ export default function BlogItem() {
               higher-quality products.
             </p>
 
-            <h3> Elements of a Good Developer Experience</h3>
+            <h3>What makes a good Developer Experience</h3>
             <p>
               <strong>Quick Start:</strong> Developers should be able to jump
               into a project without lengthy setups. The faster they can start,
-              the quicker they can deliver.{' '}
+              the quicker they can deliver.
             </p>
             <p>
               <strong>Clear Documentation:</strong> Like a good map,
