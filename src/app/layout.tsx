@@ -3,6 +3,8 @@ import { Mulish } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 
+import { Analytics } from '@vercel/analytics/react';
+
 const mulish = Mulish({
   weight: ['400', '500', '600', '700', '800'],
   style: ['normal', 'italic'],
@@ -32,7 +34,11 @@ export default function RootLayout({
         data-domain='untameable.io'
         src='https://plausible.io/js/script.js'
       />
-      <body className={mulish.className}>{children}</body>
+
+      <body className={mulish.className}>
+        <Analytics />
+        {children}
+      </body>
     </html>
   );
 }
