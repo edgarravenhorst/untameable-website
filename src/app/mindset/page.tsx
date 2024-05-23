@@ -1,4 +1,3 @@
-import { BlogApprover } from '@/app/components/blog-approval';
 import { Headline } from '@/app/components/headline';
 import { Logo } from '@/app/components/logo';
 import { TLDR } from '@/app/components/tldr';
@@ -24,7 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogItem() {
+export default function Mindset() {
   return (
     <main
       className={tw('relative', 'text-white', 'text-opacity-80', 'text-lg')}
@@ -122,7 +121,7 @@ export default function BlogItem() {
               </div>
             </div>
 
-            <BlogApprover blogId={'8d436b4a-d3a6-4934-b93f-56e88a00b878'} />
+            {/* <BlogApprover blogId={'8d436b4a-d3a6-4934-b93f-56e88a00b878'} /> */}
           </div>
 
           <div className=' max-w-screen-md mx-auto'>
