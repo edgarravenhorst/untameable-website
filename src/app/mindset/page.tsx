@@ -3,15 +3,15 @@ import { Blog } from '../components/blog';
 import { AspectOverview } from './aspect-overview';
 
 export const metadata: Metadata = {
-  title: 'Untameable - User & Developer experiences',
+  title: 'The Untameable Mindset - For software development',
   description:
-    'Build great Developer and User Experiences for digital products',
+    'The Untameable Mindset aligns all team members—including developers, product owners, clients, designers, and other stakeholders—around a shared philosophy and adaptable principles. This mindset guides behavior and decision-making to develop high-quality, secure, stable, and controllable web applications. By fostering a common culture and emphasizing flexibility, the Untameable Mindset ensures collaborative and efficient work to meet user and developer needs, leading to project success.',
   openGraph: {
-    title: 'Untameable - User & Developer experiences',
+    title: 'The Untameable Mindset - For software development',
     description:
-      'Build great Developer and User Experiences for digital products',
+      'The Untameable Mindset aligns all team members—including developers, product owners, clients, designers, and other stakeholders—around a shared philosophy and adaptable principles. This mindset guides behavior and decision-making to develop high-quality, secure, stable, and controllable web applications. By fostering a common culture and emphasizing flexibility, the Untameable Mindset ensures collaborative and efficient work to meet user and developer needs, leading to project success.',
     type: 'website',
-    url: 'https://untameable.io',
+    url: 'https://untameable.io/mindset',
     locale: 'en_US',
   },
 };
