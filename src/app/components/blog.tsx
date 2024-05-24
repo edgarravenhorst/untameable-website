@@ -81,14 +81,15 @@ export function Blog({ children, title, subtitle, date, by }: BlogProps) {
                 'whitespace-normal',
                 'text-center',
                 'text-balance',
-                'text-wrap'
+                'text-wrap',
+                'max-sm:!leading-[7vw]'
               )}
               noLines
               primary={
                 <>
                   <span className='md:whitespace-nowrap'>{title}</span>
                   <br />
-                  <span className='font-extralight md:whitespace-nowrap text-[0.66em]'>
+                  <span className='font-extralight md:whitespace-nowrap  text-[0.85em] sm:text-[0.66em]'>
                     {subtitle}
                   </span>
                 </>
