@@ -4,15 +4,17 @@ import { Blog } from '../../components/blog';
 import { AspectOverview } from '../aspect-overview';
 
 export const metadata: Metadata = {
-  title: 'Untameable - User & Developer experiences',
+  title:
+    'Untameable Mindset - Release or Disable Features Through Configuration',
   description:
-    'Build great Developer and User Experiences for digital products',
+    'Use feature toggles and configurations to release or disable features quickly. This approach allows for flexible adjustments without extensive code changes, enabling controlled rollouts and quick responses to feedback.',
   openGraph: {
-    title: 'Untameable - User & Developer experiences',
+    title:
+      'Untameable Mindset - Release or Disable Features Through Configuration',
     description:
-      'Build great Developer and User Experiences for digital products',
+      'Use feature toggles and configurations to release or disable features quickly. This approach allows for flexible adjustments without extensive code changes, enabling controlled rollouts and quick responses to feedback.',
     type: 'website',
-    url: 'https://untameable.io',
+    url: 'https://untameable.io/mindset/release-or-disable-features-through-configuration',
     locale: 'en_US',
   },
 };

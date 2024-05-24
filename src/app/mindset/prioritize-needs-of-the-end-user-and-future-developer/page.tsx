@@ -4,15 +4,16 @@ import { Blog } from '../../components/blog';
 import { AspectOverview } from '../aspect-overview';
 
 export const metadata: Metadata = {
-  title: 'Untameable - User & Developer experiences',
+  title: 'Untameable - Prioritize needs of the End-User and (future) Developer',
   description:
-    'Build great Developer and User Experiences for digital products',
+    'Prioritize both the end-user experience and (future) developer needs to ensure the product is user-friendly and maintainable.',
   openGraph: {
-    title: 'Untameable - User & Developer experiences',
+    title:
+      'Untameable - Prioritize needs of the End-User and (future) Developer',
     description:
-      'Build great Developer and User Experiences for digital products',
+      'Prioritize both the end-user experience and (future) developer needs to ensure the product is user-friendly and maintainable.',
     type: 'website',
-    url: 'https://untameable.io',
+    url: 'https://untameable.io/mindset/prioritize-needs-of-the-end-user-and-future-developer',
     locale: 'en_US',
   },
 };

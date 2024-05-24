@@ -4,15 +4,15 @@ import { Blog } from '../../components/blog';
 import { AspectOverview } from '../aspect-overview';
 
 export const metadata: Metadata = {
-  title: 'Untameable - User & Developer experiences',
+  title: 'Untameable Mindset - Cross-Functional Collaboration',
   description:
-    'Build great Developer and User Experiences for digital products',
+    'Foster collaboration among all roles by encouraging open communication and teamwork. This approach leverages diverse expertise and perspectives to solve problems and innovate effectively.',
   openGraph: {
-    title: 'Untameable - User & Developer experiences',
+    title: 'Untameable Mindset - Cross-Functional Collaboration',
     description:
-      'Build great Developer and User Experiences for digital products',
+      'Foster collaboration among all roles by encouraging open communication and teamwork. This approach leverages diverse expertise and perspectives to solve problems and innovate effectively.',
     type: 'website',
-    url: 'https://untameable.io',
+    url: 'https://untameable.io/mindset/cross-functional-collaboration',
     locale: 'en_US',
   },
 };

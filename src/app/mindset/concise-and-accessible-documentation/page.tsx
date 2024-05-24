@@ -4,15 +4,15 @@ import { Blog } from '../../components/blog';
 import { AspectOverview } from '../aspect-overview';
 
 export const metadata: Metadata = {
-  title: 'Untameable - User & Developer experiences',
+  title: 'Untameable Mindset - Concise and Accessible Documentation',
   description:
-    'Build great Developer and User Experiences for digital products',
+    'Maintain concise and accessible documentation to provide an overview of the software, its components, and critical business logic. This approach ensures that product owners, managers, and team members have access to essential information, supporting effective use and development without consuming excessive time.',
   openGraph: {
-    title: 'Untameable - User & Developer experiences',
+    title: 'Untameable Mindset - Concise and Accessible Documentation',
     description:
-      'Build great Developer and User Experiences for digital products',
+      'Maintain concise and accessible documentation to provide an overview of the software, its components, and critical business logic. This approach ensures that product owners, managers, and team members have access to essential information, supporting effective use and development without consuming excessive time.',
     type: 'website',
-    url: 'https://untameable.io',
+    url: 'https://untameable.io/mindset/concise-and-accessible-documentation',
     locale: 'en_US',
   },
 };

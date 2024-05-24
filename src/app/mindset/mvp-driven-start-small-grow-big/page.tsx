@@ -4,15 +4,15 @@ import { Blog } from '../../components/blog';
 import { AspectOverview } from '../aspect-overview';
 
 export const metadata: Metadata = {
-  title: 'Untameable - User & Developer experiences',
+  title: 'Untameable Mindset - MVP Driven: Start Small, Grow Big',
   description:
-    'Build great Developer and User Experiences for digital products',
+    'Begin with a Minimum Viable Product (MVP) and scale up through iterative development. This approach allows for rapid deployment and user feedback while ensuring the product evolves robustly and sustainably.',
   openGraph: {
-    title: 'Untameable - User & Developer experiences',
+    title: 'Untameable - MVP Driven: Start Small, Grow Big',
     description:
-      'Build great Developer and User Experiences for digital products',
+      'Begin with a Minimum Viable Product (MVP) and scale up through iterative development. This approach allows for rapid deployment and user feedback while ensuring the product evolves robustly and sustainably.',
     type: 'website',
-    url: 'https://untameable.io',
+    url: 'https://untameable.io/mindset/mvp-driven-start-small-grow-big',
     locale: 'en_US',
   },
 };

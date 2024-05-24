@@ -4,15 +4,13 @@ import { Blog } from '../../components/blog';
 import { AspectOverview } from '../aspect-overview';
 
 export const metadata: Metadata = {
-  title: 'Untameable - User & Developer experiences',
-  description:
-    'Build great Developer and User Experiences for digital products',
+  title: 'Untameable Mindset - Automate Repetitive and Complex tasks',
+  description: `Automate complex or repetitive tasks across the organization and for end-users to improve efficiency and free up time for more valuable work. This approach enhances productivity, ensures consistent execution, and  boosts motivation by allowing everyone to focus on more engaging and strategic activities.`,
   openGraph: {
-    title: 'Untameable - User & Developer experiences',
-    description:
-      'Build great Developer and User Experiences for digital products',
+    title: 'Untameable Mindset - Automate Repetitive and Complex tasks',
+    description: `Automate complex or repetitive tasks across the organization and for end-users to improve efficiency and free up time for more valuable work. This approach enhances productivity, ensures consistent execution, and  boosts motivation by allowing everyone to focus on more engaging and strategic activities.`,
     type: 'website',
-    url: 'https://untameable.io',
+    url: 'https://untameable.io/mindset/automate-repetitive-and-complex-tasks',
     locale: 'en_US',
   },
 };

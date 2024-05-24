@@ -4,15 +4,15 @@ import { Blog } from '../../components/blog';
 import { AspectOverview } from '../aspect-overview';
 
 export const metadata: Metadata = {
-  title: 'Untameable - User & Developer experiences',
+  title: 'Untameable Mindset - Pragmatic Testing of Code',
   description:
-    'Build great Developer and User Experiences for digital products',
+    'Focus on tests that provide real value and insight. Identify critical paths and concentrate testing efforts on the most important areas to ensure high code quality and performance.',
   openGraph: {
-    title: 'Untameable - User & Developer experiences',
+    title: 'Untameable Mindset - Pragmatic Testing of Code',
     description:
-      'Build great Developer and User Experiences for digital products',
+      'Focus on tests that provide real value and insight. Identify critical paths and concentrate testing efforts on the most important areas to ensure high code quality and performance.',
     type: 'website',
-    url: 'https://untameable.io',
+    url: 'https://untameable.io/mindset/pragmatic-testing-of-code',
     locale: 'en_US',
   },
 };

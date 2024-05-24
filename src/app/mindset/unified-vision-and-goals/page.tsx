@@ -4,15 +4,15 @@ import { Blog } from '../../components/blog';
 import { AspectOverview } from '../aspect-overview';
 
 export const metadata: Metadata = {
-  title: 'Untameable - User & Developer experiences',
+  title: 'Untameable Mindset - Unified Vision and Goals',
   description:
-    'Build great Developer and User Experiences for digital products',
+    'Ensure everyone understands the project’s vision and goals. This shared understanding guides decisions and actions across the team.',
   openGraph: {
-    title: 'Untameable - User & Developer experiences',
+    title: 'Untameable Mindset - Unified Vision and Goals',
     description:
-      'Build great Developer and User Experiences for digital products',
+      'Ensure everyone understands the project’s vision and goals. This shared understanding guides decisions and actions across the team.',
     type: 'website',
-    url: 'https://untameable.io',
+    url: 'https://untameable.io/mindset/unified-vision-and-goals',
     locale: 'en_US',
   },
 };

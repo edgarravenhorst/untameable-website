@@ -4,15 +4,16 @@ import { Blog } from '../../components/blog';
 import { AspectOverview } from '../aspect-overview';
 
 export const metadata: Metadata = {
-  title: 'Untameable - User & Developer experiences',
+  title: 'Untameable Mindset - Continuous Integration and Continuous Delivery',
   description:
-    'Build great Developer and User Experiences for digital products',
+    'Integrate and deliver code changes frequently with automated testing and deployment to ensure code quality and functionality. This approach promotes collaboration, reduces integration issues, and maintains a stable, deployable codebase.',
   openGraph: {
-    title: 'Untameable - User & Developer experiences',
+    title:
+      'Untameable Mindset - Continuous Integration and Continuous Delivery',
     description:
-      'Build great Developer and User Experiences for digital products',
+      'Integrate and deliver code changes frequently with automated testing and deployment to ensure code quality and functionality. This approach promotes collaboration, reduces integration issues, and maintains a stable, deployable codebase.',
     type: 'website',
-    url: 'https://untameable.io',
+    url: 'https://untameable.io/mindset/continuous-integration-and-continuous-delivery',
     locale: 'en_US',
   },
 };
