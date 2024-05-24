@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { FullScreenContainer } from './components/fullscreen-container';
 import { Headline } from './components/headline';
 import { Logo } from './components/logo';
-import { TLDR } from './components/tldr';
 import { Divider } from './decoration/divider';
 import { LogoIcon } from './decoration/logo-icon';
 import { StripedOverlay } from './decoration/overlay-stripes';
@@ -68,13 +67,23 @@ export default function Home() {
       >
         <FullScreenContainer>
           <Logo className='w-[40vw]' />
-          <Headline primary={'Have digital,'} secondary={'work for you'} />
+          <Headline
+            primary={'Have digital,'}
+            secondary={'work for you'}
+            className={tw(
+              'max-w-lg',
+              'max-w-[500px]',
+              'md:max-w-[600px]',
+              'lg:max-w-[800px]',
+              'xl:max-w-[1100px]'
+            )}
+          />
+
           <div className='text-center pb-8'>
             <h2 className='!text-lg md:!text-xl text-balance'>
               Elevating user and developer experiences in software application
               development.
             </h2>
-            <TLDR className='!mb-0'>Software Development</TLDR>
           </div>
         </FullScreenContainer>
         <div
@@ -91,17 +100,32 @@ export default function Home() {
         >
           <Divider orientation='vertical' className={'h-10'} />
           <div className={'max-w-screen-lg'}>
+            <h2 className='!mt-0'>Clear vision on Software Development</h2>
+            <p>
+              Learn about the Untameable Mindset, our approach to fast,
+              efficient, and high-quality software development for developers,
+              product owners, designers, and managers. Discover how we align
+              every team member to turn ideas into reality quickly and
+              effectively.
+            </p>
+
+            <Link
+              href='/mindset'
+              className='inline-block no-underline bg-[--color-primary] text-[--background] font-bold py-1 px-4 rounded'
+            >
+              Read The Untameable Mindset
+            </Link>
+          </div>
+          <Divider orientation='vertical' className={'h-10'} />
+          <div className={'max-w-screen-lg'}>
             <h2 className='!mt-0'>Reliable partner</h2>
             <p>
-              A reliable partner that is focused on developing and improving
-              your software. Knowledge, time and effort will be provided to
-              support you in developing great user and developer experiences.
-              Ideas are rapidly advanced into functional prototypes, ensuring
-              swift realization of innovative concepts.
+              A reliable partner that is focused on software development.
+              Knowledge, time and effort is provided to develop software that
+              works for your end-user. Untameable is an extension of your team
+              to make sure that software is developed in a way that is agile,
+              maintainable and scalable.
             </p>
-            <TLDR className='!mb-0'>
-              Reliable partner for software development
-            </TLDR>
           </div>
 
           <Divider orientation='vertical' className={'h-10'} />
@@ -140,9 +164,6 @@ export default function Home() {
                 pleasant and fun time doing things you generally don&apos;t like
                 to do.
               </p>
-              <TLDR className='!mb-0'>
-                Develop software to make things more pleasant to work with
-              </TLDR>
             </div>
           </div>
 
@@ -157,8 +178,7 @@ export default function Home() {
             <p>
               The goal is to develop digital products that are more pleasant to
               work with. This can be achieved by focusing on the user interface{' '}
-              <strong>(UI)</strong>, user experience <strong>(UX)</strong>, and
-              the developer experience <strong>(DX)</strong>.
+              (UI), user experience (UX), and the developer experience (DX).
             </p>
             <p className='paragraph'>
               Why DX? Improving developer experience can lead to
@@ -168,10 +188,10 @@ export default function Home() {
               workflows, they are better equipped to create products that meet
               user needs and expectations.
             </p>
-            <TLDR className='!mb-0'>
-              Develop software that is pleasant to work with for both users and
-              developers.
-            </TLDR>
+
+            <Link href='/mindset/prioritize-needs-of-the-end-user-and-future-developer/'>
+              Read more about the importance of User and Developer Experience
+            </Link>
           </div>
 
           {/* <Divider orientation='vertical' className={'h-10'} /> */}

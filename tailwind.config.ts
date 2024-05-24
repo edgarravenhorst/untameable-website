@@ -13,8 +13,12 @@ const config: Config = {
           css: [
             {
               '--tw-prose-invert-links': 'var(--color-primary)',
+              '[class~="lead"]': {
+                color: '#fff',
+              },
+
               h3: {
-                fontWeight: '100',
+                fontWeight: '600',
               },
               strong: {
                 fontWeight: '800',

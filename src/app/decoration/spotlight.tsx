@@ -28,8 +28,8 @@ export const Spotlight: React.FC<SpotlghtProps> = ({
       scrollX + window.scrollX;
       scrollY = window.scrollY;
 
-      x = scrollX + e.screenX;
-      y = scrollY + e.screenY - 125;
+      x = scrollX + e.clientX;
+      y = scrollY + e.clientY - 125;
 
       spotRef.current.style.left = `${x}px`;
       spotRef.current.style.top = `${y}px`;
