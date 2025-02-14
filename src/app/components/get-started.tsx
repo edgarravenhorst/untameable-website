@@ -46,7 +46,7 @@ export const GetStarted = (props: Props) => {
             Work with us and discover what we can do for your organization.
           </p>
         </div>
-        <div>
+        <div id="contact-us">
           <h3 className="not-prose text-[1.625rem] font-extrabold leading-10 mb-2">
             Contact us
           </h3>

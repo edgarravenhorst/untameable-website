@@ -16,7 +16,11 @@ export const NavBar: React.FC<NavBarProps> = () => {
           Our mindset
         </Link>
 
-        <Link href="https://www.linkedin.com/company/untameable/">
+        <Link
+          href="https://www.linkedin.com/company/untameable/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaLinkedin size={26} />
         </Link>
         <LanguageChanger />
