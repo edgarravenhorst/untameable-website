@@ -1,35 +1,58 @@
+"use client";
 import React from "react";
 import { TextBox } from "./text-box";
 import { Divider } from "../decoration/divider";
+import { useTranslation } from "react-i18next";
 
 type Props = {};
 
 export const HowWeHelp = (props: Props) => {
+  const { t } = useTranslation();
   return (
     <section>
       <h2 className="text-center text-xl md:text-[1.75rem] mb-6 not-prose text-white font-extrabold">
-        How we can help you:
+        {t("home:howWeCanHelpYou", { defaultValue: "Waar we je bij helpen:" })}
       </h2>
 
       <div className="flex flex-wrap gap-10 justify-center">
         <TextBox
-          title="Web & Platform development"
-          text="We develop user-friendly solutions tailored to your organization."
+          title={t("home:webAndPlatformDevelopment.title", {
+            defaultValue: "Web- en platformontwikkeling",
+          })}
+          text={t("home:webAndPlatformDevelopment.text", {
+            defaultValue:
+              "We ontwikkelen gebruiksvriendelijke toepassingen die aansluiten op jouw bedrijf.",
+          })}
           isBigTitle
         />
         <TextBox
-          title="Process optimization"
-          text="We simplify processes and boost productivity"
+          title={t("home:processOptimization.title", {
+            defaultValue: "Procesoptimalisatie",
+          })}
+          text={t("home:processOptimization.text", {
+            defaultValue:
+              "We vereenvoudigen workflows en verhogen de productiviteit.",
+          })}
           isBigTitle
         />
         <TextBox
-          title="IoT & Automation"
-          text="We integrate systems and devices, enabling faster and more efficient workflows."
+          title={t("home:iotAndOptimization.title", {
+            defaultValue: "IoT & Automatisering",
+          })}
+          text={t("home:iotAndOptimization.text", {
+            defaultValue:
+              "We zorgen voor slimme koppelingen tussen systemen en apparaten, zodat jij sneller en efficiënter kunt werken.",
+          })}
           isBigTitle
         />
         <TextBox
-          title="Strategic innovation"
-          text="We explore new ideas and growth opportunities—from vision to realization."
+          title={t("home:strategicInnovation.title", {
+            defaultValue: "Strategische innovatie",
+          })}
+          text={t("home:strategicInnovation.text", {
+            defaultValue:
+              "We denken mee over nieuwe ideeën en groeikansen—van visie tot realisatie.",
+          })}
           isBigTitle
         />
       </div>

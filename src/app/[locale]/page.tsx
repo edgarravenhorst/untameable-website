@@ -110,14 +110,23 @@ export default async function Home({ params: { locale } }: HomeProps) {
 
               <section>
                 <h2 className="text-center not-prose text-5xl mb-8">
-                  Truly helping people & organizations move forward
+                  {t("home:trulyHelpPeople", {
+                    defaultValue:
+                      "Truly helping people & organizations move forward",
+                  })}
                 </h2>
                 <p className="text-center text-2xl font-normal">
                   <span className="block">
-                    By removing obstacles and deliver solutions that work,{" "}
+                    {t("home:byRemovingObstacles.firstPart", {
+                      defaultValue:
+                        "We nemen obstakels weg en bieden oplossingen die werken,",
+                    })}
                   </span>
                   <span className="block">
-                    so you can focus on what really matters.
+                    {t("home:byRemovingObstacles.secondPart", {
+                      defaultValue:
+                        "zodat jij je kunt richten op wat er écht toe doet.",
+                    })}
                   </span>
                 </p>
                 <Divider

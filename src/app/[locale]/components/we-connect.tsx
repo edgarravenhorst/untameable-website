@@ -1,35 +1,59 @@
+"use client";
 import React from "react";
 import { tw } from "../helper/tw";
 import { TextBoxWithIcon } from "./text-box-with-icon";
 import { Divider } from "../decoration/divider";
+import { useTranslation } from "react-i18next";
 
 type Props = {};
 
 export const WeConnect = (props: Props) => {
+  const { t } = useTranslation();
   return (
     <section>
       <h2 className="text-center text-xl md:text-[1.75rem] mb-6 not-prose text-white font-extrabold">
-        We connect with:
+        {t("home:weConnectWith", { defaultValue: "Wij verbinden met:" })}
       </h2>
       <div className=" flex gap-6">
         <TextBoxWithIcon
           iconName="growth"
-          subtitle="Businesses focussed on:"
-          title="Growth & Efficiency"
-          text="From startups to SMEs and beyond—if you want to grow and streamline operations."
+          subtitle={t("home:growthAndEfficiency.subtitle", {
+            defaultValue: "Bedrijven gericht op",
+          })}
+          title={t("home:growthAndEfficiency.title", {
+            defaultValue: "Bedrijven gericht op",
+          })}
+          text={t("home:growthAndEfficiency.text", {
+            defaultValue:
+              "Van start-ups tot MKB en daarbuiten—als je wilt groeien en efficiënter wilt werken.",
+          })}
         />
         <TextBoxWithIcon
           iconName="idea"
-          subtitle="Organization with"
-          title="Innovative Ideas"
-          text="For those bold enough to embrace new insights and stay ahead of the curve."
+          subtitle={t("home:innovativeIdeas.subtitle", {
+            defaultValue: "Organisaties met",
+          })}
+          title={t("home:innovativeIdea.title", {
+            defaultValue: "Innovatieve ideeën",
+          })}
+          text={t("home:innovativeIdea.text", {
+            defaultValue:
+              "Voor wie lef heeft en openstaat voor nieuwe inzichten om voorop te blijven lopen.",
+          })}
         />
 
         <TextBoxWithIcon
           iconName="balance"
-          subtitle="Teams seeking"
-          title="Focus & Balance"
-          text="For those wanting to drive change and innovation, whether through automation, digitalization, or sustainability."
+          subtitle={t("home:focusAndBalance.subtitle", {
+            defaultValue: "Teams op zoek naar",
+          })}
+          title={t("home:focusAndBalance.title", {
+            defaultValue: "Focus & Balans",
+          })}
+          text={t("home:focusAndBalance.text", {
+            defaultValue:
+              "Voor wie verandering en vernieuwing nastreeft, of het nu gaat om automatisering, digitalisering of verduurzaming.",
+          })}
         />
       </div>
 

@@ -1,1 +1,72 @@
-{}
+{
+  "title": {
+    "firstPart": "Voor wie écht",
+    "secondPart": "vooruit wil."
+  },
+  "subtitle": "Wij werken aan projecten die het verschil maken, met oplossingen die helder, efficiënt en doelgericht zijn. We nemen obstakels weg en bieden oplossingen die werken, zodat jij je kunt richten op wat er écht toe doet.",
+  "discoverOurMindset": "Ontdek onze mindset",
+  "readExampleCases": "Lees voorbeeld cases",
+  "connectWithUs": "Verbind met ons",
+  "whatWorks": {
+    "title": "Wij doen wat werkt",
+    "text": "We houden het simpel: wat werkt, werkt—zonder opgeblazen marketingtaal."
+  },
+  "weCollaborate": {
+    "title": "Wij denken mee",
+    "text": "We denken strategisch met je mee en helpen je bij de uitvoering."
+  },
+  "weSolve": {
+    "title": "Wij ontzorgen",
+    "text": "We nemen obstakels weg met oplossingen die écht werken."
+  },
+  "weDeliver": {
+    "title": "Wij leveren",
+    "text": "We zetten ons in om jouw visie waar te maken en écht impact te leveren."
+  },
+  "howWeCanHelpYou": "Waar we je bij helpen:",
+  "webAndPlatformDevelopment": {
+    "title": "Web- en platformontwikkeling",
+    "text": "We ontwikkelen gebruiksvriendelijke toepassingen die aansluiten op jouw bedrijf."
+  },
+  "processOptimization": {
+    "title": "Procesoptimalisatie",
+    "text": "We vereenvoudigen workflows en verhogen de productiviteit."
+  },
+  "iotAndOptimization": {
+    "title": "IoT & Automatisering",
+    "text": "We zorgen voor slimme koppelingen tussen systemen en apparaten, zodat jij sneller en efficiënter kunt werken."
+  },
+  "strategicInnovation": {
+    "title": "Strategische innovatie",
+    "text": "We denken mee over nieuwe ideeën en groeikansen—van visie tot realisatie."
+  },
+  "weConnectWith": "Wij verbinden met:",
+  "growthAndEfficiency": {
+    "subtitle": "Bedrijven gericht op",
+    "title": "Groei & Efficiëntie",
+    "text": "Van start-ups tot MKB en daarbuiten—als je wilt groeien en efficiënter wilt werken."
+  },
+  "innovativeIdeas": {
+    "subtitle": "Organisaties met",
+    "title": "Innovatieve ideeën",
+    "text": "Voor wie lef heeft en openstaat voor nieuwe inzichten om voorop te blijven lopen."
+  },
+  "focusAndBalance": {
+    "subtitle": "Teams op zoek naar",
+    "title": "Focus & Balans",
+    "text": "Voor wie verandering en vernieuwing nastreeft, of het nu gaat om automatisering, digitalisering of verduurzaming."
+  },
+  "trulyHelpPeople": "Mensen en organisaties écht vooruit helpen!",
+  "byRemovingObstacles": {
+    "firstPart": "We nemen obstakels weg en bieden oplossingen die werken, ",
+    "secondPart": "zodat jij je kunt richten op wat er écht toe doet."
+  },
+  "shortIntroduction": {
+    "title": "Korte introductie",
+    "text": "“Mijn naam is Edgar Ravenhorst. Met meer dan 10 jaar ervaring in full-stack webdevelopment werk ik samen met jou en het team om de resultaten te behalen waar je naar streeft.”"
+  },
+  "getStarted": {
+    "title": "Aan de slag!",
+    "text": "Ga met ons aan de slag en ontdek wat we voor jouw organisatie kunnen betekenen."
+  }
+}
