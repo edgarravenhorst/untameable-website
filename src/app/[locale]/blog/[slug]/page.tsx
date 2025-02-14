@@ -1,120 +1,120 @@
-import { Headline } from '@/app/components/headline';
-import { Logo } from '@/app/components/logo';
-import { TLDR } from '@/app/components/tldr';
-import { LogoIcon } from '@/app/decoration/logo-icon';
-import { StripedOverlay } from '@/app/decoration/overlay-stripes';
-import { Spotlight } from '@/app/decoration/spotlight';
-import { tw } from '@/app/helper/tw';
-import { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
+import { Headline } from "@/app/[locale]/components/headline";
+import { Logo } from "@/app/[locale]/components/logo";
+import { TLDR } from "@/app/[locale]/components/tldr";
+import { LogoIcon } from "@/app/[locale]/decoration/logo-icon";
+import { StripedOverlay } from "@/app/[locale]/decoration/overlay-stripes";
+import { Spotlight } from "@/app/[locale]/decoration/spotlight";
+import { tw } from "@/app/[locale]/helper/tw";
+import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: 'Untameable - User & Developer experiences',
+  title: "Untameable - User & Developer experiences",
   description:
-    'Build great Developer and User Experiences for digital products',
+    "Build great Developer and User Experiences for digital products",
   openGraph: {
-    title: 'Untameable - User & Developer experiences',
+    title: "Untameable - User & Developer experiences",
     description:
-      'Build great Developer and User Experiences for digital products',
-    type: 'website',
-    url: 'https://untameable.io',
-    locale: 'en_US',
+      "Build great Developer and User Experiences for digital products",
+    type: "website",
+    url: "https://untameable.io",
+    locale: "en_US",
   },
 };
 
 export default function BlogItem() {
   return (
     <main
-      className={tw('relative', 'text-white', 'text-opacity-80', 'text-lg')}
+      className={tw("relative", "text-white", "text-opacity-80", "text-lg")}
     >
       <Spotlight
         className={tw(
-          'top-[5%]',
-          'lg:top-[-8%]',
-          'translate-y-[-50%]',
-          'sm:translate-y-[-50%]',
-          'lg:translate-y-[-50%]',
-          'xl:translate-y-[-60%]',
-          'lg:hidden'
+          "top-[5%]",
+          "lg:top-[-8%]",
+          "translate-y-[-50%]",
+          "sm:translate-y-[-50%]",
+          "lg:translate-y-[-50%]",
+          "xl:translate-y-[-60%]",
+          "lg:hidden"
         )}
       />
 
       <Spotlight
         followMouse
         className={tw(
-          'top-[5%]',
-          'lg:top-[-8%]',
-          'opacity-50',
-          'hidden',
-          'lg:block'
+          "top-[5%]",
+          "lg:top-[-8%]",
+          "opacity-50",
+          "hidden",
+          "lg:block"
         )}
       />
 
       <LogoIcon
         className={tw(
-          'absolute',
-          'w-[50%]',
-          'left-[50%]',
-          'translate-x-[-50%]',
-          'translate-y-[-10%]',
-          'opacity-80'
+          "absolute",
+          "w-[50%]",
+          "left-[50%]",
+          "translate-x-[-50%]",
+          "translate-y-[-10%]",
+          "opacity-80"
         )}
       />
 
       <StripedOverlay />
       <div
         className={tw(
-          'relative',
-          'max-w-full',
-          'flex',
-          'flex-col',
-          'items-center',
-          'min-h-svh',
-          'p-10'
+          "relative",
+          "max-w-full",
+          "flex",
+          "flex-col",
+          "items-center",
+          "min-h-svh",
+          "p-10"
         )}
       >
         <Logo />
         <article
           className={tw(
-            'relative',
-            'prose prose-invert prose-md md:prose-lg',
-            'max-w-screen-lg'
+            "relative",
+            "prose prose-invert prose-md md:prose-lg",
+            "max-w-screen-lg"
           )}
         >
-          <div className={tw('pt-[12vw] pb-[5vw]', 'max-w-screen-lg')}>
+          <div className={tw("pt-[12vw] pb-[5vw]", "max-w-screen-lg")}>
             <Headline
               className={tw(
-                'text-[6vw]',
-                'md:text-5xl',
-                'lg:text-6xl',
-                'xl:text-7xl',
-                'whitespace-normal',
-                'text-center',
-                'text-balance'
+                "text-[6vw]",
+                "md:text-5xl",
+                "lg:text-6xl",
+                "xl:text-7xl",
+                "whitespace-normal",
+                "text-center",
+                "text-balance"
               )}
               primary={
                 <>
-                  <span className='whitespace-nowrap'>
+                  <span className="whitespace-nowrap">
                     Developer Experience
-                  </span>{' '}
+                  </span>{" "}
                   and why it matters
                 </>
               }
             />
 
-            <div className='p-12 flex justify-center items-center gap-10'>
-              <p className=' text-center'>March 10, 2024</p>
-              <div className='flex items-center gap-3'>
-                <div className='rounded-full'>
+            <div className="p-12 flex justify-center items-center gap-10">
+              <p className=" text-center">March 10, 2024</p>
+              <div className="flex items-center gap-3">
+                <div className="rounded-full">
                   <Image
-                    src='/edgar.png'
-                    alt='Avatar Edgar Ravenhorst'
+                    src="/edgar.png"
+                    alt="Avatar Edgar Ravenhorst"
                     width={45}
                     height={45}
                   />
                 </div>
-                <p className='leading-none'>
+                <p className="leading-none">
                   by: <strong>Edgar Ravenhorst</strong>
                 </p>
               </div>
@@ -123,7 +123,7 @@ export default function BlogItem() {
             {/* <BlogApprover blogId={'8d436b4a-d3a6-4934-b93f-56e88a00b878'} /> */}
           </div>
 
-          <div className=' max-w-screen-md mx-auto'>
+          <div className=" max-w-screen-md mx-auto">
             <TLDR>
               Developer Experience or DX is about enjoyment through efficiency
               while creating software and making the work for developers easier
@@ -145,13 +145,13 @@ export default function BlogItem() {
               developers easier and more enjoyable. DX is similar to User
               Experience (UX), but it focuses on the experience of developers
               rather than end users. It&apos;s about improving the process
-              creating software, so developers can get in their{' '}
+              creating software, so developers can get in their{" "}
               <Link
-                target='_blank'
-                href='https://en.wikipedia.org/wiki/Flow_(psychology)'
+                target="_blank"
+                href="https://en.wikipedia.org/wiki/Flow_(psychology)"
               >
                 flow
-              </Link>{' '}
+              </Link>{" "}
               where they will be more productive or creative and deliver
               higher-quality products.
             </p>
