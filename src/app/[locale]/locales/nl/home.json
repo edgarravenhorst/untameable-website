@@ -68,5 +68,11 @@
   "getStarted": {
     "title": "Aan de slag!",
     "text": "Ga met ons aan de slag en ontdek wat we voor jouw organisatie kunnen betekenen."
+  },
+  "contactUs": {
+    "title": "Neem contact op",
+    "callUs": "Bel ons:",
+    "emailUs": "Mail ons:",
+    "connectWithUs": "Verbind met ons op social media"
   }
 }
