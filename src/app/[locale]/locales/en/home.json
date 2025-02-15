@@ -1,0 +1,78 @@
+{
+  "title": {
+    "firstPart": "Determined to",
+    "secondPart": "move forward."
+  },
+  "subtitle": "We work on projects that make a real difference, providing clear, deliver solutions that work, so you can focus on what truly matters.",
+  "discoverOurMindset": "Discover our mindset",
+  "readExampleCases": "Read example cases",
+  "connectWithUs": "Connect with us",
+  "whatWorks": {
+    "title": "We do what works",
+    "text": "We keep it simple: if it works, it works—no inflated marketing talk."
+  },
+  "weCollaborate": {
+    "title": "We collaborate",
+    "text": "We think strategically with you and support you through execution."
+  },
+  "weSolve": {
+    "title": "We solve",
+    "text": "We remove obstacles with solutions that truly work."
+  },
+  "weDeliver": {
+    "title": "We deliver",
+    "text": "We're committed to bringing your vision to life and making a real impact."
+  },
+  "howWeCanHelpYou": "How we can help you:",
+  "webAndPlatformDevelopment": {
+    "title": "Web & Platform development",
+    "text": "We develop user-friendly solutions tailored to your organization."
+  },
+  "processOptimization": {
+    "title": "Process optimization",
+    "text": "We simplify processes and boost productivity"
+  },
+  "iotAndOptimization": {
+    "title": "IoT & Automation",
+    "text": "We integrate systems and devices, enabling faster and more efficient workflows."
+  },
+  "strategicInnovation": {
+    "title": "Strategic innovation",
+    "text": "We explore new ideas and growth opportunities—from vision to realization."
+  },
+  "weConnectWith": "We connect with:",
+  "growthAndEfficiency": {
+    "subtitle": "Businesses focussed on:",
+    "title": "Growth & Efficiency",
+    "text": "From startups to SMEs and beyond—if you want to grow and streamline operations."
+  },
+  "innovativeIdeas": {
+    "subtitle": "Organizations with",
+    "title": "Innovative Ideas",
+    "text": "For those bold enough to embrace new insights and stay ahead of the curve."
+  },
+  "focusAndBalance": {
+    "subtitle": "Teams seeking",
+    "title": "Focus & Balance",
+    "text": "For those wanting to drive change and innovation, whether through automation, digitalization, or sustainability."
+  },
+  "trulyHelpPeople": "Truly helping people & organizations move forward",
+  "byRemovingObstacles": {
+    "firstPart": "By removing obstacles and deliver solutions that work, ",
+    "secondPart": "so you can focus on what really matters."
+  },
+  "shortIntroduction": {
+    "title": "Short introduction",
+    "text": "My name is Edgar Ravenhorst. With over 10 years of experience in full-stack web development, I work alongside you and the team to achieve the results you strive for."
+  },
+  "getStarted": {
+    "title": "Get started!",
+    "text": "Work with us and discover what we can do for your organization."
+  },
+  "contactUs": {
+    "title": "Contact us:",
+    "callUs": "Call us:",
+    "emailUs": "Email us:",
+    "connectWithUs": "Connect with us on social media"
+  }
+}
