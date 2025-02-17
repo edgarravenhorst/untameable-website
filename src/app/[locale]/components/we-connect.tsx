@@ -14,7 +14,7 @@ export const WeConnect = (props: Props) => {
       <h2 className="text-center text-xl md:text-[1.75rem] mb-6 not-prose text-white font-extrabold">
         {t("home:weConnectWith", { defaultValue: "Wij verbinden met:" })}
       </h2>
-      <div className=" flex gap-6">
+      <div className=" grid xl:grid-cols-3 gap-6 justify-items-center">
         <TextBoxWithIcon
           iconName="growth"
           subtitle={t("home:growthAndEfficiency.subtitle", {

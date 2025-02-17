@@ -5,6 +5,7 @@ import { ButtonLink } from "./button-link";
 import { TextBox } from "./text-box";
 import { Divider } from "../decoration/divider";
 import { useTranslation } from "react-i18next";
+import { ButtonLinks } from "./button-links";
 
 type Props = {};
 
@@ -13,7 +14,7 @@ export const Hero = (props: Props) => {
 
   return (
     <section>
-      <div className={tw("xl:mt-52", "flex")}>
+      <div className="mt-20 sm:mt-32 lg:mt-40 xl:mt-52 flex flex-col xl:flex-row">
         <div className="max-w-[1250px]  mx-auto">
           <h1
             className={tw(
@@ -38,7 +39,7 @@ export const Hero = (props: Props) => {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl lg:text-[1.625rem]  max-w-[921px] md:leading-10  not-prose py-10">
+          <p className="text-lg md:text-xl lg:text-[1.625rem]  max-w-[921px] md:leading-10  not-prose py-5 xl:py-10">
             {t("home:subtitle", {
               defaultValue:
                 "Wij werken aan projecten die het verschil maken, met oplossingen die helder, efficiënt en doelgericht zijn. We nemen obstakels weg en bieden oplossingen die werken, zodat jij je kunt richten op wat er écht toe doet.",
@@ -46,31 +47,11 @@ export const Hero = (props: Props) => {
           </p>
         </div>
         <div>
-          <div className="flex flex-col gap-5 justify-end  h-full pb-10 ">
-            <ButtonLink
-              url="/mindset"
-              text={t("home:discoverOurMindset", {
-                defaultValue: "Ontdek onze mindset",
-              })}
-            />
-            <ButtonLink
-              url=""
-              text={t("home:readExampleCases", {
-                defaultValue: "Lees voorbeeld cases",
-              })}
-              spaceRight
-            />
-            <ButtonLink
-              url="#contact-us"
-              text={t("home:connectWithUs", {
-                defaultValue: "Verbind met ons",
-              })}
-            />
-          </div>
+          <ButtonLinks />
         </div>
       </div>
 
-      <div className="flex justify-around mt-56 flex-wrap">
+      <div className="mt-20 sm:mt-32 lg:mt-40 xl:mt-52 grid gap-6 sm:grid-cols-2 xl:grid-cols-4 justify-items-center">
         <TextBox
           title={t("home:whatWorks.title", {
             defaultValue: "Wij doen wat werkt",

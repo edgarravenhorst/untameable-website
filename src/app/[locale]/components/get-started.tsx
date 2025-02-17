@@ -11,7 +11,7 @@ type Props = {};
 export const GetStarted = (props: Props) => {
   const { t } = useTranslation();
   return (
-    <section className="w-full max-w-[1041px] mx-auto flex gap-24">
+    <section className="w-full max-w-[1041px] mx-auto flex items-center flex-col xl:flex-row gap-24">
       <article className="w-full max-w-[381.5px]  items-center gap-24 justify-center mb-16">
         <Image
           src="/edgar.png"
@@ -44,18 +44,18 @@ export const GetStarted = (props: Props) => {
         </div>
       </article>
       <article className="gap-24  ">
-        <div className="w-full max-w-[534px] h-full max-h-[381.52px] flex flex-col justify-center mb-16">
-          <h2 className="not-prose text-8xl whitespace-nowrap font-extrabold mb-3">
+        <div className="w-full max-w-[534px] h-full max-h-[381.52px] flex flex-col justify-center items-center mb-16">
+          <h2 className="not-prose text-8xl whitespace-nowrap font-extrabold mb-3 text-center">
             {t("home:getStarted.title", { defaultValue: "Aan de slag!" })}
           </h2>
-          <p className="not-prose text-[1.625rem] leading-10">
+          <p className="not-prose text-[1.625rem] leading-10 text-center">
             {t("home:getStarted.text", {
               defaultValue:
                 "Ga met ons aan de slag en ontdek wat we voor jouw organisatie kunnen betekenen.",
             })}
           </p>
         </div>
-        <div id="contact-us">
+        <div id="contact-us" className="flex flex-col items-center">
           <h3 className="not-prose text-[1.625rem] font-extrabold leading-10 mb-2">
             {t("home:contactUs.title", { defaultValue: "Neem contact op" })}
           </h3>

@@ -18,9 +18,7 @@ export const TextBox: React.FC<TextBoxProps> = ({
         "w-full",
         isBigTitle ? "max-w-[605px]" : "max-w-[302px]",
         "p-6",
-        isBigTitle ? "max-h-36" : "max-h-48",
-        "border",
-        "border-[#111B2B]"
+        isBigTitle ? "max-h-36" : "max-h-48"
       )}
       style={{ backgroundColor: "rgba(46, 70, 111, 0.1)" }}
     >
