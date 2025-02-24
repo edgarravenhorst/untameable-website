@@ -1,4 +1,4 @@
-import { Headline } from "@/components/headline";
+import { Headline } from "@/components/hero";
 import { Logo } from "@/components/logo";
 import { TLDR } from "@/components/tldr";
 import { LogoIcon } from "@/app/[locale]/decoration/logo-icon";

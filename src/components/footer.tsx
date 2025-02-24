@@ -1,5 +1,5 @@
 "use client";
-import { Divider } from "@/decoration/divider";
+import { Divider } from "@/app/[locale]/decoration/divider";
 import { tw } from "@/helper/tw";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";

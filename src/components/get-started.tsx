@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { tw } from "../app/[locale]/helper/tw";
 import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { tw } from "@/helper/tw";
 
 type Props = {};
 

@@ -1,5 +1,5 @@
+import { tw } from "@/helper/tw";
 import React from "react";
-import { tw } from "../app/[locale]/helper/tw";
 
 type TextBoxProps = {
   title: string;

@@ -1,5 +1,5 @@
+import { tw } from "@/helper/tw";
 import { ComponentProps } from "react";
-import { tw } from "../app/[locale]/helper/tw";
 
 export const FullScreenContainer: React.FC<ComponentProps<"div">> = ({
   children,
