@@ -7,7 +7,6 @@ import { useTranslation } from "react-i18next";
 import { FaLinkedin } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/pro-light-svg-icons";
-import { tw } from "../app/[locale]/helper/tw";
 
 type NavBarProps = {};
 
