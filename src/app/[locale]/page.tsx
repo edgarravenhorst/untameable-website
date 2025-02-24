@@ -16,6 +16,7 @@ import TranslationsProvider from "./translations-provider";
 import initTranslations from "../i18n";
 import { Headline } from "../../components/headline";
 import { Services } from "../../components/services";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Untameable - Elevate user & developer experiences",
@@ -70,8 +71,8 @@ export default async function Home({ params: { locale } }: HomeProps) {
         <LogoIcon
           className={tw(
             "absolute",
-            // "w-[50%]",
-            "w-[80%]",
+            "w-[50%]",
+            "2xl:w-[80%]",
             "left-[70%]",
             "translate-x-[-50%]",
             "translate-y-[-10%]"
@@ -156,25 +157,16 @@ export default async function Home({ params: { locale } }: HomeProps) {
           </main>
           {/* </div> */}
 
-          <footer className="relative ">
-            <div className="not-prose flex items-center justify-end text-sm relative p-9">
-              <Link href="">Terms of service</Link>
-              <Divider
-                orientation="vertical"
-                className="h-3 mx-2 border-white "
-              />
-              <Link href="">privacy policy</Link>
-            </div>
-          </footer>
+          <Footer />
         </div>
 
         <div className={"flex justify-end absolute bottom-0 right-0"}>
           <LogoIcon
             className={tw(
               "fill-[#0A0E14]",
-              // "w-[40vw]",
-              "w-[60vw]",
-              // "h-[50vw]",
+              "w-[40vw]",
+              "2xl:w-[60vw]",
+              "h-[50vw]",
               "-mt-[35vw]",
               "opacity-40"
             )}
