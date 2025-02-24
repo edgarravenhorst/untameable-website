@@ -7,13 +7,13 @@ import { WeConnect } from "../../components/we-connect";
 import { GetStarted } from "../../components/get-started";
 import TranslationsProvider from "../../translations-provider";
 import initTranslations from "../../i18n";
-import { Headline } from "../../components/headline";
+import { Hero } from "../../components/hero";
 import { Services } from "../../components/services";
 import { Footer } from "@/components/footer";
-import { Spotlight } from "@/decoration/spotlight";
-import { LogoIcon } from "@/decoration/logo-icon";
-import { StripedOverlay } from "@/decoration/overlay-stripes";
-import { Divider } from "@/decoration/divider";
+import { Spotlight } from "@/app/[locale]/decoration/spotlight";
+import { LogoIcon } from "@/app/[locale]/decoration/logo-icon";
+import { StripedOverlay } from "@/app/[locale]/decoration/overlay-stripes";
+import { Divider } from "@/app/[locale]/decoration/divider";
 import { tw } from "@/helper/tw";
 
 export const metadata: Metadata = {
@@ -89,7 +89,7 @@ export default async function Home({ params: { locale } }: HomeProps) {
           <header>
             <FullScreenContainer>
               <NavBar />
-              <Headline />
+              <Hero />
               <Services />
             </FullScreenContainer>
           </header>

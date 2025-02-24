@@ -2,7 +2,7 @@
 import React from "react";
 import { TextBoxWithIcon } from "./text-box-with-icon";
 import { useTranslation } from "react-i18next";
-import { Divider } from "@/decoration/divider";
+import { Divider } from "@/app/[locale]/decoration/divider";
 
 type Props = {};
 

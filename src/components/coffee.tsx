@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { tw } from "../app/[locale]/helper/tw";
+import { tw } from "@/helper/tw";
 import { Headline } from "./headline";
 
 export const CoffeeTime = () => {
