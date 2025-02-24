@@ -1,31 +1,31 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { Blog } from '../../components/blog';
-import { AspectOverview } from '../aspect-overview';
+import { Metadata } from "next";
+import Link from "next/link";
+import { Blog } from "../../../../components/blog";
+import { AspectOverview } from "../aspect-overview";
 
 export const metadata: Metadata = {
-  title: 'Untameable Mindset - Continuous Feedback and Improvement',
+  title: "Untameable Mindset - Continuous Feedback and Improvement",
   description:
-    ' Foster a culture of continuous feedback and improvement to ensure the development process is always evolving and adapting. This approach helps in maintaining high standards of quality, efficiency, and user satisfaction.',
+    " Foster a culture of continuous feedback and improvement to ensure the development process is always evolving and adapting. This approach helps in maintaining high standards of quality, efficiency, and user satisfaction.",
   openGraph: {
-    title: 'Untameable Mindset - Continuous Feedback and Improvement',
+    title: "Untameable Mindset - Continuous Feedback and Improvement",
     description:
-      ' Foster a culture of continuous feedback and improvement to ensure the development process is always evolving and adapting. This approach helps in maintaining high standards of quality, efficiency, and user satisfaction.',
-    type: 'website',
-    url: 'https://untameable.io/mindset/continuous-feedback-and-improvement',
-    locale: 'en_US',
+      " Foster a culture of continuous feedback and improvement to ensure the development process is always evolving and adapting. This approach helps in maintaining high standards of quality, efficiency, and user satisfaction.",
+    type: "website",
+    url: "https://untameable.io/mindset/continuous-feedback-and-improvement",
+    locale: "en_US",
   },
 };
 
 export default function Mindset() {
   return (
     <Blog
-      title='The Untameable Mindset'
-      subtitle='10. Continuous Feedback and Improvement'
-      date='2024-05-24'
-      by='Edgar Ravenhorst'
+      title="The Untameable Mindset"
+      subtitle="10. Continuous Feedback and Improvement"
+      date="2024-05-24"
+      by="Edgar Ravenhorst"
     >
-      <p className='lead md:!text-2xl text-center !mb-24 !mt-0'>
+      <p className="lead md:!text-2xl text-center !mb-24 !mt-0">
         Foster a culture of continuous feedback and improvement to ensure the
         development process is always evolving and adapting. This approach helps
         in maintaining high standards of quality, efficiency, and user
@@ -83,8 +83,8 @@ export default function Mindset() {
       <p>--</p>
       <h3>Read about other Aspects of the Untameable Mindset:</h3>
       <p>
-        This page is part of a series on{' '}
-        <Link href='/mindset'>The Untameable Mindset</Link>. Explore the other
+        This page is part of a series on{" "}
+        <Link href="/mindset">The Untameable Mindset</Link>. Explore the other
         aspects to learn more about the principles that guide our development
         practices and behaviors.
         <br />

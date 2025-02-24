@@ -1,31 +1,31 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { Blog } from '../../components/blog';
-import { AspectOverview } from '../aspect-overview';
+import { Metadata } from "next";
+import Link from "next/link";
+import { Blog } from "../../../../components/blog";
+import { AspectOverview } from "../aspect-overview";
 
 export const metadata: Metadata = {
-  title: 'Untameable Mindset - Concise and Accessible Documentation',
+  title: "Untameable Mindset - Concise and Accessible Documentation",
   description:
-    'Maintain concise and accessible documentation to provide an overview of the software, its components, and critical business logic. This approach ensures that product owners, managers, and team members have access to essential information, supporting effective use and development without consuming excessive time.',
+    "Maintain concise and accessible documentation to provide an overview of the software, its components, and critical business logic. This approach ensures that product owners, managers, and team members have access to essential information, supporting effective use and development without consuming excessive time.",
   openGraph: {
-    title: 'Untameable Mindset - Concise and Accessible Documentation',
+    title: "Untameable Mindset - Concise and Accessible Documentation",
     description:
-      'Maintain concise and accessible documentation to provide an overview of the software, its components, and critical business logic. This approach ensures that product owners, managers, and team members have access to essential information, supporting effective use and development without consuming excessive time.',
-    type: 'website',
-    url: 'https://untameable.io/mindset/concise-and-accessible-documentation',
-    locale: 'en_US',
+      "Maintain concise and accessible documentation to provide an overview of the software, its components, and critical business logic. This approach ensures that product owners, managers, and team members have access to essential information, supporting effective use and development without consuming excessive time.",
+    type: "website",
+    url: "https://untameable.io/mindset/concise-and-accessible-documentation",
+    locale: "en_US",
   },
 };
 
 export default function Mindset() {
   return (
     <Blog
-      title='The Untameable Mindset'
-      subtitle='9. Concise and Accessible Documentation'
-      date='2024-05-24'
-      by='Edgar Ravenhorst'
+      title="The Untameable Mindset"
+      subtitle="9. Concise and Accessible Documentation"
+      date="2024-05-24"
+      by="Edgar Ravenhorst"
     >
-      <p className='lead md:!text-2xl text-center !mb-24 !mt-0'>
+      <p className="lead md:!text-2xl text-center !mb-24 !mt-0">
         Maintain concise and accessible documentation to provide an overview of
         the software, its components, and critical business logic. This approach
         ensures that product owners, managers, and team members have access to
@@ -91,8 +91,8 @@ export default function Mindset() {
       <p>--</p>
       <h3>Read about other Aspects of the Untameable Mindset:</h3>
       <p>
-        This page is part of a series on{' '}
-        <Link href='/mindset'>The Untameable Mindset</Link>. Explore the other
+        This page is part of a series on{" "}
+        <Link href="/mindset">The Untameable Mindset</Link>. Explore the other
         aspects to learn more about the principles that guide our development
         practices and behaviors.
         <br />

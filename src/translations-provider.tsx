@@ -1,9 +1,9 @@
 "use client";
 
 import { I18nextProvider } from "react-i18next";
-import initTranslations from "@/app/i18n";
 import { createInstance } from "i18next";
 import React, { PropsWithChildren } from "react";
+import initTranslations from "@/i18n";
 
 export type TranslationsProviderType = PropsWithChildren & {
   locale: string;

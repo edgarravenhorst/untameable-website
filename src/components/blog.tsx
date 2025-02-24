@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { LogoIcon } from "../decoration/logo-icon";
-import { StripedOverlay } from "../decoration/overlay-stripes";
-import { Spotlight } from "../decoration/spotlight";
-import { tw } from "../helper/tw";
+import { LogoIcon } from "../app/[locale]/decoration/logo-icon";
+import { StripedOverlay } from "../app/[locale]/decoration/overlay-stripes";
+import { Spotlight } from "../app/[locale]/decoration/spotlight";
+import { tw } from "../app/[locale]/helper/tw";
 import { CoffeeTime } from "./coffee";
 import { Headline } from "./headline";
 import { Logo } from "./logo";

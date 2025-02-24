@@ -1,6 +1,12 @@
 import React from "react";
 import { FaChartLine, FaRegLightbulb } from "react-icons/fa";
 import { FaArrowsToCircle } from "react-icons/fa6";
+import {
+  faChartLine,
+  faLightbulb,
+  faArrowsToDot,
+} from "@fortawesome/pro-light-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type TextBoxWithIconProps = {
   iconName: "growth" | "idea" | "balance";
@@ -15,10 +21,21 @@ export const TextBoxWithIcon: React.FC<TextBoxWithIconProps> = ({
   text,
   title,
 }) => {
+  // const icons = {
+  //   growth: <FaChartLine className="text-4xl md:text-6xl" />,
+  //   idea: <FaRegLightbulb className="text-4xl md:text-6xl" />,
+  //   balance: <FaArrowsToCircle className="text-4xl md:text-6xl" />,
+  // };
   const icons = {
-    growth: <FaChartLine className="text-4xl md:text-6xl" />,
-    idea: <FaRegLightbulb className="text-4xl md:text-6xl" />,
-    balance: <FaArrowsToCircle className="text-4xl md:text-6xl" />,
+    growth: (
+      <FontAwesomeIcon icon={faChartLine} className="text-4xl md:text-6xl" />
+    ),
+    idea: (
+      <FontAwesomeIcon icon={faLightbulb} className="text-4xl md:text-6xl" />
+    ),
+    balance: (
+      <FontAwesomeIcon icon={faArrowsToDot} className="text-4xl md:text-6xl" />
+    ),
   };
   return (
     <article

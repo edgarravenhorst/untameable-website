@@ -1,6 +1,6 @@
-import { Headline } from "@/app/[locale]/components/headline";
-import { Logo } from "@/app/[locale]/components/logo";
-import { TLDR } from "@/app/[locale]/components/tldr";
+import { Headline } from "@/components/headline";
+import { Logo } from "@/components/logo";
+import { TLDR } from "@/components/tldr";
 import { LogoIcon } from "@/app/[locale]/decoration/logo-icon";
 import { StripedOverlay } from "@/app/[locale]/decoration/overlay-stripes";
 import { Spotlight } from "@/app/[locale]/decoration/spotlight";

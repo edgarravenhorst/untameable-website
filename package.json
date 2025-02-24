@@ -6,9 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup-fontawesome": "npm config set @fortawesome:registry=https://npm.fontawesome.com/; npm config set //npm.fontawesome.com/:_authToken=79558104-C4E1-46B0-81C9-50E626686E30"
   },
   "dependencies": {
+    "@fortawesome/pro-light-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@vercel/analytics": "^1.2.2",
     "@vercel/postgres": "^0.7.2",
     "clsx": "^2.1.0",

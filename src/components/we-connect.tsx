@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
-import { tw } from "../helper/tw";
 import { TextBoxWithIcon } from "./text-box-with-icon";
-import { Divider } from "../decoration/divider";
 import { useTranslation } from "react-i18next";
+import { Divider } from "@/decoration/divider";
 
 type Props = {};
 
@@ -14,7 +13,7 @@ export const WeConnect = (props: Props) => {
       <h2 className="text-center text-xl md:text-[1.75rem] mb-6 not-prose text-white font-extrabold">
         {t("home:weConnectWith", { defaultValue: "Wij verbinden met:" })}
       </h2>
-      <div className=" flex gap-6">
+      <div className=" grid xl:grid-cols-3 gap-6 justify-items-center">
         <TextBoxWithIcon
           iconName="growth"
           subtitle={t("home:growthAndEfficiency.subtitle", {
@@ -33,10 +32,10 @@ export const WeConnect = (props: Props) => {
           subtitle={t("home:innovativeIdeas.subtitle", {
             defaultValue: "Organisaties met",
           })}
-          title={t("home:innovativeIdea.title", {
+          title={t("home:innovativeIdeas.title", {
             defaultValue: "Innovatieve ideeën",
           })}
-          text={t("home:innovativeIdea.text", {
+          text={t("home:innovativeIdeas.text", {
             defaultValue:
               "Voor wie lef heeft en openstaat voor nieuwe inzichten om voorop te blijven lopen.",
           })}

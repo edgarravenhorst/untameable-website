@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { TextBox } from "./text-box";
-import { Divider } from "../decoration/divider";
 import { useTranslation } from "react-i18next";
+import { Divider } from "@/decoration/divider";
 
 type Props = {};
 

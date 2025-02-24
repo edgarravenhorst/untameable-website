@@ -1,5 +1,5 @@
 import { ComponentProps } from "react";
-import { tw } from "../helper/tw";
+import { tw } from "../app/[locale]/helper/tw";
 
 export const FullScreenContainer: React.FC<ComponentProps<"div">> = ({
   children,
@@ -13,9 +13,10 @@ export const FullScreenContainer: React.FC<ComponentProps<"div">> = ({
         "relative",
         "p-8",
         "md:p-16",
+
         "flex",
         "w-svw",
-        "h-svh",
+        "min-h-svh",
         "justify-between",
         "items-center",
         "flex-col",
