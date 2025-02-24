@@ -70,8 +70,7 @@ export default async function Home({ params: { locale } }: HomeProps) {
           className={tw(
             "absolute",
             "w-[50%]",
-            // "2xl:w-[80%]",
-            "left-[70%]",
+            "left-[50%]",
             "translate-x-[-50%]",
             "translate-y-[-10%]"
           )}
@@ -154,7 +153,6 @@ export default async function Home({ params: { locale } }: HomeProps) {
             className={tw(
               "fill-[#0A0E14]",
               "w-[40vw]",
-              // "2xl:w-[60vw]",
               "h-[50vw]",
               "-mt-[35vw]",
               "opacity-40"
