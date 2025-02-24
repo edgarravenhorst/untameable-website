@@ -3,7 +3,12 @@ import { ComponentProps } from "react";
 
 export const Logo: React.FC<ComponentProps<"svg">> = (props) => {
   return (
-    <Link href="/" className="w-full max-w-[156px]">
+    <Link
+      href="/"
+      // className="w-full max-w-[156px] h-auto"
+      className="h-auto"
+      style={{ width: "clamp(80px, 10svw, 156px)" }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="205.313"

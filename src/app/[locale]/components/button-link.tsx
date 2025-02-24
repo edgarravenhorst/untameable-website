@@ -23,13 +23,16 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
           "bg-[--color-primary]",
           "text-[--background]",
           "font-bold",
-          "py-1",
           "px-4",
           "min-w-[253px]",
+          "text-xl",
+          "h-[53px]",
+          "flex",
+          "items-center",
           className ? className : ""
         )}
         style={{
-          clipPath: "polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%)",
+          clipPath: "polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%)",
         }}
       >
         {text}

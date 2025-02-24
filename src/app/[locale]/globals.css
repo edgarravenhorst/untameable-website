@@ -7,7 +7,7 @@
   --background: #111b2b;
   --background-stripes: rgba(10, 17, 28, 40%);
   --spotlight: rgb(46, 70, 111);
-  --color-primary: rgb(247, 213, 96);
+  --color-primary: #ffe000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,7 +18,7 @@
   }
 }
 
-body {
+#FFE000 body {
   color: rgb(var(--foreground-rgb));
   background-color: var(--background);
 }

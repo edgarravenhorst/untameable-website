@@ -18,10 +18,9 @@ export const NavBar: React.FC<NavBarProps> = () => {
 
   return (
     <nav className="flex justify-between  w-full  text-base">
-      <Logo className="" />
+      <Logo />
 
-      {/* For screens greater than or equal to 640px */}
-      <div className="hidden sm:flex items-center gap-6  ">
+      <div className="flex items-center gap-6  ">
         <Link href="/mindset" className="no-underline text-white ">
           {t("common:ourMindset", { defaultValue: "Onze mindset" })}
         </Link>

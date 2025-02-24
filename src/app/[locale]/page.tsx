@@ -71,7 +71,7 @@ export default async function Home({ params: { locale } }: HomeProps) {
           className={tw(
             "absolute",
             "w-[50%]",
-            "left-[50%]",
+            "left-[70%]",
             "translate-x-[-50%]",
             "translate-y-[-10%]"
           )}
@@ -90,10 +90,13 @@ export default async function Home({ params: { locale } }: HomeProps) {
           )}
         >
           <header>
-            <NavBar />
+            <FullScreenContainer>
+              <NavBar />
+              <Hero />
+            </FullScreenContainer>
           </header>
 
-          <div
+          {/* <div
             className={tw(
               "max-w-lg",
               "max-w-[500px]",
@@ -102,42 +105,41 @@ export default async function Home({ params: { locale } }: HomeProps) {
               "xl:max-w-[1250px]",
               "mx-auto"
             )}
-          >
-            <main>
-              <Hero />
-              <HowWeHelp />
-              <WeConnect />
+          > */}
+          <main>
+            <HowWeHelp />
+            <WeConnect />
 
-              <section>
-                <h2 className="text-center not-prose text-5xl mb-8">
-                  {t("home:trulyHelpPeople", {
+            <section>
+              <h2 className="text-center not-prose text-5xl mb-8">
+                {t("home:trulyHelpPeople", {
+                  defaultValue:
+                    "Truly helping people & organizations move forward",
+                })}
+              </h2>
+              <p className="text-center text-2xl font-normal">
+                <span className="block">
+                  {t("home:byRemovingObstacles.firstPart", {
                     defaultValue:
-                      "Truly helping people & organizations move forward",
+                      "We nemen obstakels weg en bieden oplossingen die werken,",
                   })}
-                </h2>
-                <p className="text-center text-2xl font-normal">
-                  <span className="block">
-                    {t("home:byRemovingObstacles.firstPart", {
-                      defaultValue:
-                        "We nemen obstakels weg en bieden oplossingen die werken,",
-                    })}
-                  </span>
-                  <span className="block">
-                    {t("home:byRemovingObstacles.secondPart", {
-                      defaultValue:
-                        "zodat jij je kunt richten op wat er écht toe doet.",
-                    })}
-                  </span>
-                </p>
-                <Divider
-                  orientation="vertical"
-                  className={"h-10 mx-auto mt-[7.5rem] mb-[3.75rem]"}
-                />
-              </section>
+                </span>
+                <span className="block">
+                  {t("home:byRemovingObstacles.secondPart", {
+                    defaultValue:
+                      "zodat jij je kunt richten op wat er écht toe doet.",
+                  })}
+                </span>
+              </p>
+              <Divider
+                orientation="vertical"
+                className={"h-10 mx-auto mt-[7.5rem] mb-[3.75rem]"}
+              />
+            </section>
 
-              <GetStarted />
-            </main>
-          </div>
+            {/* <GetStarted /> */}
+          </main>
+          {/* </div> */}
 
           <footer>
             <div className="not-prose flex items-center justify-end text-sm relative p-9">
