@@ -87,28 +87,20 @@ export default async function Home({ params: { locale } }: HomeProps) {
           )}
         >
           <header>
-            <FullScreenContainer>
+            <FullScreenContainer className="pb-0 md:pb-0">
               <NavBar />
               <Hero />
               <Services />
             </FullScreenContainer>
           </header>
 
-          {/* <div
-            className={tw(
-              "max-w-lg",
-              "max-w-[500px]",
-              "md:max-w-[600px]",
-              "lg:max-w-[800px]",
-              "xl:max-w-[1250px]",
-              "mx-auto"
-            )}
-          > */}
           <main
             className={tw(
               "relative",
               "p-8",
               "md:p-16",
+              "pt-0",
+              "md:pt-0",
               "max-w-lg",
               "max-w-[500px]",
               "md:max-w-[600px]",
@@ -153,7 +145,6 @@ export default async function Home({ params: { locale } }: HomeProps) {
             />
             <GetStarted />
           </main>
-          {/* </div> */}
 
           <Footer />
         </div>
