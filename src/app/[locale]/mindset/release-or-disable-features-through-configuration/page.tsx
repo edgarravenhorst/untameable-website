@@ -1,33 +1,33 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { Blog } from '../../components/blog';
-import { AspectOverview } from '../aspect-overview';
+import { Metadata } from "next";
+import Link from "next/link";
+import { Blog } from "../../../../components/blog";
+import { AspectOverview } from "../aspect-overview";
 
 export const metadata: Metadata = {
   title:
-    'Untameable Mindset - Release or Disable Features Through Configuration',
+    "Untameable Mindset - Release or Disable Features Through Configuration",
   description:
-    'Use feature toggles and configurations to release or disable features quickly. This approach allows for flexible adjustments without extensive code changes, enabling controlled rollouts and quick responses to feedback.',
+    "Use feature toggles and configurations to release or disable features quickly. This approach allows for flexible adjustments without extensive code changes, enabling controlled rollouts and quick responses to feedback.",
   openGraph: {
     title:
-      'Untameable Mindset - Release or Disable Features Through Configuration',
+      "Untameable Mindset - Release or Disable Features Through Configuration",
     description:
-      'Use feature toggles and configurations to release or disable features quickly. This approach allows for flexible adjustments without extensive code changes, enabling controlled rollouts and quick responses to feedback.',
-    type: 'website',
-    url: 'https://untameable.io/mindset/release-or-disable-features-through-configuration',
-    locale: 'en_US',
+      "Use feature toggles and configurations to release or disable features quickly. This approach allows for flexible adjustments without extensive code changes, enabling controlled rollouts and quick responses to feedback.",
+    type: "website",
+    url: "https://untameable.io/mindset/release-or-disable-features-through-configuration",
+    locale: "en_US",
   },
 };
 
 export default function Mindset() {
   return (
     <Blog
-      title='The Untameable Mindset'
-      subtitle='4. Release or Disable Features Through Configuration'
-      date='2024-05-24'
-      by='Edgar Ravenhorst'
+      title="The Untameable Mindset"
+      subtitle="4. Release or Disable Features Through Configuration"
+      date="2024-05-24"
+      by="Edgar Ravenhorst"
     >
-      <p className='lead md:!text-2xl text-center !mb-24 !mt-0'>
+      <p className="lead md:!text-2xl text-center !mb-24 !mt-0">
         Use feature toggles and configurations to release or disable features
         quickly. This approach allows for flexible adjustments without extensive
         code changes, enabling controlled rollouts and quick responses to
@@ -83,8 +83,8 @@ export default function Mindset() {
       <p>--</p>
       <h3>Read about other Aspects of the Untameable Mindset:</h3>
       <p>
-        This page is part of a series on{' '}
-        <Link href='/mindset'>The Untameable Mindset</Link>. Explore the other
+        This page is part of a series on{" "}
+        <Link href="/mindset">The Untameable Mindset</Link>. Explore the other
         aspects to learn more about the principles that guide our development
         practices and behaviors.
         <br />
