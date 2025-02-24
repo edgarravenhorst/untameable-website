@@ -165,7 +165,7 @@ export default async function Home({ params: { locale } }: HomeProps) {
             className={tw(
               "fill-[#0A0E14]",
               "w-[40vw]",
-              "2xl:w-[60vw]",
+              // "2xl:w-[60vw]",
               "h-[50vw]",
               "-mt-[35vw]",
               "opacity-40"
