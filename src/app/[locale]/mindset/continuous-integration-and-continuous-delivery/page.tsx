@@ -1,33 +1,33 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { Blog } from '../../components/blog';
-import { AspectOverview } from '../aspect-overview';
+import { Metadata } from "next";
+import Link from "next/link";
+import { Blog } from "../../../../components/blog";
+import { AspectOverview } from "../aspect-overview";
 
 export const metadata: Metadata = {
-  title: 'Untameable Mindset - Continuous Integration and Continuous Delivery',
+  title: "Untameable Mindset - Continuous Integration and Continuous Delivery",
   description:
-    'Integrate and deliver code changes frequently with automated testing and deployment to ensure code quality and functionality. This approach promotes collaboration, reduces integration issues, and maintains a stable, deployable codebase.',
+    "Integrate and deliver code changes frequently with automated testing and deployment to ensure code quality and functionality. This approach promotes collaboration, reduces integration issues, and maintains a stable, deployable codebase.",
   openGraph: {
     title:
-      'Untameable Mindset - Continuous Integration and Continuous Delivery',
+      "Untameable Mindset - Continuous Integration and Continuous Delivery",
     description:
-      'Integrate and deliver code changes frequently with automated testing and deployment to ensure code quality and functionality. This approach promotes collaboration, reduces integration issues, and maintains a stable, deployable codebase.',
-    type: 'website',
-    url: 'https://untameable.io/mindset/continuous-integration-and-continuous-delivery',
-    locale: 'en_US',
+      "Integrate and deliver code changes frequently with automated testing and deployment to ensure code quality and functionality. This approach promotes collaboration, reduces integration issues, and maintains a stable, deployable codebase.",
+    type: "website",
+    url: "https://untameable.io/mindset/continuous-integration-and-continuous-delivery",
+    locale: "en_US",
   },
 };
 
 export default function Mindset() {
   return (
     <Blog
-      title='The Untameable Mindset'
-      subtitle='5. Continuous Integration and Continuous Delivery  
-      (CI/CD)'
-      date='2024-05-24'
-      by='Edgar Ravenhorst'
+      title="The Untameable Mindset"
+      subtitle="5. Continuous Integration and Continuous Delivery  
+      (CI/CD)"
+      date="2024-05-24"
+      by="Edgar Ravenhorst"
     >
-      <p className='lead md:!text-2xl text-center !mb-24 !mt-0'>
+      <p className="lead md:!text-2xl text-center !mb-24 !mt-0">
         Integrate and deliver code changes frequently with automated testing and
         deployment to ensure code quality and functionality. This approach
         promotes collaboration, reduces integration issues, and maintains a
@@ -88,8 +88,8 @@ export default function Mindset() {
       <p>--</p>
       <h3>Read about other Aspects of the Untameable Mindset:</h3>
       <p>
-        This page is part of a series on{' '}
-        <Link href='/mindset'>The Untameable Mindset</Link>. Explore the other
+        This page is part of a series on{" "}
+        <Link href="/mindset">The Untameable Mindset</Link>. Explore the other
         aspects to learn more about the principles that guide our development
         practices and behaviors.
         <br />

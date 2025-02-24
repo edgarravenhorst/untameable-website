@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { tw } from "../helper/tw";
+import { tw } from "../app/[locale]/helper/tw";
 import { TextBoxWithIcon } from "./text-box-with-icon";
-import { Divider } from "../decoration/divider";
+import { Divider } from "../app/[locale]/decoration/divider";
 import { useTranslation } from "react-i18next";
 
 type Props = {};
@@ -33,10 +33,10 @@ export const WeConnect = (props: Props) => {
           subtitle={t("home:innovativeIdeas.subtitle", {
             defaultValue: "Organisaties met",
           })}
-          title={t("home:innovativeIdea.title", {
+          title={t("home:innovativeIdeas.title", {
             defaultValue: "Innovatieve ideeën",
           })}
-          text={t("home:innovativeIdea.text", {
+          text={t("home:innovativeIdeas.text", {
             defaultValue:
               "Voor wie lef heeft en openstaat voor nieuwe inzichten om voorop te blijven lopen.",
           })}

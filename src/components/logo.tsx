@@ -6,13 +6,12 @@ export const Logo: React.FC<ComponentProps<"svg">> = (props) => {
     <Link
       href="/"
       // className="w-full max-w-[156px] h-auto"
-      className="h-auto"
-      style={{ width: "clamp(80px, 10svw, 156px)" }}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="205.313"
         height="28.69"
+        className="w-[30vw] sm:w-[40vw] md:w-full"
         viewBox="0 0 205.313 28.69"
         {...props}
       >

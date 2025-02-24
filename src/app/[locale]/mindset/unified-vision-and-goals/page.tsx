@@ -1,31 +1,31 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { Blog } from '../../components/blog';
-import { AspectOverview } from '../aspect-overview';
+import { Metadata } from "next";
+import Link from "next/link";
+import { Blog } from "../../../../components/blog";
+import { AspectOverview } from "../aspect-overview";
 
 export const metadata: Metadata = {
-  title: 'Untameable Mindset - Unified Vision and Goals',
+  title: "Untameable Mindset - Unified Vision and Goals",
   description:
-    'Ensure everyone understands the project’s vision and goals. This shared understanding guides decisions and actions across the team.',
+    "Ensure everyone understands the project’s vision and goals. This shared understanding guides decisions and actions across the team.",
   openGraph: {
-    title: 'Untameable Mindset - Unified Vision and Goals',
+    title: "Untameable Mindset - Unified Vision and Goals",
     description:
-      'Ensure everyone understands the project’s vision and goals. This shared understanding guides decisions and actions across the team.',
-    type: 'website',
-    url: 'https://untameable.io/mindset/unified-vision-and-goals',
-    locale: 'en_US',
+      "Ensure everyone understands the project’s vision and goals. This shared understanding guides decisions and actions across the team.",
+    type: "website",
+    url: "https://untameable.io/mindset/unified-vision-and-goals",
+    locale: "en_US",
   },
 };
 
 export default function Mindset() {
   return (
     <Blog
-      title='The Untameable Mindset'
-      subtitle='1. Unified Vision and Goals'
-      date='2024-05-24'
-      by='Edgar Ravenhorst'
+      title="The Untameable Mindset"
+      subtitle="1. Unified Vision and Goals"
+      date="2024-05-24"
+      by="Edgar Ravenhorst"
     >
-      <p className='lead md:!text-2xl text-center !mb-24 !mt-0'>
+      <p className="lead md:!text-2xl text-center !mb-24 !mt-0">
         Ensure everyone understands the project’s vision and goals. This shared
         understanding guides decisions and actions across the team.
       </p>
@@ -71,8 +71,8 @@ export default function Mindset() {
       <p>--</p>
       <h3>Read about other Aspects of the Untameable Mindset:</h3>
       <p>
-        This page is part of a series on{' '}
-        <Link href='/mindset'>The Untameable Mindset</Link>. Explore the other
+        This page is part of a series on{" "}
+        <Link href="/mindset">The Untameable Mindset</Link>. Explore the other
         aspects to learn more about the principles that guide our development
         practices and behaviors.
         <br />

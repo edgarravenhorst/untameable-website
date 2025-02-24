@@ -1,31 +1,31 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { Blog } from '../../components/blog';
-import { AspectOverview } from '../aspect-overview';
+import { Metadata } from "next";
+import Link from "next/link";
+import { Blog } from "../../../../components/blog";
+import { AspectOverview } from "../aspect-overview";
 
 export const metadata: Metadata = {
-  title: 'Untameable Mindset - Pragmatic Testing of Code',
+  title: "Untameable Mindset - Pragmatic Testing of Code",
   description:
-    'Focus on tests that provide real value and insight. Identify critical paths and concentrate testing efforts on the most important areas to ensure high code quality and performance.',
+    "Focus on tests that provide real value and insight. Identify critical paths and concentrate testing efforts on the most important areas to ensure high code quality and performance.",
   openGraph: {
-    title: 'Untameable Mindset - Pragmatic Testing of Code',
+    title: "Untameable Mindset - Pragmatic Testing of Code",
     description:
-      'Focus on tests that provide real value and insight. Identify critical paths and concentrate testing efforts on the most important areas to ensure high code quality and performance.',
-    type: 'website',
-    url: 'https://untameable.io/mindset/pragmatic-testing-of-code',
-    locale: 'en_US',
+      "Focus on tests that provide real value and insight. Identify critical paths and concentrate testing efforts on the most important areas to ensure high code quality and performance.",
+    type: "website",
+    url: "https://untameable.io/mindset/pragmatic-testing-of-code",
+    locale: "en_US",
   },
 };
 
 export default function Mindset() {
   return (
     <Blog
-      title='The Untameable Mindset'
-      subtitle='6. Pragmatic Testing of Code'
-      date='2024-05-24'
-      by='Edgar Ravenhorst'
+      title="The Untameable Mindset"
+      subtitle="6. Pragmatic Testing of Code"
+      date="2024-05-24"
+      by="Edgar Ravenhorst"
     >
-      <p className='lead md:!text-2xl text-center !mb-24 !mt-0'>
+      <p className="lead md:!text-2xl text-center !mb-24 !mt-0">
         Focus on tests that provide real value and insight. Identify critical
         paths and concentrate testing efforts on the most important areas to
         ensure high code quality and performance.
@@ -80,8 +80,8 @@ export default function Mindset() {
       <p>--</p>
       <h3>Read about other Aspects of the Untameable Mindset:</h3>
       <p>
-        This page is part of a series on{' '}
-        <Link href='/mindset'>The Untameable Mindset</Link>. Explore the other
+        This page is part of a series on{" "}
+        <Link href="/mindset">The Untameable Mindset</Link>. Explore the other
         aspects to learn more about the principles that guide our development
         practices and behaviors.
         <br />

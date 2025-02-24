@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { FaLinkedin } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/pro-light-svg-icons";
-import { tw } from "../helper/tw";
+import { tw } from "../app/[locale]/helper/tw";
 
 type NavBarProps = {};
 
@@ -17,10 +17,10 @@ export const NavBar: React.FC<NavBarProps> = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <nav className="flex justify-between  w-full  text-base">
+    <nav className="flex justify-between  w-full  text-base pb-8">
       <Logo />
 
-      <div className="flex items-center gap-6  ">
+      <div className="flex items-center gap-2 md:gap-6  ">
         <Link href="/mindset" className="no-underline text-white ">
           {t("common:ourMindset", { defaultValue: "Onze mindset" })}
         </Link>

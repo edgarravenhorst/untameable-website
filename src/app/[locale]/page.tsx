@@ -1,21 +1,21 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { FullScreenContainer } from "./components/fullscreen-container";
-import { Headline } from "./components/headline";
-import { Logo } from "./components/logo";
+import { FullScreenContainer } from "../../components/fullscreen-container";
+import { Logo } from "../../components/logo";
 import { Divider } from "./decoration/divider";
 import { LogoIcon } from "./decoration/logo-icon";
 import { StripedOverlay } from "./decoration/overlay-stripes";
 import { Spotlight } from "./decoration/spotlight";
 import { tw } from "./helper/tw";
-import { NavBar } from "./components/nav-bar";
-import { Hero } from "./components/hero";
-import { HowWeHelp } from "./components/how-we-help";
-import { WeConnect } from "./components/we-connect";
-import { GetStarted } from "./components/get-started";
+import { NavBar } from "../../components/nav-bar";
+import { HowWeHelp } from "../../components/how-we-help";
+import { WeConnect } from "../../components/we-connect";
+import { GetStarted } from "../../components/get-started";
 import TranslationsProvider from "./translations-provider";
 import initTranslations from "../i18n";
+import { Headline } from "../../components/headline";
+import { Services } from "../../components/services";
 
 export const metadata: Metadata = {
   title: "Untameable - Elevate user & developer experiences",
@@ -47,7 +47,7 @@ export default async function Home({ params: { locale } }: HomeProps) {
       locale={locale}
       namespaces={i18nNamespaces}
     >
-      <div className="relative text-white text-opacity-80 text-lg">
+      <div className="relative text-white text-opacity-80 text-lg h-fit">
         <Spotlight
           className={tw(
             "top-[5%]",
@@ -70,7 +70,8 @@ export default async function Home({ params: { locale } }: HomeProps) {
         <LogoIcon
           className={tw(
             "absolute",
-            "w-[50%]",
+            // "w-[50%]",
+            "w-[80%]",
             "left-[70%]",
             "translate-x-[-50%]",
             "translate-y-[-10%]"
@@ -80,19 +81,17 @@ export default async function Home({ params: { locale } }: HomeProps) {
         <StripedOverlay />
         <div
           className={tw(
-            "relative",
             "prose prose-invert",
             "prose-md",
             "md:prose-xl",
-            "max-w-full",
-            "p-8",
-            "w-svw"
+            "max-w-full"
           )}
         >
           <header>
             <FullScreenContainer>
               <NavBar />
-              <Hero />
+              <Headline />
+              <Services />
             </FullScreenContainer>
           </header>
 
@@ -106,18 +105,35 @@ export default async function Home({ params: { locale } }: HomeProps) {
               "mx-auto"
             )}
           > */}
-          <main>
+          <main
+            className={tw(
+              "relative",
+              "p-8",
+              "md:p-16",
+              "max-w-lg",
+              "max-w-[500px]",
+              "md:max-w-[600px]",
+              "lg:max-w-[800px]",
+              "xl:max-w-[1251px]",
+
+              "mx-auto"
+            )}
+          >
+            <Divider
+              orientation="vertical"
+              className={"h-10 mx-auto my-[3.75rem]"}
+            />
             <HowWeHelp />
             <WeConnect />
 
             <section>
-              <h2 className="text-center not-prose text-5xl mb-8">
+              <h2 className="font-extrabold text-center not-prose text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-8">
                 {t("home:trulyHelpPeople", {
                   defaultValue:
                     "Truly helping people & organizations move forward",
                 })}
               </h2>
-              <p className="text-center text-2xl font-normal">
+              <p className="text-center text-base  sm:text-lg md:text-xl lg:text-2xl font-normal">
                 <span className="block">
                   {t("home:byRemovingObstacles.firstPart", {
                     defaultValue:
@@ -131,34 +147,34 @@ export default async function Home({ params: { locale } }: HomeProps) {
                   })}
                 </span>
               </p>
-              <Divider
-                orientation="vertical"
-                className={"h-10 mx-auto mt-[7.5rem] mb-[3.75rem]"}
-              />
             </section>
-
-            {/* <GetStarted /> */}
+            <Divider
+              orientation="vertical"
+              className={"h-10 mx-auto my-[3.75rem]"}
+            />
+            <GetStarted />
           </main>
           {/* </div> */}
 
-          <footer>
+          <footer className="relative ">
             <div className="not-prose flex items-center justify-end text-sm relative p-9">
               <Link href="">Terms of service</Link>
               <Divider
                 orientation="vertical"
-                className="h-3 mx-2 border-white"
+                className="h-3 mx-2 border-white "
               />
               <Link href="">privacy policy</Link>
             </div>
           </footer>
         </div>
 
-        <div className={"flex justify-end"}>
+        <div className={"flex justify-end absolute bottom-0 right-0"}>
           <LogoIcon
             className={tw(
               "fill-[#0A0E14]",
-              "w-[40vw]",
-              "h-[50vw]",
+              // "w-[40vw]",
+              "w-[60vw]",
+              // "h-[50vw]",
               "-mt-[35vw]",
               "opacity-40"
             )}

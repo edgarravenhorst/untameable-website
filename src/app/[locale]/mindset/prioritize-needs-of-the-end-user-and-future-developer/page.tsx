@@ -1,32 +1,32 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { Blog } from '../../components/blog';
-import { AspectOverview } from '../aspect-overview';
+import { Metadata } from "next";
+import Link from "next/link";
+import { Blog } from "../../../../components/blog";
+import { AspectOverview } from "../aspect-overview";
 
 export const metadata: Metadata = {
-  title: 'Untameable - Prioritize needs of the End-User and (future) Developer',
+  title: "Untameable - Prioritize needs of the End-User and (future) Developer",
   description:
-    'Prioritize both the end-user experience and (future) developer needs to ensure the product is user-friendly and maintainable.',
+    "Prioritize both the end-user experience and (future) developer needs to ensure the product is user-friendly and maintainable.",
   openGraph: {
     title:
-      'Untameable - Prioritize needs of the End-User and (future) Developer',
+      "Untameable - Prioritize needs of the End-User and (future) Developer",
     description:
-      'Prioritize both the end-user experience and (future) developer needs to ensure the product is user-friendly and maintainable.',
-    type: 'website',
-    url: 'https://untameable.io/mindset/prioritize-needs-of-the-end-user-and-future-developer',
-    locale: 'en_US',
+      "Prioritize both the end-user experience and (future) developer needs to ensure the product is user-friendly and maintainable.",
+    type: "website",
+    url: "https://untameable.io/mindset/prioritize-needs-of-the-end-user-and-future-developer",
+    locale: "en_US",
   },
 };
 
 export default function Mindset() {
   return (
     <Blog
-      title='The Untameable Mindset'
-      subtitle='8. Prioritize needs of the End-User and (future) Developer'
-      date='2024-05-24'
-      by='Edgar Ravenhorst'
+      title="The Untameable Mindset"
+      subtitle="8. Prioritize needs of the End-User and (future) Developer"
+      date="2024-05-24"
+      by="Edgar Ravenhorst"
     >
-      <p className='lead md:!text-2xl text-center !mb-24 !mt-0'>
+      <p className="lead md:!text-2xl text-center !mb-24 !mt-0">
         Prioritize both the end-user experience and (future) developer needs to
         ensure the product is user-friendly and maintainable.
       </p>
@@ -152,8 +152,8 @@ export default function Mindset() {
       <p>--</p>
       <h3>Read about other Aspects of the Untameable Mindset:</h3>
       <p>
-        This page is part of a series on{' '}
-        <Link href='/mindset'>The Untameable Mindset</Link>. Explore the other
+        This page is part of a series on{" "}
+        <Link href="/mindset">The Untameable Mindset</Link>. Explore the other
         aspects to learn more about the principles that guide our development
         practices and behaviors.
         <br />

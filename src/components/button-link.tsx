@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { tw } from "../helper/tw";
+import { tw } from "../app/[locale]/helper/tw";
 
 type ButtonLinkProps = {
   url: string;
@@ -23,12 +23,15 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
           "bg-[--color-primary]",
           "text-[--background]",
           "font-bold",
-          "px-4",
-          "min-w-[253px]",
-          "text-xl",
-          "h-[53px]",
-          "flex",
-          "items-center",
+          "text-base",
+          "sm:text-lg",
+          "md:text-xl",
+          "min-w-[220px]",
+          "md:min-w-[253px]",
+          "pl-6",
+          // "pr-8",
+          "py-3",
+          "sm:py-2",
           className ? className : ""
         )}
         style={{

@@ -1,31 +1,31 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { Blog } from '../../components/blog';
-import { AspectOverview } from '../aspect-overview';
+import { Metadata } from "next";
+import Link from "next/link";
+import { Blog } from "../../../../components/blog";
+import { AspectOverview } from "../aspect-overview";
 
 export const metadata: Metadata = {
-  title: 'Untameable Mindset - MVP Driven: Start Small, Grow Big',
+  title: "Untameable Mindset - MVP Driven: Start Small, Grow Big",
   description:
-    'Begin with a Minimum Viable Product (MVP) and scale up through iterative development. This approach allows for rapid deployment and user feedback while ensuring the product evolves robustly and sustainably.',
+    "Begin with a Minimum Viable Product (MVP) and scale up through iterative development. This approach allows for rapid deployment and user feedback while ensuring the product evolves robustly and sustainably.",
   openGraph: {
-    title: 'Untameable - MVP Driven: Start Small, Grow Big',
+    title: "Untameable - MVP Driven: Start Small, Grow Big",
     description:
-      'Begin with a Minimum Viable Product (MVP) and scale up through iterative development. This approach allows for rapid deployment and user feedback while ensuring the product evolves robustly and sustainably.',
-    type: 'website',
-    url: 'https://untameable.io/mindset/mvp-driven-start-small-grow-big',
-    locale: 'en_US',
+      "Begin with a Minimum Viable Product (MVP) and scale up through iterative development. This approach allows for rapid deployment and user feedback while ensuring the product evolves robustly and sustainably.",
+    type: "website",
+    url: "https://untameable.io/mindset/mvp-driven-start-small-grow-big",
+    locale: "en_US",
   },
 };
 
 export default function Mindset() {
   return (
     <Blog
-      title='The Untameable Mindset'
-      subtitle='3. MVP Driven: Start Small, Grow Big'
-      date='2024-05-24'
-      by='Edgar Ravenhorst'
+      title="The Untameable Mindset"
+      subtitle="3. MVP Driven: Start Small, Grow Big"
+      date="2024-05-24"
+      by="Edgar Ravenhorst"
     >
-      <p className='lead md:!text-2xl text-center !mb-24 !mt-0'>
+      <p className="lead md:!text-2xl text-center !mb-24 !mt-0">
         Begin with a Minimum Viable Product (MVP) and scale up through iterative
         development. This approach allows for rapid deployment and user feedback
         while ensuring the product evolves robustly and sustainably.
@@ -75,8 +75,8 @@ export default function Mindset() {
       <p>--</p>
       <h3>Read about other Aspects of the Untameable Mindset:</h3>
       <p>
-        This page is part of a series on{' '}
-        <Link href='/mindset'>The Untameable Mindset</Link>. Explore the other
+        This page is part of a series on{" "}
+        <Link href="/mindset">The Untameable Mindset</Link>. Explore the other
         aspects to learn more about the principles that guide our development
         practices and behaviors.
         <br />

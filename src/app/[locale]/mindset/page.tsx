@@ -1,30 +1,30 @@
-import { Metadata } from 'next';
-import { Blog } from '../components/blog';
-import { AspectOverview } from './aspect-overview';
+import { Metadata } from "next";
+import { Blog } from "../../../components/blog";
+import { AspectOverview } from "./aspect-overview";
 
 export const metadata: Metadata = {
-  title: 'The Untameable Mindset - For software development',
+  title: "The Untameable Mindset - For software development",
   description:
-    'The Untameable Mindset aligns all team members—including developers, product owners, clients, designers, and other stakeholders—around a shared philosophy and adaptable principles. This mindset guides behavior and decision-making to develop high-quality, secure, stable, and controllable web applications. By fostering a common culture and emphasizing flexibility, the Untameable Mindset ensures collaborative and efficient work to meet user and developer needs, leading to project success.',
+    "The Untameable Mindset aligns all team members—including developers, product owners, clients, designers, and other stakeholders—around a shared philosophy and adaptable principles. This mindset guides behavior and decision-making to develop high-quality, secure, stable, and controllable web applications. By fostering a common culture and emphasizing flexibility, the Untameable Mindset ensures collaborative and efficient work to meet user and developer needs, leading to project success.",
   openGraph: {
-    title: 'The Untameable Mindset - For software development',
+    title: "The Untameable Mindset - For software development",
     description:
-      'The Untameable Mindset aligns all team members—including developers, product owners, clients, designers, and other stakeholders—around a shared philosophy and adaptable principles. This mindset guides behavior and decision-making to develop high-quality, secure, stable, and controllable web applications. By fostering a common culture and emphasizing flexibility, the Untameable Mindset ensures collaborative and efficient work to meet user and developer needs, leading to project success.',
-    type: 'website',
-    url: 'https://untameable.io/mindset',
-    locale: 'en_US',
+      "The Untameable Mindset aligns all team members—including developers, product owners, clients, designers, and other stakeholders—around a shared philosophy and adaptable principles. This mindset guides behavior and decision-making to develop high-quality, secure, stable, and controllable web applications. By fostering a common culture and emphasizing flexibility, the Untameable Mindset ensures collaborative and efficient work to meet user and developer needs, leading to project success.",
+    type: "website",
+    url: "https://untameable.io/mindset",
+    locale: "en_US",
   },
 };
 
 export default function Mindset() {
   return (
     <Blog
-      title='The Untameable Mindset'
-      subtitle='for software development'
-      date='2024-05-24'
-      by='Edgar Ravenhorst'
+      title="The Untameable Mindset"
+      subtitle="for software development"
+      date="2024-05-24"
+      by="Edgar Ravenhorst"
     >
-      <h2 className='mt-0'>Purpose</h2>
+      <h2 className="mt-0">Purpose</h2>
       <p>
         The Untameable Mindset aligns all team members—including developers,
         product owners, clients, designers, and other stakeholders—around a

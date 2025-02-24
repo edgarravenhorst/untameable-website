@@ -1,5 +1,5 @@
 import React from "react";
-import { tw } from "../helper/tw";
+import { tw } from "../app/[locale]/helper/tw";
 
 type TextBoxProps = {
   title: string;
@@ -28,12 +28,16 @@ export const TextBox: React.FC<TextBoxProps> = ({
           "text-lg",
           isBigTitle ? "md:text-[26px]" : "md:text-[22px]",
           "mb-5",
-          "text-[--color-primary]"
+          "text-[--color-primary]",
+          "text-center",
+          "xl:text-left"
         )}
       >
         {title}
       </h2>
-      <p className="not-prose text-base md:text-xl font-normal">{text}</p>
+      <p className="not-prose text-base md:text-xl font-normal text-center xl:text-left">
+        {text}
+      </p>
     </article>
   );
 };
