@@ -1,22 +1,20 @@
 import { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { FullScreenContainer } from "../../components/fullscreen-container";
 import { Logo } from "../../components/logo";
-import { Divider } from "./decoration/divider";
-import { LogoIcon } from "./decoration/logo-icon";
-import { StripedOverlay } from "./decoration/overlay-stripes";
-import { Spotlight } from "./decoration/spotlight";
-import { tw } from "./helper/tw";
 import { NavBar } from "../../components/nav-bar";
 import { HowWeHelp } from "../../components/how-we-help";
 import { WeConnect } from "../../components/we-connect";
 import { GetStarted } from "../../components/get-started";
-import TranslationsProvider from "./translations-provider";
-import initTranslations from "../i18n";
+import TranslationsProvider from "../../translations-provider";
+import initTranslations from "../../i18n";
 import { Headline } from "../../components/headline";
 import { Services } from "../../components/services";
 import { Footer } from "@/components/footer";
+import { Spotlight } from "@/decoration/spotlight";
+import { LogoIcon } from "@/decoration/logo-icon";
+import { StripedOverlay } from "@/decoration/overlay-stripes";
+import { Divider } from "@/decoration/divider";
+import { tw } from "@/helper/tw";
 
 export const metadata: Metadata = {
   title: "Untameable - Elevate user & developer experiences",
@@ -72,7 +70,7 @@ export default async function Home({ params: { locale } }: HomeProps) {
           className={tw(
             "absolute",
             "w-[50%]",
-            "2xl:w-[80%]",
+            // "2xl:w-[80%]",
             "left-[70%]",
             "translate-x-[-50%]",
             "translate-y-[-10%]"

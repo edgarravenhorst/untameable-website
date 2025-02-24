@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
-import { tw } from "../app/[locale]/helper/tw";
 import { TextBoxWithIcon } from "./text-box-with-icon";
-import { Divider } from "../app/[locale]/decoration/divider";
 import { useTranslation } from "react-i18next";
+import { Divider } from "@/decoration/divider";
 
 type Props = {};
 
