@@ -1,5 +1,5 @@
+import { tw } from "@/helper/tw";
 import { ComponentProps } from "react";
-import { tw } from "../app/[locale]/helper/tw";
 
 export type TLDRProps = ComponentProps<"p">;
 

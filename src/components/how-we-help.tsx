@@ -2,7 +2,7 @@
 import React from "react";
 import { TextBox } from "./text-box";
 import { useTranslation } from "react-i18next";
-import { Divider } from "@/decoration/divider";
+import { Divider } from "@/app/[locale]/decoration/divider";
 
 type Props = {};
 
@@ -14,7 +14,7 @@ export const HowWeHelp = (props: Props) => {
         {t("home:howWeCanHelpYou", { defaultValue: "Waar we je bij helpen:" })}
       </h2>
 
-      <div className="flex flex-wrap gap-10 justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 justify-items-center ">
         <TextBox
           title={t("home:webAndPlatformDevelopment.title", {
             defaultValue: "Web- en platformontwikkeling",

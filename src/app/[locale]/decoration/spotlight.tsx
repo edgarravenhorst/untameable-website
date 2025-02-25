@@ -60,12 +60,12 @@ export const Spotlight: React.FC<SpotlghtProps> = ({
         className={twMerge(
           clsx([
             "absolute",
-            "left-[40vw]",
-            "top-[40vh]",
-            "w-[100vw]",
-            "h-[100vw]",
-            "min-w-[40vh]",
-            "min-h-[40vh]",
+            "left-[50vw]",
+            "top-[50vh]",
+            "w-[140vw]",
+            "h-[140vw]",
+            "min-w-[80vh]",
+            "min-h-[80vh]",
             "translate-x-[-50%]",
             "translate-y-[-50%]",
             `bg-gradient-radial from-[_var(--spotlight)] to-transparent to-70%`,

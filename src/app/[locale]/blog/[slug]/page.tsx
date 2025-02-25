@@ -1,13 +1,13 @@
-import { Headline } from "@/components/headline";
 import { Logo } from "@/components/logo";
 import { TLDR } from "@/components/tldr";
 import { LogoIcon } from "@/app/[locale]/decoration/logo-icon";
 import { StripedOverlay } from "@/app/[locale]/decoration/overlay-stripes";
 import { Spotlight } from "@/app/[locale]/decoration/spotlight";
-import { tw } from "@/app/[locale]/helper/tw";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { tw } from "@/helper/tw";
+import { Headline } from "@/components/headline";
 
 export const metadata: Metadata = {
   title: "Untameable - User & Developer experiences",

@@ -7,13 +7,13 @@ import { WeConnect } from "../../components/we-connect";
 import { GetStarted } from "../../components/get-started";
 import TranslationsProvider from "../../translations-provider";
 import initTranslations from "../../i18n";
-import { Headline } from "../../components/headline";
+import { Hero } from "../../components/hero";
 import { Services } from "../../components/services";
 import { Footer } from "@/components/footer";
-import { Spotlight } from "@/decoration/spotlight";
-import { LogoIcon } from "@/decoration/logo-icon";
-import { StripedOverlay } from "@/decoration/overlay-stripes";
-import { Divider } from "@/decoration/divider";
+import { Spotlight } from "@/app/[locale]/decoration/spotlight";
+import { LogoIcon } from "@/app/[locale]/decoration/logo-icon";
+import { StripedOverlay } from "@/app/[locale]/decoration/overlay-stripes";
+import { Divider } from "@/app/[locale]/decoration/divider";
 import { tw } from "@/helper/tw";
 
 export const metadata: Metadata = {
@@ -70,8 +70,7 @@ export default async function Home({ params: { locale } }: HomeProps) {
           className={tw(
             "absolute",
             "w-[50%]",
-            // "2xl:w-[80%]",
-            "left-[70%]",
+            "left-[50%]",
             "translate-x-[-50%]",
             "translate-y-[-10%]"
           )}
@@ -87,28 +86,20 @@ export default async function Home({ params: { locale } }: HomeProps) {
           )}
         >
           <header>
-            <FullScreenContainer>
+            <FullScreenContainer className="pb-0 md:pb-0">
               <NavBar />
-              <Headline />
+              <Hero />
               <Services />
             </FullScreenContainer>
           </header>
 
-          {/* <div
-            className={tw(
-              "max-w-lg",
-              "max-w-[500px]",
-              "md:max-w-[600px]",
-              "lg:max-w-[800px]",
-              "xl:max-w-[1250px]",
-              "mx-auto"
-            )}
-          > */}
           <main
             className={tw(
               "relative",
               "p-8",
               "md:p-16",
+              "pt-0",
+              "md:pt-0",
               "max-w-lg",
               "max-w-[500px]",
               "md:max-w-[600px]",
@@ -153,7 +144,6 @@ export default async function Home({ params: { locale } }: HomeProps) {
             />
             <GetStarted />
           </main>
-          {/* </div> */}
 
           <Footer />
         </div>
@@ -163,7 +153,6 @@ export default async function Home({ params: { locale } }: HomeProps) {
             className={tw(
               "fill-[#0A0E14]",
               "w-[40vw]",
-              // "2xl:w-[60vw]",
               "h-[50vw]",
               "-mt-[35vw]",
               "opacity-40"

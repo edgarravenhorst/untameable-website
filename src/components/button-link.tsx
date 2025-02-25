@@ -1,6 +1,6 @@
+import { tw } from "@/helper/tw";
 import Link from "next/link";
 import React from "react";
-import { tw } from "../app/[locale]/helper/tw";
 
 type ButtonLinkProps = {
   url: string;

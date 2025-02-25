@@ -1,5 +1,5 @@
 "use client";
-import { Divider } from "@/decoration/divider";
+import { Divider } from "@/app/[locale]/decoration/divider";
 import { tw } from "@/helper/tw";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -7,21 +7,21 @@ import React, { useEffect, useState } from "react";
 type Props = {};
 
 export const Footer = (props: Props) => {
-  const [isBottom, setIsBottom] = useState(false);
+  // const [isBottom, setIsBottom] = useState(false);
 
-  // center footer when you scroll to the bottom
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        setIsBottom(true);
-      } else {
-        setIsBottom(false);
-      }
-    };
+  // // center footer when you scroll to the bottom
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+  //       setIsBottom(true);
+  //     } else {
+  //       setIsBottom(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <footer className={tw("relative")}>
@@ -30,7 +30,7 @@ export const Footer = (props: Props) => {
           "not-prose",
           "flex",
           "items-center",
-          isBottom ? "justify-center" : "justify-end",
+          "justify-center",
           "text-sm",
           "relative",
           "p-9"
