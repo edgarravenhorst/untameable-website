@@ -11,7 +11,7 @@ type Props = {};
 export const GetStarted = (props: Props) => {
   const { t } = useTranslation();
   return (
-    <section className="flex flex-col xl:flex-row items-center justify-center gap-20">
+    <section className="flex flex-col xl:flex-row items-center justify-center gap-20 ">
       <article className="w-full max-w-96 ">
         <Image
           src="/edgar.png"
