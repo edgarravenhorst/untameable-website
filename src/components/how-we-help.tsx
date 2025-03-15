@@ -13,8 +13,8 @@ export const HowWeHelp = (props: Props) => {
       <h2 className="text-center text-xl md:text-[1.75rem] mb-6 not-prose text-white font-extrabold">
         {t("home:howWeCanHelpYou", { defaultValue: "Waar we je bij helpen:" })}
       </h2>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 justify-items-center ">
+      {/* grid grid-cols-1 lg:grid-cols-2 gap-10 justify-items-center */}
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10 justify-items-center  ">
         <TextBox
           title={t("home:webAndPlatformDevelopment.title", {
             defaultValue: "Web- en platformontwikkeling",
@@ -56,6 +56,19 @@ export const HowWeHelp = (props: Props) => {
           isBigTitle
         />
       </div>
+      <div className="flex justify-center mt-10">
+        <TextBox
+          title={t("home:1-on-1Coaching&Support.title", {
+            defaultValue: "Strategische innovatie",
+          })}
+          text={t("home:1-on-1Coaching&Support.text", {
+            defaultValue:
+              "Persoonlijke begeleiding voor ontwikkelaars en stakeholders, met directe feedback en resultaten op het gebied van code, UX en processen.",
+          })}
+          isBigTitle
+        />
+      </div>
+
       <Divider orientation="vertical" className={"h-10 mx-auto my-[3.75rem]"} />
     </section>
   );

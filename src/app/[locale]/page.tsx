@@ -70,7 +70,9 @@ export default async function Home({ params: { locale } }: HomeProps) {
           className={tw(
             "absolute",
             "w-[50%]",
-            "left-[50%]",
+            "left-[55%]",
+            "lg:left-[65%]",
+
             "translate-x-[-50%]",
             "translate-y-[-10%]"
           )}
@@ -93,54 +95,66 @@ export default async function Home({ params: { locale } }: HomeProps) {
             </FullScreenContainer>
           </header>
 
-          <main
-            className={tw(
-              "relative",
-              "p-8",
-              "md:p-16",
-              "pt-0",
-              "md:pt-0",
-              "max-w-lg",
-              "max-w-[500px]",
-              "md:max-w-[600px]",
-              "lg:max-w-[800px]",
-              "xl:max-w-[1251px]",
+          <main className={tw("p-8", "md:p-16", "pt-0", "md:pt-0", "relative")}>
+            <div
+              className={tw(
+                "relative",
 
-              "mx-auto"
-            )}
-          >
-            <Divider
-              orientation="vertical"
-              className={"h-10 mx-auto my-[3.75rem]"}
-            />
-            <HowWeHelp />
-            <WeConnect />
+                "max-w-lg",
+                "max-w-[500px]",
+                "md:max-w-[600px]",
+                "lg:max-w-[800px]",
+                "xl:max-w-[1251px]",
 
+                "mx-auto"
+              )}
+            >
+              <Divider
+                orientation="vertical"
+                className={"h-10 mx-auto my-[3.75rem]"}
+              />
+              <HowWeHelp />
+              <WeConnect />
+            </div>
             <section>
-              <h2 className="font-extrabold text-center not-prose text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-8">
+              <h2 className="font-extrabold text-center not-prose text-2xl sm:text-3xl md:text-4xl xl:text-5xl mb-4 md:mb-8 xl:whitespace-nowrap">
                 {t("home:trulyHelpPeople", {
                   defaultValue:
                     "Truly helping people & organizations move forward",
                 })}
               </h2>
-              <p className="text-center text-base  sm:text-lg md:text-xl lg:text-2xl font-normal">
-                <span className="block">
-                  {t("home:byRemovingObstacles.firstPart", {
-                    defaultValue:
-                      "We nemen obstakels weg en bieden oplossingen die werken,",
-                  })}
-                </span>
-                <span className="block">
-                  {t("home:byRemovingObstacles.secondPart", {
-                    defaultValue:
-                      "zodat jij je kunt richten op wat er écht toe doet.",
-                  })}
-                </span>
-              </p>
+              <div
+                className={tw(
+                  "relative",
+
+                  "max-w-lg",
+                  "max-w-[500px]",
+                  "md:max-w-[600px]",
+                  "lg:max-w-[800px]",
+                  "xl:max-w-[1251px]",
+
+                  "mx-auto"
+                )}
+              >
+                <p className="text-center text-base  sm:text-lg md:text-xl lg:text-2xl font-normal">
+                  <span className="block">
+                    {t("home:byRemovingObstacles.firstPart", {
+                      defaultValue:
+                        "We nemen obstakels weg en bieden oplossingen die werken,",
+                    })}
+                  </span>
+                  <span className="block">
+                    {t("home:byRemovingObstacles.secondPart", {
+                      defaultValue:
+                        "zodat jij je kunt richten op wat er écht toe doet.",
+                    })}
+                  </span>
+                </p>
+              </div>
             </section>
             <Divider
               orientation="vertical"
-              className={"h-10 mx-auto my-[3.75rem]"}
+              className={"h-10 mx-auto mb-[3.75rem] mt-[5rem]"}
             />
             <GetStarted />
           </main>

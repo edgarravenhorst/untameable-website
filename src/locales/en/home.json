@@ -3,7 +3,7 @@
     "firstPart": "Determined to",
     "secondPart": "move forward."
   },
-  "subtitle": "We work on projects that make a real difference, providing clear, deliver solutions that work, so you can focus on what truly matters.",
+  "subtitle": "We work on projects that make a real difference, providing clear, efficient, and goal-oriented solutions. We remove obstacles and deliver solutions that work, so you can focus on what truly matters.",
   "discoverOurMindset": "Discover our mindset",
   "readExampleCases": "Read example cases",
   "connectWithUs": "Connect with us",
@@ -39,6 +39,10 @@
   "strategicInnovation": {
     "title": "Strategic innovation",
     "text": "We explore new ideas and growth opportunities—from vision to realization."
+  },
+  "1-on-1Coaching&Support": {
+    "title": "1-on-1 Coaching & Support",
+    "text": "Personal guidance for developers and stakeholders, with immediate feedback and result in code, UX, and processes."
   },
   "weConnectWith": "We connect with:",
   "growthAndEfficiency": {
