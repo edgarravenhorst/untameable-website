@@ -63,7 +63,7 @@ export const Spotlight: React.FC<SpotlghtProps> = ({
             "left-[50vw]",
             "top-[50vh]",
             "w-[300vw]",
-            "h-[900vw]",
+            "h-[900vh]",
             "sm:w-[200vw]",
             "sm:h-[200vw]",
             "min-w-[80vh]",
