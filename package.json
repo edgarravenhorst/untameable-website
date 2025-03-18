@@ -6,15 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup-fontawesome": "npm config set @fortawesome:registry=https://npm.fontawesome.com/; npm config set //npm.fontawesome.com/:_authToken=79558104-C4E1-46B0-81C9-50E626686E30"
   },
   "dependencies": {
+    "@fortawesome/pro-light-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@vercel/analytics": "^1.2.2",
     "@vercel/postgres": "^0.7.2",
     "clsx": "^2.1.0",
+    "i18next": "^24.2.2",
+    "i18next-resources-to-backend": "^1.2.1",
     "next": "14.1.3",
+    "next-i18n-router": "^5.5.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-i18next": "^15.4.0",
+    "react-icons": "^5.4.0",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
