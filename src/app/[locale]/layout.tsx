@@ -35,7 +35,7 @@ export default function RootLayout({
         src='https://plausible.io/js/script.js'
       />
 
-      <body className={mulish.className}>
+      <body className={mulish.className + ' ' + 'antialiased'}>
         <Analytics />
         {children}
       </body>

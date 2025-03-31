@@ -1,65 +1,79 @@
-"use client";
-import React from "react";
-import { TextBoxWithIcon } from "./text-box-with-icon";
-import { useTranslation } from "react-i18next";
-import { Divider } from "@/app/[locale]/decoration/divider";
+'use client';
+import {
+  faArrowsToDot,
+  faChartLine,
+  faLightbulb,
+} from '@fortawesome/pro-thin-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTranslation } from 'react-i18next';
+import { Card, Title } from './content';
+import { Section, SectionContainer } from './section';
 
 type Props = {};
 
 export const WeConnect = (props: Props) => {
   const { t } = useTranslation();
   return (
-    <section>
-      <h2 className="text-center text-xl md:text-[1.75rem] mb-6 not-prose text-white font-extrabold">
-        {t("home:weConnectWith", { defaultValue: "Wij verbinden met:" })}
-      </h2>
-      <div className=" grid xl:grid-cols-3 gap-6 justify-items-center">
-        <TextBoxWithIcon
-          iconName="growth"
-          subtitle={t("home:growthAndEfficiency.subtitle", {
-            defaultValue: "Bedrijven gericht op",
-          })}
-          title={t("home:growthAndEfficiency.title", {
-            defaultValue: "Bedrijven gericht op",
-          })}
-          text={t("home:growthAndEfficiency.text", {
-            defaultValue:
-              "Van start-ups tot MKB en daarbuiten—als je wilt groeien en efficiënter wilt werken.",
-          })}
-        />
-        <TextBoxWithIcon
-          iconName="idea"
-          subtitle={t("home:innovativeIdeas.subtitle", {
-            defaultValue: "Organisaties met",
-          })}
-          title={t("home:innovativeIdeas.title", {
-            defaultValue: "Innovatieve ideeën",
-          })}
-          text={t("home:innovativeIdeas.text", {
-            defaultValue:
-              "Voor wie lef heeft en openstaat voor nieuwe inzichten om voorop te blijven lopen.",
-          })}
+    <Section>
+      <SectionContainer className='flex-col'>
+        <Title
+          title={t('home:weConnectWith')}
+          variant='section'
+          className='mx-auto'
         />
 
-        <TextBoxWithIcon
-          iconName="balance"
-          subtitle={t("home:focusAndBalance.subtitle", {
-            defaultValue: "Teams op zoek naar",
-          })}
-          title={t("home:focusAndBalance.title", {
-            defaultValue: "Focus & Balans",
-          })}
-          text={t("home:focusAndBalance.text", {
-            defaultValue:
-              "Voor wie verandering en vernieuwing nastreeft, of het nu gaat om automatisering, digitalisering of verduurzaming.",
-          })}
-        />
-      </div>
+        <div className='grid xl:grid-cols-3 gap-6'>
+          <Card className='flex flex-col gap-6'>
+            <div className='flex gap-6 items-center'>
+              <FontAwesomeIcon
+                icon={faChartLine}
+                className='text-4xl md:text-6xl text-white'
+              />
+              <Title
+                preTitle={t('home:growthAndEfficiency.subtitle')}
+                title={t('home:growthAndEfficiency.title')}
+                variant='widget-sm'
+                className='mt-2'
+              />
+            </div>
+            <p className='font-semibold'>
+              {t('home:growthAndEfficiency.text')}
+            </p>
+          </Card>
 
-      <Divider
-        orientation="vertical"
-        className={"h-10 mx-auto mt-[3.75rem] mb-[7.5rem]"}
-      />
-    </section>
+          <Card className='flex flex-col gap-6'>
+            <div className='flex gap-6 items-center'>
+              <FontAwesomeIcon
+                icon={faLightbulb}
+                className='text-4xl md:text-6xl text-white'
+              />
+              <Title
+                preTitle={t('home:innovativeIdeas.subtitle')}
+                title={t('home:innovativeIdeas.title')}
+                variant='widget-sm'
+                className='mt-2'
+              />
+            </div>
+            <p className='font-semibold'>{t('home:innovativeIdeas.text')} </p>
+          </Card>
+
+          <Card className='flex flex-col gap-6'>
+            <div className='flex gap-6 items-center'>
+              <FontAwesomeIcon
+                icon={faArrowsToDot}
+                className='text-4xl md:text-6xl text-white'
+              />
+              <Title
+                preTitle={t('home:focusAndBalance.subtitle')}
+                title={t('home:focusAndBalance.title')}
+                variant='widget-sm'
+                className='mt-2'
+              />
+            </div>
+            <p className='font-semibold'>{t('home:focusAndBalance.text')}</p>
+          </Card>
+        </div>
+      </SectionContainer>
+    </Section>
   );
 };

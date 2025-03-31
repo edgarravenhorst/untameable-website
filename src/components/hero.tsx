@@ -1,10 +1,9 @@
-"use client";
-import React from "react";
-import { ButtonLink } from "./button-link";
-import { TextBox } from "./text-box";
-import { useTranslation } from "react-i18next";
-import { ButtonLinks } from "./button-links";
-import { tw } from "@/helper/tw";
+'use client';
+import { LogoIcon } from '@/app/[locale]/decoration/logo-icon';
+import { tw } from '@/helper/tw';
+import { useTranslation } from 'react-i18next';
+import { ButtonLink } from './button-link';
+import { Section, SectionContainer } from './section';
 
 type Props = {};
 
@@ -12,60 +11,60 @@ export const Hero = (props: Props) => {
   const { t } = useTranslation();
 
   return (
-    <section
-      className={tw(
-        "max-w-lg",
-        "max-w-[500px]",
-        "md:max-w-[600px]",
-        "lg:max-w-[800px]",
-        "xl:max-w-[1251px]",
-        "flex",
-        "items-center",
-        "min-h-[calc(100svh-240px)]",
-        "pb-8"
-      )}
-    >
-      {/* mt-20 sm:mt-32 lg:mt-40 xl:mt-52  */}
-      <div className="flex flex-col xl:flex-row  gap-14">
-        <div>
-          <h1
-            className={tw(
-              "not-prose",
-              "text-white",
-              "flex",
-              "flex-col",
-              "whitespace-nowrap",
-              "text-[10vw]",
-              "sm:text-6xl",
-              "md:text-7xl",
-              "lg:text-8xl",
-              "xl:text-9xl",
-              "!leading-none",
-              "font-extrabold",
-              "justify-center",
-              "w-[100%]",
-              "mx-auto"
-            )}
-          >
-            <span className="block">
-              {t("home:title.firstPart", { defaultValue: "Voor wie écht" })}
-            </span>
-            <span className="block">
-              {t("home:title.secondPart", { defaultValue: "vooruit wil." })}
-            </span>
-          </h1>
+    <Section>
+      <div
+        className={tw(
+          'flex',
+          'items-center',
+          'max-lg:pt-40',
+          'py-56',
+          'lg:min-h-dvh',
+          'lg:-mb-[100px]'
+        )}
+      >
+        <SectionContainer className='gap-x-20'>
+          <LogoIcon
+            className={
+              'absolute right-0 bottom-[8%] w-[55%] h-auto z-[0] opacity-40'
+            }
+          />
 
-          <p className="text-lg md:text-xl lg:text-[1.625rem]  max-w-[921px] md:leading-10  not-prose py-5 xl:py-10">
-            {t("home:subtitle", {
-              defaultValue:
-                "Wij werken aan projecten die het verschil maken, met oplossingen die helder, efficiënt en doelgericht zijn. We nemen obstakels weg en bieden oplossingen die werken, zodat jij je kunt richten op wat er écht toe doet.",
-            })}
-          </p>
-        </div>
-        <div>
-          <ButtonLinks />
-        </div>
+          <div className='relative z-10 pl-6'>
+            <h1
+              className={tw(
+                'text-white',
+                'text-[7.4rem]',
+                'max-xl:text-[clamp(3rem,6vw,7.4rem)]',
+                'leading-none',
+                'font-extrabold',
+                'mb-2'
+              )}
+            >
+              {t('home:title')}
+            </h1>
+
+            <p className='text-lg md:text-xl lg:text-[1.625rem] md:leading-10 py-5 xl:py-10 font-semibold'>
+              {t('home:subtitle')}
+            </p>
+          </div>
+          <div className='pr-6'>
+            <div className='h-full  pb-10'>
+              <div className='h-full flex flex-col justify-end  gap-5 min-w-[250px]'>
+                <ButtonLink
+                  url='/mindset'
+                  text={t('home:discoverOurMindset')}
+                />
+                <ButtonLink
+                  url='/cases'
+                  text={t('home:readExampleCases')}
+                  className={'translate-x-[15px]'}
+                />
+                <ButtonLink url='#contact-us' text={t('home:connectWithUs')} />
+              </div>
+            </div>
+          </div>
+        </SectionContainer>
       </div>
-    </section>
+    </Section>
   );
 };
