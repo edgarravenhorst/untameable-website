@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
 import { Card, Title } from './content';
 import { Section, SectionContainer } from './section';
+import { tw } from '@/helper/tw';
 
 type Props = {};
 
@@ -15,7 +16,7 @@ export const WeConnect = (props: Props) => {
   const { t } = useTranslation();
   return (
     <Section>
-      <SectionContainer className='flex-col'>
+      <SectionContainer className={tw('flex-col', 'max-md:px-0')}>
         <Title
           title={t('home:weConnectWith')}
           variant='section'

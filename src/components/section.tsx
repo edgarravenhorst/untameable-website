@@ -24,7 +24,8 @@ export const SectionContainer: React.FC<
     <div
       {...props}
       className={tw(
-        'relative flex flex-row gap-x-6 gap-y-6 max-w-[calc(1280px+4rem)] px-[clamp(1rem,6vw,2rem)]',
+        'relative flex flex-row gap-x-6 gap-y-6 max-w-[calc(1280px+4rem)] px-[clamp(1rem,6vw,2rem)]', 
+        'max-md:flex-col',
         props.className
       )}
     >

@@ -9,7 +9,7 @@ export const HowWeHelp = (props: Props) => {
   const { t } = useTranslation();
   return (
     <Section>
-      <SectionContainer className='flex-col'>
+      <SectionContainer className='flex-col max-md:px-0'>
         <Title
           title={t('home:howWeCanHelpYou')}
           variant='section'
@@ -45,8 +45,8 @@ export const HowWeHelp = (props: Props) => {
             />
             <p>{t('home:strategicInnovation.text')}</p>
           </Card>
-          <div className='col-span-2 flex justify-center'>
-            <Card className='w-1/2'>
+          <div className='col-span-2 flex justify-center max-md:col-span-1'>
+            <Card className='w-1/2 max-md:w-full'>
               <Title
                 title={t('home:1-on-1Coaching&Support.title')}
                 variant='widget'

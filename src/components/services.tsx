@@ -9,7 +9,7 @@ export const Services = (props: Props) => {
   const { t } = useTranslation();
   return (
     <Section>
-      <SectionContainer>
+      <SectionContainer className='max-md:px-6'>
         <Card>
           <Title title={t('home:whatWorks.title')} variant='widget-sm' />
           <p className='font-semibold'>{t('home:whatWorks.text')}</p>

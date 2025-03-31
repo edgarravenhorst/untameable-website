@@ -44,7 +44,7 @@ export const Title: React.FC<TitleProps> = ({
           className={tw(
             'text-white',
             'text-[6rem]',
-            'max-xl:text-[clamp(3rem,6vw,8rem)]',
+            'max-xl:text-[clamp(2.8rem,6vw,8rem)]',
             'leading-none',
             'font-extrabold',
             'mb-2',
@@ -75,7 +75,7 @@ export const Title: React.FC<TitleProps> = ({
       return (
         <h3
           className={tw(
-            'text-[1.625rem] font-extrabold text-[--color-primary] leading-tight',
+            'text-[1.625rem] font-extrabold text-[--color-primary] leading-tight max-md:text-[1.375rem]',
             className
           )}
         >

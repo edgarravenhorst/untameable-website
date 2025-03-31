@@ -97,7 +97,7 @@ export default async function Home(props: HomeProps) {
             <Services />
           </header>
 
-          <main className={tw('p-8', 'md:p-16', 'pt-0', 'md:pt-0', 'relative')}>
+          <main className={tw('p-8', 'md:p-16', 'pt-0', 'md:pt-0', 'relative', 'max-md:p-6')}>
             <SectionDivider />
             <HowWeHelp />
             <SectionDivider />

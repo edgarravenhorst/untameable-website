@@ -19,22 +19,24 @@ export const Hero = (props: Props) => {
           'max-lg:pt-40',
           'py-56',
           'lg:min-h-dvh',
-          'lg:-mb-[100px]'
+          'lg:-mb-[100px]',
+          'max-md:pb-12',
+          'max-md:pt-[125px]'
         )}
       >
-        <SectionContainer className='gap-x-20'>
+        <SectionContainer className={tw('gap-x-20', 'max-md:px-6')}>
           <LogoIcon
             className={
               'absolute right-0 bottom-[8%] w-[55%] h-auto z-[0] opacity-40'
             }
           />
 
-          <div className='relative z-10 pl-6'>
+          <div className='relative z-10 pl-6 max-md:pl-0'>
             <h1
               className={tw(
                 'text-white',
                 'text-[7.4rem]',
-                'max-xl:text-[clamp(3rem,6vw,7.4rem)]',
+                'max-xl:text-[clamp(2.8rem,6vw,7.4rem)]',
                 'leading-none',
                 'font-extrabold',
                 'mb-2'
