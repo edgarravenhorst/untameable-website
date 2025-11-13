@@ -1,6 +1,6 @@
-import { tw } from "@/helper/tw";
+import { tw } from '@/helper/tw';
 
-export type StripedOverlayProps = React.ComponentProps<"div">;
+export type StripedOverlayProps = React.ComponentProps<'div'>;
 
 export const StripedOverlay: React.FC<StripedOverlayProps> = ({
   className,
@@ -10,12 +10,12 @@ export const StripedOverlay: React.FC<StripedOverlayProps> = ({
     <div
       {...props}
       className={tw(
-        "absolute",
-        "w-full",
-        "h-full",
-        "bg-stripes",
-        "bg-[length:6px_6px]",
-        "sm:bg-[length:10px_10px]",
+        'absolute',
+        'w-full',
+        'h-full',
+        'bg-stripes',
+        'bg-[length:8px_8px]',
+        'sm:bg-[length:8px_8px]',
         className
       )}
     />

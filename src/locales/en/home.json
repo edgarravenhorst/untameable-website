@@ -1,74 +1,75 @@
 {
-  "title": "Determined to move forward.",
-  "subtitle": "We work on projects that make a real difference, providing clear, efficient, and goal-oriented solutions. We remove obstacles and deliver solutions that work, so you can focus on what truly matters.",
+  "title": "Full-Stack development, prototyping & UX design",
+  "subtitle": "With clear communication and purpose-driven development, we build online applications that keeps your team and organization focused on growth, new features, and continuous improvement.",
   "discoverOurMindset": "Discover our mindset",
   "readExampleCases": "Read example cases",
-  "connectWithUs": "Connect with us",
+  "connectWithUs": "Get started!",
+  "weAimTo": "We aim to:",
   "whatWorks": {
-    "title": "We do what works",
-    "text": "We keep it simple: if it works, it works—no inflated marketing talk."
+    "title": "Do what works",
+    "text": "We keep things simple and effective — for you and your users."
   },
   "weCollaborate": {
-    "title": "We collaborate",
-    "text": "We think strategically with you and support you through execution."
+    "title": "Collaborate",
+    "text": "We think strategically with you and support you from idea to execution."
   },
   "weSolve": {
-    "title": "We solve",
-    "text": "We remove obstacles with solutions that truly work."
+    "title": "Solve",
+    "text": "We let ourselves be challenged in finding effective solutions."
   },
   "weDeliver": {
-    "title": "We deliver",
-    "text": "We're committed to bringing your vision to life and making a real impact."
+    "title": "Develop",
+    "text": "We develop and improve software from concept to product."
   },
-  "howWeCanHelpYou": "How we can help you:",
+  "howWeCanHelpYou": "Services we offer:",
   "webAndPlatformDevelopment": {
-    "title": "Web & Platform development",
-    "text": "We develop user-friendly solutions tailored to your organization."
+    "title": "Web development",
+    "text": "We develop online applications that are easy to use for your customers and your team. Our work focuses on user experience, performance, and practical usability. We believe applications should be scalable and easy to maintain, so they can evolve and grow with your organization."
   },
   "processOptimization": {
-    "title": "Process optimization",
-    "text": "We simplify processes and boost productivity"
+    "title": "Optimization",
+    "text": "We streamline workflows, reduce manual work, and shift the focus to what truly creates value. By simplifying processes and introducing smart improvements, we help organizations work faster, more efficiently, and with greater clarity. The goal is to create space for growth and new initiatives."
   },
   "iotAndOptimization": {
-    "title": "IoT & Automation",
-    "text": "We integrate systems and devices, enabling faster and more efficient workflows."
+    "title": "Automation",
+    "text": "We automate repetitive tasks and connect systems and devices to save time and reduce errors. Our solutions ensure smoother operations and free up your team to focus on work that really matters. We build integrations that are reliable, secure, and scalable for the future."
   },
   "strategicInnovation": {
-    "title": "Strategic innovation",
-    "text": "We explore new ideas and growth opportunities—from vision to realization."
+    "title": "Strategy & innovation",
+    "text": "We help you explore and realize new strategies, features, and product directions. Together we identify opportunities for growth, improvement, and innovation. We think along at a strategic level, translate ideas into concrete steps, and support you in shaping solutions that fit your organization and your users."
   },
   "1-on-1Coaching&Support": {
-    "title": "1-on-1 Coaching & Support",
-    "text": "Personal guidance for developers and stakeholders, with immediate feedback and result in code, UX, and processes."
+    "title": "Coaching",
+    "text": "We provide targeted guidance for developers and stakeholders, offering practical feedback on code, UX, and collaboration. Our coaching helps teams work better together, make stronger technical decisions, and improve processes. We support you in developing skills that directly contribute to better products and smoother workflows."
   },
   "weConnectWith": "We connect with:",
   "growthAndEfficiency": {
     "subtitle": "Businesses focussed on:",
-    "title": "Growth & Efficiency",
-    "text": "From startups to SMEs and beyond—if you want to grow and streamline operations."
+    "title": "Growth & Optimization",
+    "text": "For organizations that want to become smarter, faster and more scalable."
   },
   "innovativeIdeas": {
-    "subtitle": "Organizations with",
+    "subtitle": "Entrepreneurs with",
     "title": "Innovative Ideas",
-    "text": "For those bold enough to embrace new insights and stay ahead of the curve."
+    "text": "For entrepreneurs and teams that see opportunities and dare to innovate."
   },
   "focusAndBalance": {
-    "subtitle": "Teams seeking",
+    "subtitle": "Teams looking for",
     "title": "Focus & Balance",
-    "text": "For those wanting to drive change and innovation, whether through automation, digitalization, or sustainability."
+    "text": "For teams that want to achieve peace, direction and efficiency in their processes."
   },
-  "trulyHelpPeople": "Truly helping people & organizations move forward",
+  "trulyHelpPeople": "Truly helping people and organizations move forward!",
   "byRemovingObstacles": {
-    "firstPart": "By removing obstacles and deliver solutions that work, ",
-    "secondPart": "so you can focus on what really matters."
+    "firstPart": "We deliver practical solutions that deliver value, ",
+    "secondPart": "enabling you to make progress and grow your organization."
   },
   "shortIntroduction": {
     "title": "Short introduction",
-    "text": "My name is Edgar Ravenhorst. With over 10 years of experience in full-stack web development, I work alongside you and the team to achieve the results you strive for."
+    "text": "“My name is Edgar Ravenhorst. With more than 10 years of full-stack development experience, I help teams deliver great results and drive sustainable growth.”"
   },
   "getStarted": {
     "title": "Get started!",
-    "text": "Work with us and discover what we can do for your organization."
+    "text": "Together we take the next step for your organization!"
   },
   "contactUs": {
     "title": "Contact us:",

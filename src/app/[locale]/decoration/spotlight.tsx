@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import clsx from "clsx";
-import { useEffect, useRef } from "react";
-import { twMerge } from "tailwind-merge";
+import clsx from 'clsx';
+import { useEffect, useRef } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-export interface SpotlghtProps extends React.ComponentProps<"div"> {
+export interface SpotlghtProps extends React.ComponentProps<'div'> {
   followMouse?: boolean;
 }
 
@@ -45,33 +45,33 @@ export const Spotlight: React.FC<SpotlghtProps> = ({
       spotRef.current.style.top = `${y + deltaY}px`;
     };
 
-    window.addEventListener("mousemove", onMove);
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('scroll', onScroll);
     return () => {
-      window.removeEventListener("mousemove", onMove);
-      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('scroll', onScroll);
     };
   }, [followMouse]);
 
   return (
-    <div className="absolute left-0 top-0 w-full h-full overflow-hidden">
+    <div className='absolute left-0 top-0 w-full h-full overflow-hidden'>
       <div
         ref={spotRef}
         className={twMerge(
           clsx([
-            "absolute",
-            "left-[50vw]",
-            "top-[50vh]",
-            "w-[1000vw]",
-            "h-[1000vh]",
-            "sm:w-[200vw]",
-            "sm:h-[200vw]",
-            "sm:min-w-[80vh]",
-            "sm:min-h-[80vh]",
-            "translate-x-[-50%]",
-            "translate-y-[-50%]",
+            'absolute',
+            'left-[50vw]',
+            'top-[50vh]',
+            'w-[500vw]',
+            'h-[500vw]',
+            'sm:w-[200vw]',
+            'sm:h-[200vw]',
+            'sm:min-w-[80vh]',
+            'sm:min-h-[80vh]',
+            'translate-x-[-50%]',
+            'translate-y-[-50%]',
             `bg-gradient-radial from-[_var(--spotlight)] to-transparent to-30% sm:to-70%`,
-            "opacity-75",
+            'opacity-80',
             className,
           ])
         )}

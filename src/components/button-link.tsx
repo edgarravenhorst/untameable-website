@@ -17,18 +17,16 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
     <Link
       href={url}
       className={tw(
+        'btn-arrow',
         'no-underline',
         'bg-[--color-primary]',
         'text-[--background]',
         'font-bold',
-        'py-2 px-6',
+        'py-2',
         className
       )}
-      style={{
-        clipPath: 'polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%)',
-      }}
     >
-      {text}
+      <span>{text}</span>
     </Link>
   );
 };

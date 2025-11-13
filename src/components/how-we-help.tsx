@@ -22,28 +22,36 @@ export const HowWeHelp = (props: Props) => {
               title={t('home:webAndPlatformDevelopment.title')}
               variant='widget'
             />
-            <p>{t('home:webAndPlatformDevelopment.text')}</p>
+            <p className='text-[1.125rem]'>
+              {t('home:webAndPlatformDevelopment.text')}
+            </p>
           </Card>
           <Card>
             <Title
               title={t('home:processOptimization.title')}
               variant='widget'
             />
-            <p>{t('home:processOptimization.text')}</p>
+            <p className='text-[1.125rem]'>
+              {t('home:processOptimization.text')}
+            </p>
           </Card>
           <Card>
             <Title
               title={t('home:iotAndOptimization.title')}
               variant='widget'
             />
-            <p>{t('home:iotAndOptimization.text')}</p>
+            <p className='text-[1.125rem]'>
+              {t('home:iotAndOptimization.text')}
+            </p>
           </Card>
           <Card>
             <Title
               title={t('home:strategicInnovation.title')}
               variant='widget'
             />
-            <p>{t('home:strategicInnovation.text')}</p>
+            <p className='text-[1.125rem]'>
+              {t('home:strategicInnovation.text')}
+            </p>
           </Card>
           <div className='col-span-2 flex justify-center max-md:col-span-1'>
             <Card className='w-1/2 max-md:w-full'>
@@ -51,7 +59,9 @@ export const HowWeHelp = (props: Props) => {
                 title={t('home:1-on-1Coaching&Support.title')}
                 variant='widget'
               />
-              <p>{t('home:1-on-1Coaching&Support.text')}</p>
+              <p className='text-[1.125rem]'>
+                {t('home:1-on-1Coaching&Support.text')}
+              </p>
             </Card>
           </div>
         </div>

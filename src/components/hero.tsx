@@ -11,58 +11,54 @@ export const Hero = (props: Props) => {
   const { t } = useTranslation();
 
   return (
-    <Section>
+    <Section className='not-prose max-sm:py-[20vw]'>
       <div
         className={tw(
           'flex',
-          'items-center',
-          'max-lg:pt-40',
-          'py-56',
-          'lg:min-h-dvh',
-          'lg:-mb-[100px]',
-          'max-md:pb-12',
-          'max-md:pt-[125px]'
+          'items-center justify-center',
+          'min-h-svh',
+          'py-12',
+          '-mb-[60px]',
+          'lg:-mb-[145px]'
         )}
       >
-        <SectionContainer className={tw('gap-x-20', 'max-md:px-6')}>
+        <SectionContainer>
           <LogoIcon
-            className={
-              'absolute right-0 bottom-[8%] w-[55%] h-auto z-[0] opacity-40'
-            }
+            className={tw(
+              'absolute right-0 bottom-[-10%] w-[45%] h-auto z-[0] opacity-40',
+              'max-md:w-[50%]'
+            )}
           />
 
           <div className='relative z-10 pl-6 max-md:pl-0'>
             <h1
               className={tw(
                 'text-white',
-                'text-[7.4rem]',
-                'max-xl:text-[clamp(2.8rem,6vw,7.4rem)]',
-                'leading-none',
-                'font-extrabold',
-                'mb-2'
+                'text-[5rem]',
+                'max-xl:text-[clamp(2.8rem,6vw,10rem)]',
+                'leading-[1.1]',
+                'font-extrabold'
               )}
             >
               {t('home:title')}
             </h1>
 
-            <p className='text-lg md:text-xl lg:text-[1.625rem] md:leading-10 py-5 xl:py-10 font-semibold'>
+            <h2 className='text-lg md:text-xl lg:text-[1.625rem] md:leading-10 py-12 font-semibold md:max-w-[75%]'>
               {t('home:subtitle')}
-            </p>
-          </div>
-          <div className='pr-6'>
-            <div className='h-full  pb-10'>
-              <div className='h-full flex flex-col justify-end  gap-5 min-w-[250px]'>
-                <ButtonLink
-                  url='/mindset'
-                  text={t('home:discoverOurMindset')}
-                />
-                <ButtonLink
-                  url='/cases'
-                  text={t('home:readExampleCases')}
-                  className={'translate-x-[15px]'}
-                />
-                <ButtonLink url='#contact-us' text={t('home:connectWithUs')} />
-              </div>
+            </h2>
+
+            <div className='flex max-sm:flex-col max-sm:gap-4'>
+              <ButtonLink
+                url='/mindset'
+                text={t('home:discoverOurMindset')}
+                className='bg-[#EB9A00] max-sm:ml-auto'
+              />
+              {/* <ButtonLink url='/cases' text={t('home:readExampleCases')} /> */}
+              <ButtonLink
+                url='#get-started'
+                text={t('home:connectWithUs')}
+                className='  max-sm:ml-auto'
+              />
             </div>
           </div>
         </SectionContainer>

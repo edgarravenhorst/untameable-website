@@ -12,7 +12,10 @@ const mulish = Mulish({
 });
 
 export const viewport: Viewport = {
-  themeColor: '#111B2B',
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#111B2B' },
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+  ],
   colorScheme: 'dark',
 };
 

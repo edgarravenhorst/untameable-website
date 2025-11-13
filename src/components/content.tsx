@@ -65,7 +65,7 @@ export const Title: React.FC<TitleProps> = ({
     case 'section':
       return (
         <h2
-          className={tw('text-[1.625rem] font-extrabold text-white', className)}
+          className={tw('text-[1.25rem] font-extrabold text-white', className)}
         >
           {preTitle && <small className='text-white'>{preTitle} </small>}
           {title}

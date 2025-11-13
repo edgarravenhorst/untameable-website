@@ -6,7 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background: #111b2b;
   --background-stripes: rgba(10, 17, 28, 40%);
-  --spotlight: rgb(46, 70, 111);
+  --spotlight: #2e466f;
   --color-primary: #ffe000;
 }
 
@@ -18,14 +18,60 @@
   }
 }
 
-#FFE000 body {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   color: rgb(var(--foreground-rgb));
   background-color: var(--background);
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .btn-arrow {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .btn-arrow::before {
+    content: '';
+    position: absolute;
+    right: calc(100% - 1px);
+    top: 0;
+    bottom: 0;
+    width: 1rem;
+    background-color: inherit;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 100% 50%, 0% 0%);
+    z-index: 0;
+  }
+
+  .btn-arrow::after {
+    content: '';
+    position: absolute;
+    left: calc(100% - 1px);
+    top: 0;
+    bottom: 0;
+    width: calc(1rem + 1px);
+    background-color: inherit;
+    clip-path: polygon(1px 0%, 100% 50%, 100% 50%, 1px 100%);
+    z-index: 0;
+  }
+
+  .btn-arrow > * {
+    position: relative;
+    z-index: 1;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .bg-stripes {
