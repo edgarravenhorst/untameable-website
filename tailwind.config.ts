@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#ffe000',
+      },
       typography: () => ({
         DEFAULT: {
           css: [

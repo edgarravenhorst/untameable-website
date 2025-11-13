@@ -1,0 +1,80 @@
+{
+  "title": "Full-Stack development, prototyping & UX design",
+  "subtitle": "Met heldere communicatie en doelgerichte ontwikkeling bouwen we software die je team en organisatie focust op groei, nieuwe functies en continu verbetering.",
+  "discoverOurMindset": "Ontdek onze mindset",
+  "readExampleCases": "Lees voorbeeld cases",
+  "connectWithUs": "Aan de slag!",
+  "weAimTo": "Wij richten ons op:",
+  "whatWorks": {
+    "title": "Doen wat werkt",
+    "text": "We houden zaken simpel en effectief voor jou en je gebruikers."
+  },
+  "weCollaborate": {
+    "title": "Samenwerken",
+    "text": "We denken strategisch mee en ondersteunen bij de uitvoering."
+  },
+  "weSolve": {
+    "title": "Oplossen",
+    "text": "We laten ons graag uitdagen in het vinden van effectieve oplossingen."
+  },
+  "weDeliver": {
+    "title": "Ontwikkelen",
+    "text": "We ontwikkelen en verbeteren software van concept naar product."
+  },
+  "howWeCanHelpYou": "Diensten die we aanbieden:",
+  "webAndPlatformDevelopment": {
+    "title": "Webontwikkeling",
+    "text": "We ontwikkelen online applicaties die eenvoudig te gebruiken zijn voor jouw gebruikers én je team. Onze ontwikkelingen zijn gericht op de gebruikerservaring, prestaties en inzetbaarheid van de applicatie. We vinden het belangrijk dat een applicatie schaalbaar is en in de toekomst gemakkelijk kan worden onderhouden én uitgebreid."
+  },
+  "processOptimization": {
+    "title": "Optimalisatie",
+    "text": "We optimaliseren workflows, verminderen handmatig werk en zorgen voor meer focus op wat echt waarde oplevert. Door processen te vereenvoudigen en slimme verbeteringen door te voeren, helpen we organisaties sneller, efficiënter en met meer plezier te werken. Het doel is om meer ruimte te creëren voor groei en nieuwe initiatieven."
+  },
+  "iotAndOptimization": {
+    "title": "Automatisering",
+    "text": "We automatiseren terugkerende taken en verbinden systemen en apparaten om tijd te besparen en fouten te verminderen. Onze oplossingen zorgen ervoor dat processen soepeler verlopen en dat je team meer ruimte krijgt om zich te richten op werk dat er écht toe doet. We bouwen integraties die betrouwbaar, veilig en schaalbaar zijn."
+  },
+  "strategicInnovation": {
+    "title": "Strategie & innovatie",
+    "text": "We helpen je nieuwe strategieën, features en productrichtingen te ontdekken én te realiseren. Samen verkennen we mogelijkheden voor groei, verbetering en vernieuwing. We denken mee op strategisch niveau, vertalen ideeën naar concrete stappen en ondersteunen je bij het vormgeven van oplossingen die passen bij je organisatie én je gebruikers."
+  },
+  "1-on-1Coaching&Support": {
+    "title": "Coaching",
+    "text": "We bieden gerichte begeleiding voor ontwikkelaars en stakeholders, met praktische feedback op code, UX en samenwerking. Onze coaching helpt teams beter samen te werken, technische keuzes scherper te maken en processen efficiënter in te richten. We ondersteunen je in het ontwikkelen van vaardigheden die direct bijdragen aan betere producten en prettigere workflows."
+  },
+  "weConnectWith": "Wij verbinden met:",
+  "growthAndEfficiency": {
+    "subtitle": "Bedrijven die gaan voor",
+    "title": "Groei & Optimalisatie",
+    "text": "Voor organisaties die slimmer, sneller en schaalbaarder willen werken."
+  },
+  "innovativeIdeas": {
+    "subtitle": "Ondernemers met",
+    "title": "Innovatieve ideeën",
+    "text": "Voor ondernemers en teams die kansen zien en durven vernieuwen."
+  },
+  "focusAndBalance": {
+    "subtitle": "Teams op zoek naar",
+    "title": "Focus & Balans",
+    "text": "Voor teams die rust, richting en efficiëntie willen in hun processen."
+  },
+  "trulyHelpPeople": "Mensen en organisaties écht vooruit helpen!",
+  "byRemovingObstacles": {
+    "firstPart": "We leveren praktische oplossingen die waarde opleveren, ",
+    "secondPart": "zodat jij stappen kan zetten en jouw organisatie kan groeien."
+  },
+  "shortIntroduction": {
+    "title": "Korte introductie",
+    "text": "“Mijn naam is Edgar Ravenhorst. Met meer dan tien jaar ervaring in full-stack development help ik teams sterke resultaten te behalen en duurzame groei te realiseren.”"
+  },
+  "getStarted": {
+    "title": "Aan de slag,",
+    "text": "Samen zetten we de volgende stap voor jouw organisatie!"
+  },
+  "contactUs": {
+    "title": "Neem contact op",
+    "callUs": "Bel ons:",
+    "emailUs": "Mail ons:",
+    "connectWithUs": "Verbind met ons op social media"
+  }
+}

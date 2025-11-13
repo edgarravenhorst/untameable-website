@@ -1,0 +1,71 @@
+'use client';
+import { useTranslation } from 'react-i18next';
+import { Card, Title } from './content';
+import { Section, SectionContainer } from './section';
+
+type Props = {};
+
+export const HowWeHelp = (props: Props) => {
+  const { t } = useTranslation();
+  return (
+    <Section>
+      <SectionContainer className='flex-col max-md:px-0'>
+        <Title
+          title={t('home:howWeCanHelpYou')}
+          variant='section'
+          className='mx-auto'
+        />
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+          <Card>
+            <Title
+              title={t('home:webAndPlatformDevelopment.title')}
+              variant='widget'
+            />
+            <p className='text-[1.125rem]'>
+              {t('home:webAndPlatformDevelopment.text')}
+            </p>
+          </Card>
+          <Card>
+            <Title
+              title={t('home:processOptimization.title')}
+              variant='widget'
+            />
+            <p className='text-[1.125rem]'>
+              {t('home:processOptimization.text')}
+            </p>
+          </Card>
+          <Card>
+            <Title
+              title={t('home:iotAndOptimization.title')}
+              variant='widget'
+            />
+            <p className='text-[1.125rem]'>
+              {t('home:iotAndOptimization.text')}
+            </p>
+          </Card>
+          <Card>
+            <Title
+              title={t('home:strategicInnovation.title')}
+              variant='widget'
+            />
+            <p className='text-[1.125rem]'>
+              {t('home:strategicInnovation.text')}
+            </p>
+          </Card>
+          <div className='col-span-2 flex justify-center max-md:col-span-1'>
+            <Card className='w-1/2 max-md:w-full'>
+              <Title
+                title={t('home:1-on-1Coaching&Support.title')}
+                variant='widget'
+              />
+              <p className='text-[1.125rem]'>
+                {t('home:1-on-1Coaching&Support.text')}
+              </p>
+            </Card>
+          </div>
+        </div>
+      </SectionContainer>
+    </Section>
+  );
+};

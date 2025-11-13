@@ -3,30 +3,44 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup-fontawesome": "npm config set @fortawesome:registry=https://npm.fontawesome.com/; npm config set //npm.fontawesome.com/:_authToken=79558104-C4E1-46B0-81C9-50E626686E30"
   },
   "dependencies": {
+    "@fortawesome/pro-light-svg-icons": "^6.7.2",
+    "@fortawesome/pro-thin-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@vercel/analytics": "^1.2.2",
     "@vercel/postgres": "^0.7.2",
     "clsx": "^2.1.0",
-    "next": "14.1.3",
-    "react": "^18",
-    "react-dom": "^18",
+    "i18next": "^24.2.2",
+    "i18next-resources-to-backend": "^1.2.1",
+    "next": "15.2.4",
+    "next-i18n-router": "^5.5.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-i18next": "^15.4.0",
+    "react-icons": "^5.4.0",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "19.0.12",
+    "@types/react-dom": "19.0.4",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
-    "eslint-config-next": "14.1.3",
+    "eslint-config-next": "15.2.4",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
-  }
+  },
+  "overrides": {
+    "@types/react": "19.0.12",
+    "@types/react-dom": "19.0.4"
+  },
+  "packageManager": "yarn@3.6.3+sha512.d432ab8b22b89cb8b46649ebaf196159b0c1870904224771d75fdf8b55490aaa5de4d9f028deb0425f1513bff7843e97b9d117103795a23b12d2e7c1cedcf50f"
 }
