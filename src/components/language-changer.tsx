@@ -36,7 +36,7 @@ export function LanguageChanger() {
 
   return (
     <button onClick={() => handleChange()} className='text-white'>
-      {newLocale?.toUpperCase()}
+      {currentLocale?.toUpperCase()}
     </button>
   );
 }
