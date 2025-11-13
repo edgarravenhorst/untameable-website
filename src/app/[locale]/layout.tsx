@@ -4,6 +4,7 @@ import Script from 'next/script';
 import './globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
+import i18nConfig from '../../../i18nConfig';
 
 const mulish = Mulish({
   weight: ['200', '300', '400', '500', '600', '700', '800'],
@@ -24,6 +25,10 @@ export const metadata: Metadata = {
   description:
     'Build great Developer and User Experiences for digital products',
 };
+
+export async function generateStaticParams() {
+  return i18nConfig.locales.map((locale) => ({ locale }));
+}
 
 export default function RootLayout({
   children,
