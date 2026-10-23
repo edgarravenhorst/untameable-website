@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Divider } from '@/app/[locale]/decoration/divider';
 import { LogoIcon } from '@/app/[locale]/decoration/logo-icon';
 import { StripedOverlay } from '@/app/[locale]/decoration/overlay-stripes';
+import { ProcessBackground } from '@/app/[locale]/decoration/process-background';
 import { Spotlight } from '@/app/[locale]/decoration/spotlight';
 import { tw } from '@/helper/tw';
 import { Footer } from './footer';
@@ -10,6 +11,7 @@ import { NavBar } from './nav-bar';
 export function SiteFrame({ children }: { children: ReactNode }) {
   return (
     <div className="relative text-white text-opacity-80 text-lg h-fit">
+      <ProcessBackground />
       <Spotlight
         className={tw(
           'top-[-3%]',
@@ -23,7 +25,7 @@ export function SiteFrame({ children }: { children: ReactNode }) {
 
       <Spotlight className={tw('top-[70%]', 'left-[-10%]')} />
 
-      <div className="flex justify-end absolute bottom-0 right-0">
+      <div className="pointer-events-none absolute right-0 bottom-0 z-[1] flex justify-end">
         <LogoIcon
           className={tw(
             'fill-[#111B2B]',
@@ -35,10 +37,12 @@ export function SiteFrame({ children }: { children: ReactNode }) {
         />
       </div>
 
-      <StripedOverlay />
+      <StripedOverlay className="pointer-events-none z-[1]" />
 
       <div
         className={tw(
+          'relative',
+          'z-10',
           'prose prose-invert',
           'prose-md',
           'md:prose-xl',

@@ -21,5 +21,5 @@ export default async function ProcessStepRedirect(
     notFound();
   }
 
-  redirect(`${localePath(locale, '/process')}#${step}`);
+  redirect(localePath(locale, '/#approach'));
 }

@@ -1,75 +1,81 @@
 {
   "meta": {
     "title": "Untameable - Understand. Design. Build.",
-    "description": "Solution architecture, forward deployed engineering en software engineering. Meer efficiëntie en meer omzet, met de tools die je al gebruikt."
+    "description": "Untameable helpt je knelpunten te herkennen, praktische oplossingen te ontwerpen en die om te zetten in werkende software."
   },
   "title": "Understand. Design. Build.",
-  "subtitle": "Untameable helpt je knelpunten te herkennen, praktische oplossingen te ontwerpen, en die om te zetten in werkende software. Het doel is simpel: efficiënter werken en je bedrijf laten groeien.",
-  "freeAudit": "Plan een verkennend gesprek",
-  "seeProcess": "Onze aanpak",
+  "subtitle": "Untameable helpt je knelpunten te herkennen, praktische oplossingen te ontwerpen en die om te zetten in werkende software.",
+  "goal": "Het doel is simpel: efficiënter werken en bedrijfswaarde creëren.",
+  "discussChallenge": "Bespreek je uitdaging",
+  "howWeWork": "Hoe we werken",
   "servicesTitle": "Diensten",
   "solutionArchitecture": {
     "title": "Solution Architecture",
-    "text": "Eisen begrijpen, mogelijkheden verkennen, en praktische technische oplossingen ontwerpen."
+    "text": "Complexe eisen omzetten in heldere, praktische technische oplossingen. Van systeemontwerp en technologiekeuzes tot integratiestrategieën."
   },
   "forwardDeployed": {
     "title": "Forward Deployed Engineering",
-    "text": "Direct met klanten werken om problemen op te lossen, prototypes te bouwen, en oplossingen in te passen in bestaande workflows."
+    "text": "Nauw samenwerken met je team om uitdagingen te begrijpen, ideeën te toetsen en oplossingen direct in bestaande workflows te bouwen."
   },
   "softwareEngineering": {
     "title": "Software Engineering",
-    "text": "Applicaties, platformen en integraties bouwen en onderhouden."
+    "text": "Applicaties, platformen en integraties ontwerpen, ontwikkelen en onderhouden. Gebouwd voor gebruiksgemak, betrouwbaarheid en onderhoud op de lange termijn."
   },
-  "weAimTo": "Wij richten ons op:",
-  "whatWorks": {
-    "title": "Doen wat werkt",
-    "text": "We houden zaken simpel en effectief voor jou en je gebruikers."
-  },
-  "weCollaborate": {
-    "title": "Samenwerken",
-    "text": "We denken strategisch mee en ondersteunen bij de uitvoering."
-  },
-  "weSolve": {
-    "title": "Oplossen",
-    "text": "We laten ons graag uitdagen in het vinden van effectieve oplossingen."
-  },
-  "weDeliver": {
-    "title": "Ontwikkelen",
-    "text": "We ontwikkelen en verbeteren software van concept naar product."
-  },
-  "process": {
-    "title": "Onze aanpak",
-    "intro": "Vier stappen. Daarna doen we ze opnieuw. Elke ronde is er om je mensen en je organisatie vooruit te helpen.",
-    "loop": "Finetune is geen eindpunt. Het is Audit, Proof en Implement, opnieuw.",
-    "readStep": "Lees deze stap",
-    "audit": {
-      "title": "Audit",
-      "text": "Samen volgen we hoe tijd en geld echt lopen, en waar een kleine verandering het meest doet."
+  "approach": {
+    "title": "Hoe we werken",
+    "intro": "Van het probleem begrijpen tot een werkende oplossing opleveren.",
+    "understand": {
+      "number": "01",
+      "title": "Understand",
+      "text": "Verken het bedrijf, de workflows en de uitdagingen die het waard zijn om op te lossen. Herken kansen en bepaal hoe succes eruitziet."
     },
-    "proof": {
-      "title": "Proof",
-      "text": "Een klein werkend voorbeeld, in je eigen tools. Werkt het niet, dan stoppen we."
+    "design": {
+      "number": "02",
+      "title": "Design",
+      "text": "Vertaal de bevindingen naar een praktische technische oplossing. Toets aannames, verken alternatieven en bouw prototypes waar dat nodig is."
     },
-    "implement": {
-      "title": "Implement",
-      "text": "De verandering die werkt, komt in de software die je team al gebruikt."
+    "build": {
+      "number": "03",
+      "title": "Build",
+      "text": "Ontwikkel de oplossing en integreer die in bestaande systemen en workflows. Focus op gebruiksgemak, betrouwbaarheid en onderhoudbaarheid."
     },
-    "finetune": {
-      "title": "Finetune",
-      "text": "We ontwikkelen hem verder. Dezelfde stappen, op het volgende knelpunt."
+    "improve": {
+      "number": "04",
+      "title": "Improve",
+      "text": "Evalueer de resultaten, verzamel feedback en verfijn wat er is gebouwd. Blijf verbeteren waar dat waarde toevoegt."
     }
   },
-  "trulyHelpPeople": "Mensen en organisaties écht vooruit helpen!",
-  "byRemovingObstacles": {
-    "firstPart": "We leveren praktische oplossingen die waarde opleveren, ",
-    "secondPart": "zodat jij stappen kan zetten en jouw organisatie kan groeien."
+  "philosophy": {
+    "title": "Doen wat werkt.",
+    "intro": "Goede software begint bij het probleem begrijpen, niet bij het kiezen van de technologie.",
+    "simple": {
+      "number": "01",
+      "title": "Houd het simpel",
+      "text": "Vermijd onnodige complexiteit. Bouw wat nodig is, met technologie die bij het probleem past."
+    },
+    "together": {
+      "number": "02",
+      "title": "Werk samen",
+      "text": "Blijf dicht bij de mensen die het bedrijf begrijpen. Goede oplossingen ontstaan door technische expertise te combineren met praktische kennis."
+    },
+    "practice": {
+      "number": "03",
+      "title": "Laat het werken",
+      "text": "Ideeën en architectuur zijn belangrijk, maar de echte waarde zit in oplossingen die in de praktijk werken."
+    }
   },
-  "shortIntroduction": {
-    "title": "Wie ik ben",
-    "text": "Ik ben software engineer en solutions architect, met meer dan 10 jaar ervaring. Ik vind het fijn om complexe problemen te begrijpen, praktische oplossingen te vinden, en ze te bouwen."
+  "about": {
+    "title": "Achter Untameable",
+    "paragraphs": [
+      "Untameable is een klein, onafhankelijk softwarebedrijf, opgericht door Edgar Ravenhorst.",
+      "Met meer dan 10 jaar ervaring in softwareontwikkeling en solution architecture ligt de focus op het begrijpen van complexe problemen en het omzetten daarvan in praktische oplossingen.",
+      "Projecten worden hands-on aangepakt, met technische expertise en directe samenwerking. Waar nodig komen extra ontwikkelaars en specialisten erbij.",
+      "Geen onnodige lagen. Alleen de juiste mensen op de juiste oplossing."
+    ]
   },
-  "getStarted": {
-    "title": "Laten we de volgende stap zetten",
-    "text": "Een verkennend gesprek is gratis. Vertel wat er speelt, of bel of mail me."
+  "contact": {
+    "title": "Laten we praten.",
+    "text": "Een uitdaging, een idee, of een project dat een praktische oplossing nodig heeft? Neem contact op.",
+    "cta": "Neem contact op"
   }
 }

@@ -1,8 +1,9 @@
 {
-  "process": "Process",
-  "freeAudit": "Explore your business",
-  "freeAuditShort": "Explore",
-  "callMe": "Call me:",
-  "emailMe": "Email me:",
-  "linkedin": "Message me on LinkedIn"
+  "approach": "Approach",
+  "services": "Services",
+  "about": "About",
+  "contact": "Contact",
+  "callMe": "Call",
+  "emailMe": "Email",
+  "linkedin": "LinkedIn"
 }

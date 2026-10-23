@@ -105,6 +105,156 @@ body {
     transparent 75%,
     var(--background-stripes) 75%
   );
+  animation: stripe-drift 90s linear infinite;
+}
+
+/* Tiny bright falling stars. Each streak is mostly waiting, then drops quickly. */
+.process-light {
+  --angle: 128deg;
+  --length: 26px;
+  --duration: 6.4s;
+  --delay: 0s;
+  --travel: 36vw;
+
+  position: absolute;
+  top: -8%;
+  left: 24%;
+  width: var(--length);
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 236, 170, 0.4) 38%,
+    #fff 100%
+  );
+  opacity: 0;
+  animation: process-fall var(--duration) linear infinite;
+  animation-delay: var(--delay);
+  will-change: transform, opacity;
+}
+
+.process-light::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 2px;
+  height: 2px;
+  border-radius: 999px;
+  background: #fff;
+  transform: translate(50%, -50%);
+  box-shadow:
+    0 0 2px 1px #fff,
+    0 0 7px 2px rgba(255, 250, 230, 0.95),
+    0 0 14px 5px rgba(255, 224, 0, 0.85);
+}
+
+.process-light:nth-child(2) {
+  top: 6%;
+  left: 72%;
+  --angle: 122deg;
+  --length: 20px;
+  --duration: 8.2s;
+  --delay: -1.7s;
+  --travel: 42vw;
+}
+
+.process-light:nth-child(3) {
+  top: -12%;
+  left: 54%;
+  --angle: 136deg;
+  --length: 36px;
+  --duration: 5.6s;
+  --delay: -3.4s;
+  --travel: 48vw;
+}
+
+.process-light:nth-child(4) {
+  top: 16%;
+  left: 88%;
+  --angle: 118deg;
+  --length: 22px;
+  --duration: 9.4s;
+  --delay: -5.1s;
+  --travel: 34vw;
+}
+
+.process-light:nth-child(5) {
+  top: -2%;
+  left: 40%;
+  --angle: 132deg;
+  --length: 28px;
+  --duration: 7.1s;
+  --delay: -0.8s;
+  --travel: 38vw;
+}
+
+.process-light:nth-child(6) {
+  top: 22%;
+  left: 62%;
+  --angle: 116deg;
+  --length: 20px;
+  --duration: 8.8s;
+  --delay: -4.2s;
+  --travel: 30vw;
+}
+
+.process-light:nth-child(7) {
+  top: -4%;
+  left: 14%;
+  --angle: 140deg;
+  --length: 24px;
+  --duration: 6.8s;
+  --delay: -2.5s;
+  --travel: 40vw;
+}
+
+.process-light:nth-child(8) {
+  top: 10%;
+  left: 96%;
+  --angle: 124deg;
+  --length: 32px;
+  --duration: 7.8s;
+  --delay: -6.3s;
+  --travel: 46vw;
+}
+
+@keyframes process-fall {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--angle)) translate3d(0, 0, 0);
+  }
+  2% {
+    opacity: 1;
+  }
+  9% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0;
+    transform: rotate(var(--angle)) translate3d(var(--travel), 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--angle)) translate3d(var(--travel), 0, 0);
+  }
+}
+
+@keyframes stripe-drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 32px 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-stripes,
+  .process-light {
+    animation: none;
+  }
 }
 
 .prose-invert {

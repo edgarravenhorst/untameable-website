@@ -54,7 +54,7 @@ export const Spotlight: React.FC<SpotlghtProps> = ({
   }, [followMouse]);
 
   return (
-    <div className="absolute left-0 top-0 w-full h-full overflow-hidden">
+    <div className="absolute left-0 top-0 z-[1] w-full h-full overflow-hidden">
       <div
         ref={spotRef}
         className={twMerge(

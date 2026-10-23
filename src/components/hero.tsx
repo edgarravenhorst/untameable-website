@@ -43,18 +43,19 @@ export const Hero = () => {
               {t('home:title')}
             </h1>
 
-            <h2 className="text-lg md:text-xl lg:text-[1.625rem] md:leading-10 py-12 font-semibold md:max-w-[75%]">
-              {t('home:subtitle')}
-            </h2>
+            <div className="flex flex-col gap-4 text-lg md:text-xl lg:text-[1.625rem] md:leading-10 py-12 font-semibold md:max-w-[75%]">
+              <p className="m-0">{t('home:subtitle')}</p>
+              <p className="m-0">{t('home:goal')}</p>
+            </div>
 
             <div className="flex max-sm:flex-col max-sm:gap-4">
               <ButtonLink
-                url={localePath(i18n.language, '/free-audit')}
-                text={t('home:freeAudit')}
+                url={localePath(i18n.language, '/#contact')}
+                text={t('home:discussChallenge')}
               />
               <ButtonLink
-                url={localePath(i18n.language, '/process')}
-                text={t('home:seeProcess')}
+                url={localePath(i18n.language, '/#approach')}
+                text={t('home:howWeWork')}
                 className="bg-[#EB9A00]"
               />
             </div>

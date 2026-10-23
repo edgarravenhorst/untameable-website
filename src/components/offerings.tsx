@@ -14,22 +14,22 @@ export const Offerings = () => {
   const { t } = useTranslation();
 
   return (
-    <Section>
-      <SectionContainer className="max-md:px-6 flex-col">
-        <Title
-          title={t('home:servicesTitle')}
-          variant="section"
-          className="mx-auto"
-        />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {services.map((service) => (
-            <Card key={service}>
-              <Title title={t(`home:${service}.title`)} variant="widget-sm" />
-              <p className="font-semibold m-0">{t(`home:${service}.text`)}</p>
-            </Card>
-          ))}
-        </div>
-      </SectionContainer>
-    </Section>
+    <div id="services" className="scroll-mt-40 w-full">
+      <Section>
+        <SectionContainer className="max-md:px-6 flex-col">
+          <h2 className="text-white text-4xl md:text-5xl font-extrabold m-0 leading-none text-center">
+            {t('home:servicesTitle')}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {services.map((service) => (
+              <Card key={service}>
+                <Title title={t(`home:${service}.title`)} variant="widget-sm" />
+                <p className="font-semibold m-0">{t(`home:${service}.text`)}</p>
+              </Card>
+            ))}
+          </div>
+        </SectionContainer>
+      </Section>
+    </div>
   );
 };

@@ -11,32 +11,32 @@
     "youLeaveWith": "Wat je meeneemt",
     "whatIsNext": "Wat daarna komt",
     "freeAudit": "Plan een verkennend gesprek",
-    "orReachMe": "Of bereik me direct",
+    "orReachMe": "Of neem direct contact op",
     "otherSteps": "Alle stappen",
     "nextStep": "Verder: {{step}}"
   },
   "steps": {
     "audit": {
       "name": "Audit",
-      "promise": "Je kunt niet verbeteren wat je niet hebt gezien. Ik zit bij de mensen die het werk doen. Samen volgen we hoe tijd en geld echt door het bedrijf lopen.",
+      "promise": "Je kunt niet verbeteren wat je niet hebt gezien. We zitten bij de mensen die het werk doen. Samen volgen we hoe tijd en geld echt door het bedrijf lopen.",
       "happens1": "We volgen het werk zoals het echt gaat, niet zoals een schema het beschrijft.",
-      "happens2": "Ik kijk naar de tools die je al gebruikt, en naar de gaten daartussen.",
+      "happens2": "We kijken naar de tools die je al gebruikt, en naar de gaten daartussen.",
       "happens3": "We zoeken de paar plekken waar een kleine verandering het meest doet. Simpel wint van een grote verbouwing.",
       "leaveWith": "Een helder beeld van waar efficiëntie en omzet vastlopen, en een korte lijst van wat je eerst probeert. We beginnen met een verkennend gesprek, gratis.",
       "next": "Proof. Je ziet een klein werkend voorbeeld voordat er iets wordt uitgerold."
     },
     "proof": {
       "name": "Proof",
-      "promise": "Voordat er iets wordt uitgerold, bouw ik een klein bewijs. Het gebruikt je eigen tools en een echt stuk van het werk. Je ziet het resultaat, geen presentatie.",
+      "promise": "Voordat er iets wordt uitgerold, bouwen we een klein bewijs. Het gebruikt je eigen tools en een echt stuk van het werk. Je ziet het resultaat, geen presentatie.",
       "happens1": "We kiezen één plek uit de audit waar een verandering snel zijn waarde kan laten zien.",
-      "happens2": "Ik bouw dat voorbeeld in de tools die je team al gebruikt.",
+      "happens2": "We bouwen dat voorbeeld in de tools die je team al gebruikt.",
       "happens3": "We bekijken het samen. Levert het niets op, dan stoppen we.",
       "leaveWith": "Een werkend voorbeeld, en een duidelijk antwoord: doorgaan, of niet.",
       "next": "Implement. De verandering die zijn plek heeft verdiend, komt in het dagelijkse werk."
     },
     "implement": {
       "name": "Implement",
-      "promise": "Ik zet de bewezen verandering in de software die je team al gebruikt. Je mensen blijven werken op vertrouwde plekken. Het doel is minder overhead, niet nog een systeem om te leren.",
+      "promise": "We zetten de bewezen verandering in de software die je team al gebruikt. Je mensen blijven werken op vertrouwde plekken. Het doel is minder overhead, niet nog een systeem om te leren.",
       "happens1": "De verandering landt in de tools die mensen elke dag al openen.",
       "happens2": "Een nieuwe tool komt er alleen als de huidige het echt niet kunnen.",
       "happens3": "We blijven erbij, van de eerste versie tot iets waar je team op kan bouwen.",
@@ -54,18 +54,18 @@
     }
   },
   "freeAudit": {
-    "metaTitle": "Verkennend gesprek - Untameable",
-    "metaDescription": "Een verkennend gesprek is een eerste blik op hoe je bedrijf echt werkt. Het is gratis, en je zit nergens aan vast.",
-    "title": "Een verkennend gesprek",
-    "text": "Een verkennend gesprek is een eerste blik op hoe je bedrijf echt werkt. Het is gratis, en je zit nergens aan vast. Vertel wat er speelt. Ik reageer per mail.",
+    "metaTitle": "Neem contact op - Untameable",
+    "metaDescription": "Een uitdaging, een idee, of een project dat een praktische oplossing nodig heeft? Neem contact op.",
+    "title": "Neem contact op",
+    "text": "Een uitdaging, een idee, of een project dat een praktische oplossing nodig heeft? Neem contact op.",
     "name": "Naam",
     "company": "Bedrijf",
     "email": "E-mail",
     "message": "Wat er speelt",
     "submit": "Verstuur",
     "sending": "Bezig met versturen...",
-    "success": "Ik heb het. Ik reageer per mail.",
+    "success": "Bericht ontvangen. Er volgt een reactie per e-mail.",
     "errorValidation": "Controleer de velden en probeer het opnieuw.",
-    "errorDelivery": "Dit is niet aangekomen. Bel of mail me, dan pak ik het op."
+    "errorDelivery": "Dit is niet aangekomen. Bel of mail, dan wordt het opgepakt."
   }
 }

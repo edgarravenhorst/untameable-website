@@ -1,75 +1,81 @@
 {
   "meta": {
     "title": "Untameable - Understand. Design. Build.",
-    "description": "Solution architecture, forward deployed engineering, and software engineering. More efficiency and more revenue, with the tools you already use."
+    "description": "Untameable helps you identify bottlenecks, design practical solutions, and turn them into working software."
   },
   "title": "Understand. Design. Build.",
-  "subtitle": "Untameable helps you identify bottlenecks, design practical solutions, and turn them into working software. The goal is simple: improve efficiency and help your business grow.",
-  "freeAudit": "Explore your business",
-  "seeProcess": "Our approach",
+  "subtitle": "Untameable helps you identify bottlenecks, design practical solutions, and turn them into working software.",
+  "goal": "The goal is simple: improve efficiency and create business value.",
+  "discussChallenge": "Discuss your challenge",
+  "howWeWork": "How we work",
   "servicesTitle": "Services",
   "solutionArchitecture": {
     "title": "Solution Architecture",
-    "text": "Understanding requirements, exploring possibilities, and designing practical technical solutions."
+    "text": "Turning complex requirements into clear, practical technical solutions. From system design and technology choices to integration strategies."
   },
   "forwardDeployed": {
     "title": "Forward Deployed Engineering",
-    "text": "Working directly with clients to solve problems, build prototypes, and integrate solutions into existing workflows."
+    "text": "Working closely with your team to understand challenges, validate ideas, and build solutions directly into your existing workflows."
   },
   "softwareEngineering": {
     "title": "Software Engineering",
-    "text": "Building and maintaining applications, platforms, and integrations."
+    "text": "Designing, developing, and maintaining applications, platforms, and integrations. Built for usability, reliability, and long-term maintainability."
   },
-  "weAimTo": "We aim to:",
-  "whatWorks": {
-    "title": "Do what works",
-    "text": "We keep things simple and effective for you and your users."
-  },
-  "weCollaborate": {
-    "title": "Collaborate",
-    "text": "We think strategically with you and support you from idea to execution."
-  },
-  "weSolve": {
-    "title": "Solve",
-    "text": "We let ourselves be challenged in finding effective solutions."
-  },
-  "weDeliver": {
-    "title": "Develop",
-    "text": "We develop and improve software from concept to product."
-  },
-  "process": {
-    "title": "Our approach",
-    "intro": "Four steps. Then we run them again. Each pass is there to move your people and your organization forward.",
-    "loop": "Finetune is not a finish line. It is Audit, Proof, and Implement again.",
-    "readStep": "Read this step",
-    "audit": {
-      "title": "Audit",
-      "text": "Together we follow how time and money actually move, and where a small change does the most."
+  "approach": {
+    "title": "How we work",
+    "intro": "From understanding the problem to delivering a working solution.",
+    "understand": {
+      "number": "01",
+      "title": "Understand",
+      "text": "Explore the business, its workflows, and the challenges worth solving. Identify opportunities and define what success looks like."
     },
-    "proof": {
-      "title": "Proof",
-      "text": "A small working example, in your own tools. If it does not work, we stop."
+    "design": {
+      "number": "02",
+      "title": "Design",
+      "text": "Translate findings into a practical technical solution. Validate assumptions, explore alternatives, and build prototypes where needed."
     },
-    "implement": {
-      "title": "Implement",
-      "text": "The change that works goes into the software your team already uses."
+    "build": {
+      "number": "03",
+      "title": "Build",
+      "text": "Develop and integrate the solution into existing systems and workflows. Focus on usability, reliability, and maintainability."
     },
-    "finetune": {
-      "title": "Finetune",
-      "text": "We develop it further. The same steps, on the next bottleneck."
+    "improve": {
+      "number": "04",
+      "title": "Improve",
+      "text": "Evaluate results, gather feedback, and refine what has been built. Keep improving where it adds value."
     }
   },
-  "trulyHelpPeople": "Truly helping people and organizations move forward!",
-  "byRemovingObstacles": {
-    "firstPart": "We deliver practical solutions that deliver value, ",
-    "secondPart": "enabling you to make progress and grow your organization."
+  "philosophy": {
+    "title": "Do what works.",
+    "intro": "Good software starts with understanding the problem, not choosing the technology.",
+    "simple": {
+      "number": "01",
+      "title": "Keep it simple",
+      "text": "Avoid unnecessary complexity. Build what's needed, using technology that fits the problem."
+    },
+    "together": {
+      "number": "02",
+      "title": "Work together",
+      "text": "Stay close to the people who understand the business. Good solutions come from combining technical expertise with practical knowledge."
+    },
+    "practice": {
+      "number": "03",
+      "title": "Make it work",
+      "text": "Ideas and architecture matter, but the real value comes from solutions that work in practice."
+    }
   },
-  "shortIntroduction": {
-    "title": "Who I am",
-    "text": "I'm a software engineer and solutions architect with over 10 years of experience. I enjoy understanding complex problems, finding practical solutions, and building them."
+  "about": {
+    "title": "Behind Untameable",
+    "paragraphs": [
+      "Untameable is a small, independent software engineering company founded by Edgar Ravenhorst.",
+      "With over 10 years of experience in software development and solution architecture, the focus is on understanding complex problems and turning them into practical solutions.",
+      "Projects are approached hands-on, combining technical expertise with direct collaboration. When needed, additional developers and specialists are brought in.",
+      "No unnecessary layers. Just the right people working on the right solution."
+    ]
   },
-  "getStarted": {
-    "title": "Let's take the next step",
-    "text": "An exploratory conversation is free. Tell me what is going on, or call or email me."
+  "contact": {
+    "title": "Let's talk.",
+    "text": "Have a challenge, an idea, or a project that needs a practical solution? Get in touch.",
+    "cta": "Get in touch"
   }
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
-import { GetStarted } from '@/components/get-started';
+import { About, Contact } from '@/components/get-started';
 import { Hero } from '@/components/hero';
-import { MissionStatement } from '@/components/misison-statement';
 import { Offerings } from '@/components/offerings';
 import { ProcessOverview } from '@/components/process-overview';
 import { Services } from '@/components/services';
@@ -61,16 +60,15 @@ export default async function Home(props: HomeProps) {
             'max-md:p-6',
           )}
         >
-          <Offerings />
-          <SectionDivider />
           <ProcessOverview />
           <SectionDivider />
-          <div className="flex flex-col gap-10">
-            <MissionStatement />
-            <Services />
-          </div>
+          <Offerings />
           <SectionDivider />
-          <GetStarted />
+          <Services />
+          <SectionDivider />
+          <About />
+          <SectionDivider />
+          <Contact />
         </main>
       </SiteFrame>
     </TranslationsProvider>

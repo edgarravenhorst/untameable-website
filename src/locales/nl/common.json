@@ -1,8 +1,9 @@
 {
-  "process": "Proces",
-  "freeAudit": "Verkennend gesprek",
-  "freeAuditShort": "Gesprek",
-  "callMe": "Bel me:",
-  "emailMe": "Mail me:",
-  "linkedin": "Stuur een bericht op LinkedIn"
+  "approach": "Aanpak",
+  "services": "Diensten",
+  "about": "Over ons",
+  "contact": "Contact",
+  "callMe": "Bellen",
+  "emailMe": "E-mail",
+  "linkedin": "LinkedIn"
 }
