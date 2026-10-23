@@ -32,6 +32,8 @@ type SignalState = {
   input: SVGTextElement;
   output: SVGTextElement;
   link: SVGPathElement;
+  route: Array<{ link: SVGPathElement; label: Pair }>;
+  routeIndex: number;
   elapsed: number;
   duration: number;
   rest: number;
@@ -57,21 +59,181 @@ type ProcessState = {
 
 const FRAME_MS = 32;
 let lastTemplateId: string | null = null;
-const PAIRS: Record<'en' | 'nl', Pair[]> = {
-  en: [
-    { input: 'Disconnected systems', output: 'Connected systems' },
-    { input: 'Slow workflows', output: 'Faster operations' },
-    { input: 'New product idea', output: 'Working prototype' },
-    { input: 'Fragmented data', output: 'Unified information' },
-    { input: 'Repetitive tasks', output: 'Automated processes' },
-  ],
-  nl: [
-    { input: 'Losse systemen', output: 'Gekoppelde systemen' },
-    { input: 'Langzame workflows', output: 'Sneller werken' },
-    { input: 'Nieuw productidee', output: 'Werkend prototype' },
-    { input: 'Versnipperde data', output: 'Eén overzicht' },
-    { input: 'Herhaalwerk', output: 'Automatisch proces' },
-  ],
+
+type StepLabel = { en: string; nl: string };
+type ProcessCopy = {
+  steps: Record<string, StepLabel>;
+  routes?: string[][];
+};
+
+const PROCESSES: Record<string, ProcessCopy> = {
+  'small-line': {
+    steps: {
+      a: { en: 'Invoice received', nl: 'Factuur ontvangen' },
+      b: { en: 'Payment scheduled', nl: 'Betaling ingepland' },
+    },
+  },
+  'small-steep': {
+    steps: {
+      a: { en: 'Lead captured', nl: 'Lead binnen' },
+      b: { en: 'Meeting booked', nl: 'Afspraak gepland' },
+    },
+  },
+  'small-arc': {
+    steps: {
+      a: { en: 'Draft written', nl: 'Concept geschreven' },
+      b: { en: 'Review requested', nl: 'Review gevraagd' },
+      c: { en: 'Changes applied', nl: 'Wijzigingen verwerkt' },
+    },
+  },
+  'small-dip': {
+    steps: {
+      a: { en: 'Order placed', nl: 'Bestelling geplaatst' },
+      b: { en: 'Stock checked', nl: 'Voorraad gecheckt' },
+      c: { en: 'Order confirmed', nl: 'Bestelling bevestigd' },
+    },
+  },
+  'small-turn': {
+    steps: {
+      a: { en: 'Ticket opened', nl: 'Ticket geopend' },
+      b: { en: 'Cause found', nl: 'Oorzaak gevonden' },
+      c: { en: 'Fix deployed', nl: 'Oplossing live' },
+    },
+  },
+  'small-hook': {
+    steps: {
+      a: { en: 'Application in', nl: 'Aanvraag binnen' },
+      b: { en: 'Approved', nl: 'Goedgekeurd' },
+      c: { en: 'Declined', nl: 'Afgewezen' },
+    },
+    routes: [['ab'], ['ac']],
+  },
+  'small-join': {
+    steps: {
+      a: { en: 'Contract signed', nl: 'Contract getekend' },
+      b: { en: 'Details checked', nl: 'Gegevens gecheckt' },
+      c: { en: 'Account opened', nl: 'Account geopend' },
+    },
+    routes: [['ac'], ['bc']],
+  },
+  'medium-wide': {
+    steps: {
+      a: { en: 'Brief received', nl: 'Briefing ontvangen' },
+      b: { en: 'Proposal drafted', nl: 'Voorstel geschreven' },
+      c: { en: 'Proposal sent', nl: 'Voorstel verstuurd' },
+    },
+  },
+  'medium-tall': {
+    steps: {
+      a: { en: 'Issue reported', nl: 'Probleem gemeld' },
+      b: { en: 'Owner assigned', nl: 'Eigenaar gekozen' },
+      c: { en: 'Issue resolved', nl: 'Probleem opgelost' },
+    },
+  },
+  'medium-step': {
+    steps: {
+      a: { en: 'Request logged', nl: 'Verzoek vastgelegd' },
+      b: { en: 'Needs assessed', nl: 'Behoefte bepaald' },
+      c: { en: 'Solution chosen', nl: 'Oplossing gekozen' },
+      d: { en: 'Work started', nl: 'Werk gestart' },
+    },
+  },
+  'medium-rise': {
+    steps: {
+      a: { en: 'Idea noted', nl: 'Idee genoteerd' },
+      b: { en: 'Scope defined', nl: 'Scope bepaald' },
+      c: { en: 'Prototype built', nl: 'Prototype gebouwd' },
+      d: { en: 'Ready to launch', nl: 'Klaar voor lancering' },
+    },
+  },
+  'medium-fork': {
+    steps: {
+      a: { en: 'Order received', nl: 'Order ontvangen' },
+      b: { en: 'Pick items', nl: 'Artikelen pakken' },
+      c: { en: 'Plan route', nl: 'Route plannen' },
+      d: { en: 'Ready to ship', nl: 'Klaar voor verzending' },
+    },
+    routes: [
+      ['ab', 'bd'],
+      ['ac', 'cd'],
+    ],
+  },
+  'medium-branch': {
+    steps: {
+      a: { en: 'Candidate applied', nl: 'Sollicitatie binnen' },
+      b: { en: 'Interview done', nl: 'Gesprek geweest' },
+      c: { en: 'Offer sent', nl: 'Aanbod verstuurd' },
+      d: { en: 'Put on hold', nl: 'In de wacht' },
+    },
+    routes: [['ab', 'bc'], ['bd']],
+  },
+  'medium-triangle': {
+    steps: {
+      a: { en: 'Plan sprint', nl: 'Sprint plannen' },
+      b: { en: 'Build the work', nl: 'Werk bouwen' },
+      c: { en: 'Review results', nl: 'Resultaat reviewen' },
+    },
+    routes: [['ab', 'bc', 'ca']],
+  },
+  'large-wide': {
+    steps: {
+      a: { en: 'Email received', nl: 'E-mail ontvangen' },
+      b: { en: 'Write response', nl: 'Antwoord schrijven' },
+      c: { en: 'Await approval', nl: 'Wacht op akkoord' },
+      d: { en: 'Approved, send email', nl: 'Akkoord, verstuur mail' },
+    },
+  },
+  'large-cascade': {
+    steps: {
+      a: { en: 'Data exported', nl: 'Data geëxporteerd' },
+      b: { en: 'Records cleaned', nl: 'Records opgeschoond' },
+      c: { en: 'Report compiled', nl: 'Rapport gemaakt' },
+      d: { en: 'Report shared', nl: 'Rapport gedeeld' },
+    },
+  },
+  'large-hook': {
+    steps: {
+      a: { en: 'Quote requested', nl: 'Offerte aangevraagd' },
+      b: { en: 'Price calculated', nl: 'Prijs berekend' },
+      c: { en: 'Quote sent', nl: 'Offerte verstuurd' },
+      d: { en: 'Quote accepted', nl: 'Offerte geaccepteerd' },
+    },
+  },
+  'large-cluster': {
+    steps: {
+      a: { en: 'Campaign brief', nl: 'Campagnebrief' },
+      b: { en: 'Write copy', nl: 'Tekst schrijven' },
+      c: { en: 'Design assets', nl: 'Beeld maken' },
+      d: { en: 'Campaign live', nl: 'Campagne live' },
+    },
+    routes: [
+      ['ab', 'bd'],
+      ['ac', 'cd'],
+    ],
+  },
+  'large-split': {
+    steps: {
+      a: { en: 'Request received', nl: 'Verzoek ontvangen' },
+      b: { en: 'Route to sales', nl: 'Naar sales' },
+      c: { en: 'Route to support', nl: 'Naar support' },
+      d: { en: 'Deal opened', nl: 'Deal geopend' },
+      e: { en: 'Case logged', nl: 'Melding vastgelegd' },
+    },
+    routes: [
+      ['ab', 'bd'],
+      ['ac', 'ce'],
+    ],
+  },
+  'large-spine': {
+    steps: {
+      a: { en: 'Shift started', nl: 'Dienst gestart' },
+      b: { en: 'Tasks assigned', nl: 'Taken verdeeld' },
+      c: { en: 'Work checked', nl: 'Werk gecontroleerd' },
+      d: { en: 'Shift closed', nl: 'Dienst afgesloten' },
+      e: { en: 'Exception flagged', nl: 'Uitzondering gemeld' },
+    },
+    routes: [['ab', 'bc', 'cd'], ['be']],
+  },
 };
 
 const TEMPLATES: Template[] = [
@@ -414,10 +576,6 @@ function rand(min: number, max: number) {
   return min + Math.random() * (max - min);
 }
 
-function pick<T>(items: T[]) {
-  return items[Math.floor(Math.random() * items.length)] as T;
-}
-
 function svgEl<T extends keyof SVGElementTagNameMap>(name: T) {
   return document.createElementNS('http://www.w3.org/2000/svg', name);
 }
@@ -432,8 +590,19 @@ function mixMarker(warmth: number) {
   return `rgb(${channels[0]} ${channels[1]} ${channels[2]})`;
 }
 
-function languagePairs(language: string) {
-  return language.startsWith('nl') ? PAIRS.nl : PAIRS.en;
+function stepText(step: StepLabel | undefined, language: string) {
+  if (!step) return '';
+  return language.startsWith('nl') ? step.nl : step.en;
+}
+
+function showStep(
+  signal: SignalState,
+  step: { link: SVGPathElement; label: Pair },
+) {
+  signal.link = step.link;
+  signal.label = step.label;
+  signal.input.textContent = step.label.input;
+  signal.output.textContent = step.label.output;
 }
 
 function buildProcess(template: Template, language: string) {
@@ -447,6 +616,7 @@ function buildProcess(template: Template, language: string) {
   svg.style.fontFamily = 'inherit';
 
   const nodes = new Map(template.nodes.map((node) => [node.id, node]));
+  const pathById = new Map<string, SVGPathElement>();
   const links: SVGPathElement[] = [];
 
   for (const link of template.links) {
@@ -463,6 +633,7 @@ function buildProcess(template: Template, language: string) {
     path.setAttribute('stroke-linecap', 'round');
     path.setAttribute('vector-effect', 'non-scaling-stroke');
     svg.appendChild(path);
+    pathById.set(link.id, path);
     links.push(path);
   }
 
@@ -485,21 +656,34 @@ function buildProcess(template: Template, language: string) {
     svg.append(ring, core);
   }
 
-  const pairs = languagePairs(language);
-  const used = new Set<string>();
-  const chosenLinks = links.slice(0, 2);
-  const assignments: Array<{ link: SVGPathElement; delay: number }> = [];
-  for (const link of chosenLinks) {
-    assignments.push({ link, delay: 0 });
-  }
-  const host = chosenLinks[0];
-  if (host) assignments.push({ link: host, delay: rand(1400, 3200) });
+  const copy = PROCESSES[template.id];
+  const routeIds = copy?.routes ?? [template.links.map((link) => link.id)];
+  const routes = routeIds
+    .map((ids) =>
+      ids.flatMap((id) => {
+        const link = template.links.find((item) => item.id === id);
+        const path = pathById.get(id);
+        const from = link ? copy?.steps[link.from] : undefined;
+        const to = link ? copy?.steps[link.to] : undefined;
+        if (!link || !path || !from || !to) return [];
+        return [
+          {
+            link: path,
+            label: {
+              input: stepText(from, language),
+              output: stepText(to, language),
+            },
+          },
+        ];
+      }),
+    )
+    .filter((route) => route.length > 0);
 
-  const signals: SignalState[] = assignments.map((assignment, index) => {
-    const available = pairs.filter((pair) => !used.has(pair.input));
-    const label = pick(available.length > 0 ? available : pairs);
-    used.add(label.input);
-
+  const makeSignal = (
+    route: Array<{ link: SVGPathElement; label: Pair }>,
+    delay: number,
+    index: number,
+  ): SignalState => {
     const group = svgEl('g');
     group.setAttribute('opacity', '0');
     const marker = svgEl('circle');
@@ -514,23 +698,37 @@ function buildProcess(template: Template, language: string) {
       text.setAttribute('dy', '0.32em');
     }
     output.setAttribute('opacity', '0');
-    input.textContent = label.input;
-    output.textContent = label.output;
     group.append(marker, input, output);
     svg.appendChild(group);
-
-    return {
+    const signal: SignalState = {
       group,
       marker,
       input,
       output,
-      link: assignment.link,
-      elapsed: -assignment.delay - index * 120,
+      link: route[0]?.link ?? svgEl('path'),
+      route,
+      routeIndex: 0,
+      elapsed: -delay - index * 120,
       duration: rand(2200, 3400),
       rest: rand(500, 900),
-      label,
+      label: route[0]?.label ?? { input: '', output: '' },
     };
-  });
+    const first = route[0];
+    if (first) showStep(signal, first);
+    return signal;
+  };
+
+  const signals: SignalState[] = [];
+  const shown = routes.slice(0, 2);
+  for (let index = 0; index < shown.length; index++) {
+    const route = shown[index];
+    if (!route) continue;
+    signals.push(makeSignal(route, index === 0 ? 0 : rand(900, 1800), index));
+  }
+  const only = shown[0];
+  if (shown.length === 1 && only) {
+    signals.push(makeSignal(only, rand(1400, 2800), 1));
+  }
 
   return { svg, links, signals };
 }
@@ -730,6 +928,7 @@ function placeProcess(
 
   process.wrap.replaceChildren();
   process.wrap.style.opacity = '0';
+  delete process.wrap.dataset.template;
   process.links = [];
   process.signals = [];
   process.box = { left: 0, top: 0, width: 0, height: 0 };
@@ -883,7 +1082,14 @@ function startField(root: HTMLElement, language: string) {
           signal.group.setAttribute('opacity', '0');
         }
         signal.elapsed += FRAME_MS;
-        if (signal.elapsed >= trip) signal.elapsed = 0;
+        if (signal.elapsed >= trip) {
+          signal.elapsed = 0;
+          if (signal.route.length > 1) {
+            signal.routeIndex = (signal.routeIndex + 1) % signal.route.length;
+            const step = signal.route[signal.routeIndex];
+            if (step) showStep(signal, step);
+          }
+        }
       });
 
       for (const link of process.links) {
