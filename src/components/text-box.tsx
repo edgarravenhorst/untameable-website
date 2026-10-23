@@ -1,19 +1,13 @@
+import type React from 'react';
 import { tw } from '@/helper/tw';
-import React from 'react';
 
 type TextBoxProps = {
   title: string;
   text: string;
-  isBigTitle?: boolean;
   className?: string;
 };
 
-export const TextBox: React.FC<TextBoxProps> = ({
-  title,
-  text,
-  isBigTitle,
-  className,
-}) => {
+export const TextBox: React.FC<TextBoxProps> = ({ title, text, className }) => {
   return (
     <article
       className={tw('w-full', 'p-6', 'flex', 'flex-col', className)}
@@ -23,14 +17,14 @@ export const TextBox: React.FC<TextBoxProps> = ({
         className={tw(
           'not-prose',
           'text-lg',
-          'text-[--color-primary]',
+          'text-primary',
           'text-center',
-          'xl:text-left'
+          'xl:text-left',
         )}
       >
         {title}
       </h2>
-      <p className='not-prose text-base md:text-xl font-normal text-center xl:text-left '>
+      <p className="not-prose text-base md:text-xl font-normal text-center xl:text-left ">
         {text}
       </p>
     </article>

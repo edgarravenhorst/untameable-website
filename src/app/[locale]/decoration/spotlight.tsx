@@ -20,7 +20,7 @@ export const Spotlight: React.FC<SpotlghtProps> = ({
     let x = 0;
     let y = 0;
     let scrollY = 0;
-    let scrollX = 0;
+    const scrollX = 0;
 
     const onMove = (e: MouseEvent) => {
       if (!spotRef.current) return;
@@ -54,7 +54,7 @@ export const Spotlight: React.FC<SpotlghtProps> = ({
   }, [followMouse]);
 
   return (
-    <div className='absolute left-0 top-0 w-full h-full overflow-hidden'>
+    <div className="absolute left-0 top-0 w-full h-full overflow-hidden">
       <div
         ref={spotRef}
         className={twMerge(
@@ -70,10 +70,10 @@ export const Spotlight: React.FC<SpotlghtProps> = ({
             'sm:min-h-[80vh]',
             'translate-x-[-50%]',
             'translate-y-[-50%]',
-            `bg-gradient-radial from-[_var(--spotlight)] to-transparent to-30% sm:to-70%`,
+            `bg-radial from-(--spotlight) to-transparent to-30% sm:to-70%`,
             'opacity-80',
             className,
-          ])
+          ]),
         )}
       />
     </div>

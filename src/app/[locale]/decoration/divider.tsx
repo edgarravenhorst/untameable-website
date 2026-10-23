@@ -1,12 +1,12 @@
-import { tw } from "@/helper/tw";
+import { tw } from '@/helper/tw';
 
 const dividerClasses = {
-  vertical: "w-0 h-full border-l",
-  horizontal: "w-full h-0 border-t",
+  vertical: 'w-0 h-full border-l',
+  horizontal: 'w-full h-0 border-t',
 };
 
-export interface DividerProps extends React.ComponentProps<"div"> {
-  orientation: "vertical" | "horizontal";
+export interface DividerProps extends React.ComponentProps<'div'> {
+  orientation: 'vertical' | 'horizontal';
 }
 
 export const Divider: React.FC<DividerProps> = ({ orientation, ...props }) => {
@@ -14,9 +14,9 @@ export const Divider: React.FC<DividerProps> = ({ orientation, ...props }) => {
     <div
       {...props}
       className={tw(
-        "border-[_var(--color-primary)]",
+        'border-primary',
         dividerClasses[orientation],
-        props.className
+        props.className,
       )}
     />
   );

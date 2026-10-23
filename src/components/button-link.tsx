@@ -1,6 +1,6 @@
-import { tw } from '@/helper/tw';
 import Link from 'next/link';
-import React from 'react';
+import type React from 'react';
+import { tw } from '@/helper/tw';
 
 type ButtonLinkProps = {
   url: string;
@@ -19,11 +19,11 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
       className={tw(
         'btn-arrow',
         'no-underline',
-        'bg-[--color-primary]',
-        'text-[--background]',
+        'bg-primary',
+        'text-(--background)',
         'font-bold',
         'py-2',
-        className
+        className,
       )}
     >
       <span>{text}</span>

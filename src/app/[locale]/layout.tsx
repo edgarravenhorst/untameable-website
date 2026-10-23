@@ -36,14 +36,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en" data-scroll-behavior="smooth">
       <Script
         defer
-        data-domain='untameable.io'
-        src='https://plausible.io/js/script.js'
+        data-domain="untameable.io"
+        src="https://plausible.io/js/script.js"
       />
 
-      <body className={mulish.className + ' ' + 'antialiased'}>
+      <body className={`${mulish.className} antialiased`}>
         <Analytics />
         {children}
       </body>

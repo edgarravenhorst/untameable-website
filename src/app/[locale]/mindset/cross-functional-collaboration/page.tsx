@@ -1,87 +1,80 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import { Blog } from "../../../../components/blog";
-import { AspectOverview } from "../aspect-overview";
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Blog } from '../../../../components/blog';
+import initTranslations from '../../../../i18n';
+import TranslationsProvider from '../../../../translations-provider';
+import type { MindsetAspect } from '../aspect';
+import { AspectOverview } from '../aspect-overview';
 
-export const metadata: Metadata = {
-  title: "Untameable Mindset - Cross-Functional Collaboration",
-  description:
-    "Foster collaboration among all roles by encouraging open communication and teamwork. This approach leverages diverse expertise and perspectives to solve problems and innovate effectively.",
-  openGraph: {
-    title: "Untameable Mindset - Cross-Functional Collaboration",
-    description:
-      "Foster collaboration among all roles by encouraging open communication and teamwork. This approach leverages diverse expertise and perspectives to solve problems and innovate effectively.",
-    type: "website",
-    url: "https://untameable.io/mindset/cross-functional-collaboration",
-    locale: "en_US",
-  },
+const i18nNamespaces = ['mindset', 'common'];
+
+type MindsetProps = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function Mindset() {
+export async function generateMetadata(props: MindsetProps): Promise<Metadata> {
+  const params = await props.params;
+  const { locale } = params;
+  const { t } = await initTranslations(locale, i18nNamespaces);
+
+  return {
+    title: `Untameable Mindset - ${t('aspects.crossFunctionalCollaboration.title')}`,
+    description: t('aspects.crossFunctionalCollaboration.lead'),
+    openGraph: {
+      title: `Untameable Mindset - ${t('aspects.crossFunctionalCollaboration.title')}`,
+      description: t('aspects.crossFunctionalCollaboration.lead'),
+      type: 'website',
+      url: 'https://untameable.io/mindset/cross-functional-collaboration',
+      locale: locale === 'nl' ? 'nl_NL' : 'en_US',
+    },
+  };
+}
+
+export default async function Mindset(props: MindsetProps) {
+  const params = await props.params;
+  const { locale } = params;
+  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+  const aspect = t('aspects.crossFunctionalCollaboration', {
+    returnObjects: true,
+  }) as MindsetAspect;
+
   return (
-    <Blog
-      title="The Untameable Mindset"
-      subtitle="2. Cross-Functional Collaboration"
-      date="2024-05-24"
-      by="Edgar Ravenhorst"
+    <TranslationsProvider
+      resources={resources}
+      locale={locale}
+      namespaces={i18nNamespaces}
     >
-      <p className="lead md:!text-2xl text-center !mb-24 !mt-0">
-        Foster collaboration among all roles by encouraging open communication
-        and teamwork. This approach leverages diverse expertise and perspectives
-        to solve problems and innovate effectively.
-      </p>
+      <Blog
+        title={t('title')}
+        subtitle={`${aspect.number}. ${aspect.title}`}
+        date={t('date')}
+        by={t('author')}
+      >
+        <p className="lead md:text-2xl! text-center mb-24! mt-0!">
+          {aspect.lead}
+        </p>
 
-      <p>
-        Cross-functional collaboration involves integrating team members from
-        different roles, such as developers, product owners, designers, and
-        other stakeholders. This approach encourages open communication and
-        teamwork, leading to more innovative and effective problem-solving.
-      </p>
+        <p>{aspect.description}</p>
 
-      <h4>Key Principles</h4>
-      <p>
-        Form integrated teams that include members from all relevant roles to
-        ensure diverse perspectives and expertise. Use collaborative tools like
-        Slack, Jira, Confluence, and Trello to facilitate communication and
-        coordination. Conduct joint workshops and brainstorming sessions to
-        generate ideas and solve problems together.
-      </p>
-      <h4>Benefits</h4>
-      <p>
-        Cross-functional collaboration enhances innovation and problem-solving
-        by leveraging diverse perspectives. It reduces silos, improves workflow
-        efficiency, and fosters a more cohesive team environment. This approach
-        leads to higher-quality outcomes and a more agile and responsive
-        development process.
-      </p>
-      <h4>Implementation Strategies</h4>
-      <p>
-        Create integrated teams with representatives from all relevant roles.
-        Implement collaborative tools to facilitate communication and
-        coordination. Schedule regular joint workshops and brainstorming
-        sessions to tackle challenges and generate ideas together.
-      </p>
-      <h4>Examples</h4>
-      <p>
-        A project team uses Slack for daily communication, Jira for task
-        management, and Confluence for documentation. They hold weekly
-        brainstorming sessions where developers, designers, and product owners
-        collaborate to solve problems and plan upcoming features. This approach
-        ensures that all perspectives are considered, leading to more innovative
-        solutions and efficient workflows.
-      </p>
-      <p>--</p>
-      <h3>Read about other Aspects of the Untameable Mindset:</h3>
-      <p>
-        This page is part of a series on{" "}
-        <Link href="/mindset">The Untameable Mindset</Link>. Explore the other
-        aspects to learn more about the principles that guide our development
-        practices and behaviors.
-        <br />
-        <br />
-      </p>
+        <h4>{aspect.keyPrinciples.heading}</h4>
+        <p>{aspect.keyPrinciples.text}</p>
+        <h4>{aspect.benefits.heading}</h4>
+        <p>{aspect.benefits.text}</p>
+        <h4>{aspect.implementation.heading}</h4>
+        <p>{aspect.implementation.text}</p>
+        <h4>{aspect.examples.heading}</h4>
+        <p>{aspect.examples.text}</p>
+        <p>--</p>
+        <h3>{t('common.readOtherAspects')}</h3>
+        <p>
+          {t('common.partOfSeries')} <Link href="/mindset">{t('title')}</Link>.{' '}
+          {t('common.exploreOtherAspects')}
+          <br />
+          <br />
+        </p>
 
-      <AspectOverview />
-    </Blog>
+        <AspectOverview />
+      </Blog>
+    </TranslationsProvider>
   );
 }

@@ -1,5 +1,5 @@
+import type { ComponentProps } from 'react';
 import { tw } from '@/helper/tw';
-import { ComponentProps } from 'react';
 
 export const FullScreenContainer: React.FC<ComponentProps<'div'>> = ({
   children,
@@ -19,7 +19,7 @@ export const FullScreenContainer: React.FC<ComponentProps<'div'>> = ({
         'justify-between',
         'items-center',
         'flex-col',
-        className
+        className,
       )}
     >
       {children}

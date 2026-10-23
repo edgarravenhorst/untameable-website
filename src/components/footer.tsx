@@ -1,9 +1,7 @@
 'use client';
 import { tw } from '@/helper/tw';
 
-type Props = {};
-
-export const Footer = (props: Props) => {
+export const Footer = () => {
   return (
     <footer className={tw('relative')}>
       <div
@@ -14,7 +12,7 @@ export const Footer = (props: Props) => {
           'justify-center',
           'text-sm',
           'relative',
-          'p-9'
+          'p-9',
         )}
       >
         {/* <Link href=''>Terms of service</Link>

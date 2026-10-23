@@ -1,102 +1,80 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import { Blog } from "../../../../components/blog";
-import { AspectOverview } from "../aspect-overview";
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Blog } from '../../../../components/blog';
+import initTranslations from '../../../../i18n';
+import TranslationsProvider from '../../../../translations-provider';
+import type { MindsetAspect } from '../aspect';
+import { AspectOverview } from '../aspect-overview';
 
-export const metadata: Metadata = {
-  title: "Untameable Mindset - Continuous Integration and Continuous Delivery",
-  description:
-    "Integrate and deliver code changes frequently with automated testing and deployment to ensure code quality and functionality. This approach promotes collaboration, reduces integration issues, and maintains a stable, deployable codebase.",
-  openGraph: {
-    title:
-      "Untameable Mindset - Continuous Integration and Continuous Delivery",
-    description:
-      "Integrate and deliver code changes frequently with automated testing and deployment to ensure code quality and functionality. This approach promotes collaboration, reduces integration issues, and maintains a stable, deployable codebase.",
-    type: "website",
-    url: "https://untameable.io/mindset/continuous-integration-and-continuous-delivery",
-    locale: "en_US",
-  },
+const i18nNamespaces = ['mindset', 'common'];
+
+type MindsetProps = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function Mindset() {
+export async function generateMetadata(props: MindsetProps): Promise<Metadata> {
+  const params = await props.params;
+  const { locale } = params;
+  const { t } = await initTranslations(locale, i18nNamespaces);
+
+  return {
+    title: `Untameable Mindset - ${t('aspects.continuousIntegrationAndDelivery.title')}`,
+    description: t('aspects.continuousIntegrationAndDelivery.lead'),
+    openGraph: {
+      title: `Untameable Mindset - ${t('aspects.continuousIntegrationAndDelivery.title')}`,
+      description: t('aspects.continuousIntegrationAndDelivery.lead'),
+      type: 'website',
+      url: 'https://untameable.io/mindset/continuous-integration-and-continuous-delivery',
+      locale: locale === 'nl' ? 'nl_NL' : 'en_US',
+    },
+  };
+}
+
+export default async function Mindset(props: MindsetProps) {
+  const params = await props.params;
+  const { locale } = params;
+  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+  const aspect = t('aspects.continuousIntegrationAndDelivery', {
+    returnObjects: true,
+  }) as MindsetAspect;
+
   return (
-    <Blog
-      title="The Untameable Mindset"
-      subtitle="5. Continuous Integration and Continuous Delivery  
-      (CI/CD)"
-      date="2024-05-24"
-      by="Edgar Ravenhorst"
+    <TranslationsProvider
+      resources={resources}
+      locale={locale}
+      namespaces={i18nNamespaces}
     >
-      <p className="lead md:!text-2xl text-center !mb-24 !mt-0">
-        Integrate and deliver code changes frequently with automated testing and
-        deployment to ensure code quality and functionality. This approach
-        promotes collaboration, reduces integration issues, and maintains a
-        stable, deployable codebase.
-      </p>
+      <Blog
+        title={t('title')}
+        subtitle={`${aspect.number}. ${aspect.title}`}
+        date={t('date')}
+        by={t('author')}
+      >
+        <p className="lead md:text-2xl! text-center mb-24! mt-0!">
+          {aspect.lead}
+        </p>
 
-      <p>
-        Continuous Integration (CI) and Continuous Delivery (CD) are development
-        practices where team members integrate their code changes into a shared
-        repository frequently, and those changes are automatically tested and
-        deployed. CI focuses on integrating and testing code regularly, while CD
-        ensures that code changes are automatically prepared for release to
-        production. Together, CI/CD aims to improve software quality and speed
-        up the delivery process.
-      </p>
+        <p>{aspect.description}</p>
 
-      <h4>Key Principles</h4>
-      <p>
-        Commit code changes frequently to a shared repository. Use automated
-        tests to verify each integration, ensuring that new changes do not break
-        existing functionality. Maintain a comprehensive suite of tests that run
-        automatically with each integration. Implement automated deployment
-        pipelines to deliver changes to production quickly and reliably.
-      </p>
-      <h4>Benefits</h4>
-      <p>
-        CI/CD helps catch bugs and issues early, reducing the cost and effort
-        required to fix them. It ensures that the codebase is always in a
-        deployable state, allowing for more frequent releases and updates. CI/CD
-        promotes better collaboration among team members, as it encourages
-        regular code integration and testing. It also improves overall software
-        quality by ensuring that code changes are continuously validated and
-        deployed through automated processes.
-      </p>
-      <h4>Implementation Strategies</h4>
-      <p>
-        Set up a CI/CD server, such as Jenkins, GitLab CI, or CircleCI, to
-        automate the integration, testing, and deployment processes. Ensure that
-        all code changes are committed to a shared repository frequently.
-        Develop and maintain a comprehensive suite of automated tests that cover
-        various aspects of the application, including unit tests, integration
-        tests, and end-to-end tests. Implement automated deployment pipelines to
-        deliver changes to production quickly and reliably. Monitor the CI/CD
-        process to ensure it remains fast and reliable, providing quick feedback
-        to developers. Encourage a culture of regular and frequent code commits
-        among team members.
-      </p>
-      <h4>Examples</h4>
-      <p>
-        A development team uses Jenkins to automate their CI/CD process, running
-        tests and deploying code on every commit. This ensures that any issues
-        are caught and addressed early, and changes are quickly delivered to
-        production. Another example is a company using GitLab CI to manage their
-        CI/CD pipeline, integrating and deploying code changes multiple times a
-        day. This practice helps them maintain a stable and reliable codebase,
-        allowing for frequent releases and updates.
-      </p>
-      <p>--</p>
-      <h3>Read about other Aspects of the Untameable Mindset:</h3>
-      <p>
-        This page is part of a series on{" "}
-        <Link href="/mindset">The Untameable Mindset</Link>. Explore the other
-        aspects to learn more about the principles that guide our development
-        practices and behaviors.
-        <br />
-        <br />
-      </p>
+        <h4>{aspect.keyPrinciples.heading}</h4>
+        <p>{aspect.keyPrinciples.text}</p>
+        <h4>{aspect.benefits.heading}</h4>
+        <p>{aspect.benefits.text}</p>
+        <h4>{aspect.implementation.heading}</h4>
+        <p>{aspect.implementation.text}</p>
+        <h4>{aspect.examples.heading}</h4>
+        <p>{aspect.examples.text}</p>
+        <p>--</p>
+        <h3>{t('common.readOtherAspects')}</h3>
+        <p>
+          {t('common.partOfSeries')} <Link href="/mindset">{t('title')}</Link>.{' '}
+          {t('common.exploreOtherAspects')}
+          <br />
+          <br />
+        </p>
 
-      <AspectOverview />
-    </Blog>
+        <AspectOverview />
+      </Blog>
+    </TranslationsProvider>
   );
 }

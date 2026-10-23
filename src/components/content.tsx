@@ -1,5 +1,6 @@
+import type React from 'react';
+import type { ComponentProps, PropsWithChildren } from 'react';
 import { tw } from '@/helper/tw';
-import React, { ComponentProps, PropsWithChildren } from 'react';
 
 type TitleProps = PropsWithChildren<{
   preTitle?: string;
@@ -31,10 +32,10 @@ export const Title: React.FC<TitleProps> = ({
             'leading-none',
             'font-extrabold',
             'mb-2',
-            className
+            className,
           )}
         >
-          {preTitle && <small className='text-white'>{preTitle} </small>}
+          {preTitle && <small className="text-white">{preTitle} </small>}
           {title}
         </h1>
       );
@@ -48,17 +49,17 @@ export const Title: React.FC<TitleProps> = ({
             'leading-none',
             'font-extrabold',
             'mb-2',
-            className
+            className,
           )}
         >
-          {preTitle && <small className='text-white'>{preTitle} </small>}
+          {preTitle && <small className="text-white">{preTitle} </small>}
           {title}
         </h2>
       );
     case 'statement':
       return (
         <h2 className={tw('text-2xl font-extrabold', className)}>
-          {preTitle && <small className='text-white'>{preTitle} </small>}
+          {preTitle && <small className="text-white">{preTitle} </small>}
           {title}
         </h2>
       );
@@ -67,7 +68,7 @@ export const Title: React.FC<TitleProps> = ({
         <h2
           className={tw('text-[1.25rem] font-extrabold text-white', className)}
         >
-          {preTitle && <small className='text-white'>{preTitle} </small>}
+          {preTitle && <small className="text-white">{preTitle} </small>}
           {title}
         </h2>
       );
@@ -75,13 +76,13 @@ export const Title: React.FC<TitleProps> = ({
       return (
         <h3
           className={tw(
-            'text-[1.625rem] font-extrabold text-[--color-primary] leading-tight max-md:text-[1.375rem]',
-            className
+            'text-[1.625rem] font-extrabold text-primary leading-tight max-md:text-[1.375rem]',
+            className,
           )}
         >
           {preTitle && (
             <>
-              <small className='text-white text-sm'>{preTitle} </small>
+              <small className="text-white text-sm">{preTitle} </small>
               <br />
             </>
           )}
@@ -93,13 +94,13 @@ export const Title: React.FC<TitleProps> = ({
       return (
         <h3
           className={tw(
-            'text-[1.375rem] font-extrabold text-[--color-primary]  leading-tight',
-            className
+            'text-[1.375rem] font-extrabold text-primary  leading-tight',
+            className,
           )}
         >
           {preTitle && (
             <>
-              <small className='text-white text-sm'>{preTitle} </small>
+              <small className="text-white text-sm">{preTitle} </small>
               <br />
             </>
           )}

@@ -17,6 +17,8 @@ export function LanguageChanger() {
     const date = new Date();
     date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
     const expires = date.toUTCString();
+    // next-i18n-router reads this cookie. The Cookie Store API is not a drop-in replacement here.
+    // biome-ignore lint/suspicious/noDocumentCookie: locale routing depends on this cookie
     document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
 
     // redirect to the new locale path
@@ -24,10 +26,10 @@ export function LanguageChanger() {
       currentLocale === i18nConfig.defaultLocale &&
       !i18nConfig.prefixDefault
     ) {
-      router.push('/' + newLocale + currentPathname);
+      router.push(`/${newLocale}${currentPathname}`);
     } else {
       router.push(
-        currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
+        currentPathname.replace(`/${currentLocale}`, `/${newLocale}`),
       );
     }
 
@@ -35,7 +37,7 @@ export function LanguageChanger() {
   };
 
   return (
-    <button onClick={() => handleChange()} className='text-white'>
+    <button type="button" onClick={() => handleChange()} className="text-white">
       {currentLocale?.toUpperCase()}
     </button>
   );

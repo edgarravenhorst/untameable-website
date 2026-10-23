@@ -1,67 +1,69 @@
-import { Metadata } from "next";
-import { Blog } from "../../../components/blog";
-import { AspectOverview } from "./aspect-overview";
+import type { Metadata } from 'next';
+import { Blog } from '../../../components/blog';
+import initTranslations from '../../../i18n';
+import TranslationsProvider from '../../../translations-provider';
+import { AspectOverview } from './aspect-overview';
 
-export const metadata: Metadata = {
-  title: "The Untameable Mindset - For software development",
-  description:
-    "The Untameable Mindset aligns all team members—including developers, product owners, clients, designers, and other stakeholders—around a shared philosophy and adaptable principles. This mindset guides behavior and decision-making to develop high-quality, secure, stable, and controllable web applications. By fostering a common culture and emphasizing flexibility, the Untameable Mindset ensures collaborative and efficient work to meet user and developer needs, leading to project success.",
-  openGraph: {
-    title: "The Untameable Mindset - For software development",
-    description:
-      "The Untameable Mindset aligns all team members—including developers, product owners, clients, designers, and other stakeholders—around a shared philosophy and adaptable principles. This mindset guides behavior and decision-making to develop high-quality, secure, stable, and controllable web applications. By fostering a common culture and emphasizing flexibility, the Untameable Mindset ensures collaborative and efficient work to meet user and developer needs, leading to project success.",
-    type: "website",
-    url: "https://untameable.io/mindset",
-    locale: "en_US",
-  },
+const i18nNamespaces = ['mindset', 'common'];
+
+type MindsetProps = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function Mindset() {
-  return (
-    <Blog
-      title="The Untameable Mindset"
-      subtitle="for software development"
-      date="2024-05-24"
-      by="Edgar Ravenhorst"
-    >
-      <h2 className="mt-0">Purpose</h2>
-      <p>
-        The Untameable Mindset aligns all team members—including developers,
-        product owners, clients, designers, and other stakeholders—around a
-        shared philosophy and adaptable principles. This mindset guides behavior
-        and decision-making to develop high-quality, secure, stable, and
-        controllable web applications. By fostering a common culture and
-        emphasizing flexibility, the Untameable Mindset ensures collaborative
-        and efficient work to meet user and developer needs, leading to project
-        success.
-      </p>
-      <h2>Methodologies</h2>
-      <p>
-        The Untameable Mindset combines key principles from Agile, Lean, DevOps,
-        and User-Centered Design (UCD) to create a fast, flexible, and
-        user-focused approach. Agile&apos;s iterative development and continuous
-        feedback align with our focus on MVP-driven growth and constant
-        improvement. Lean&apos;s emphasis on delivering value and eliminating
-        waste supports our pragmatic testing and automation strategies. DevOps
-        practices, like continuous integration and deployment, ensure rapid,
-        reliable releases and maintainable code. UCD&apos;s principles of
-        understanding user needs and designing intuitive interfaces are central
-        to prioritizing both user and developer experiences. This blend fosters
-        a collaborative, efficient, and innovative development environment.
-      </p>
-      <h2>Aspects of the Untameable Mindset</h2>
-      <p>
-        The Untameable Mindset comprises several aspects that guide development
-        practices and behaviors. These aspects emphasize collaboration,
-        flexibility, efficiency, and user-focused development to create
-        high-quality, maintainable products that meet user and developer needs.
-        By following these aspects, teams can align their work, make informed
-        decisions, and deliver successful projects.
-        <br />
-        <br />
-      </p>
+export async function generateMetadata(props: MindsetProps): Promise<Metadata> {
+  const params = await props.params;
+  const { locale } = params;
+  const { t } = await initTranslations(locale, i18nNamespaces);
 
-      <AspectOverview />
-    </Blog>
+  return {
+    title: `${t('title')} - ${t('subtitle')}`,
+    description: t('mainPage.purpose.text'),
+    openGraph: {
+      title: `${t('title')} - ${t('subtitle')}`,
+      description: t('mainPage.purpose.text'),
+      type: 'website',
+      url: 'https://untameable.io/mindset',
+      locale: locale === 'nl' ? 'nl_NL' : 'en_US',
+    },
+  };
+}
+
+export default async function Mindset(props: MindsetProps) {
+  const params = await props.params;
+  const { locale } = params;
+  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+
+  return (
+    <TranslationsProvider
+      resources={resources}
+      locale={locale}
+      namespaces={i18nNamespaces}
+    >
+      <Blog
+        title={t('title')}
+        subtitle={t('subtitle')}
+        date={t('date')}
+        by={t('author')}
+      >
+        <div className="whitespace-pre-line">
+          <h2 className="mt-0">{t('mainPage.purpose.heading')}</h2>
+          <p className="whitespace-pre-line">{t('mainPage.purpose.text')}</p>
+        </div>
+
+        <div className="whitespace-pre-line">
+          <h2>{t('mainPage.methodologies.heading')}</h2>
+          <p className="whitespace-pre-line">
+            {t('mainPage.methodologies.text')}
+          </p>
+        </div>
+
+        <div className="whitespace-pre-line">
+          <h2>{t('mainPage.aspects.heading')}</h2>
+          <p className="whitespace-pre-line">{t('mainPage.aspects.text')}</p>
+        </div>
+
+        <AspectOverview />
+      </Blog>
+    </TranslationsProvider>
   );
 }

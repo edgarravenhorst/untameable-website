@@ -1,11 +1,11 @@
+import Image from 'next/image';
 import { LogoIcon } from '@/app/[locale]/decoration/logo-icon';
 import { StripedOverlay } from '@/app/[locale]/decoration/overlay-stripes';
 import { Spotlight } from '@/app/[locale]/decoration/spotlight';
 import { tw } from '@/helper/tw';
-import Image from 'next/image';
 import { CoffeeTime } from './coffee';
 import { Headline } from './headline';
-import { Logo } from './logo';
+import { NavBar } from './nav-bar';
 
 type BlogProps = React.PropsWithChildren<{
   title: string;
@@ -16,15 +16,7 @@ type BlogProps = React.PropsWithChildren<{
 
 export function Blog({ children, title, subtitle, date, by }: BlogProps) {
   return (
-    <main
-      className={tw(
-        'relative',
-        'text-white',
-        'text-opacity-80',
-        'text-lg',
-        'pb-20'
-      )}
-    >
+    <main className={tw('relative', 'text-white/80', 'text-lg', 'pb-20')}>
       <Spotlight
         followMouse
         className={tw(
@@ -32,7 +24,7 @@ export function Blog({ children, title, subtitle, date, by }: BlogProps) {
           'lg:top-[-8%]',
           'opacity-50',
           'hidden',
-          'lg:block'
+          'lg:block',
         )}
       />
 
@@ -43,11 +35,12 @@ export function Blog({ children, title, subtitle, date, by }: BlogProps) {
           'left-[50%]',
           'translate-x-[-50%]',
           'translate-y-[-10%]',
-          'opacity-80'
+          'opacity-80',
         )}
       />
 
       <StripedOverlay />
+      <NavBar />
       <div
         className={tw(
           'relative',
@@ -56,10 +49,9 @@ export function Blog({ children, title, subtitle, date, by }: BlogProps) {
           'flex-col',
           'items-center',
           'min-h-svh',
-          'p-10'
+          'p-10',
         )}
       >
-        <Logo />
         <article
           className={tw(
             'flex',
@@ -67,10 +59,10 @@ export function Blog({ children, title, subtitle, date, by }: BlogProps) {
             'relative',
             'prose prose-invert prose-md md:prose-lg',
             'max-w-screen-xl',
-            'gap-20'
+            'gap-20',
           )}
         >
-          <div className={tw('!mt-32', 'pt-[7vw]')}>
+          <div className={tw('mt-32!', 'pt-[7vw]')}>
             <Headline
               className={tw(
                 'text-[6vw]',
@@ -82,31 +74,31 @@ export function Blog({ children, title, subtitle, date, by }: BlogProps) {
                 'text-center',
                 'text-balance',
                 'text-wrap',
-                'max-sm:!leading-[7vw]'
+                'max-sm:leading-[7vw]!',
               )}
               noLines
               primary={
                 <>
-                  <span className='md:whitespace-nowrap'>{title}</span>
+                  <span className="md:whitespace-nowrap">{title}</span>
                   <br />
-                  <span className='font-extralight md:whitespace-nowrap  text-[0.85em] sm:text-[0.66em]'>
+                  <span className="font-extralight md:whitespace-nowrap  text-[0.85em] sm:text-[0.66em]">
                     {subtitle}
                   </span>
                 </>
               }
             />
 
-            <div className='pt-12 flex justify-center items-center gap-10'>
-              <div className='flex items-center gap-3'>
-                <div className='rounded-full'>
+            <div className="pt-12 flex justify-center items-center gap-10">
+              <div className="flex items-center gap-3">
+                <div className="rounded-full">
                   <Image
-                    src='/edgar.png'
-                    alt={'Avatar ' + by}
+                    src="/edgar.png"
+                    alt={`Avatar ${by}`}
                     width={45}
                     height={45}
                   />
                 </div>
-                <p className='leading-none'>
+                <p className="leading-none">
                   Written by: <strong>{by}</strong>,{' '}
                   {new Date(date).toLocaleDateString('nl', {
                     year: 'numeric',
@@ -118,7 +110,7 @@ export function Blog({ children, title, subtitle, date, by }: BlogProps) {
             </div>
           </div>
 
-          <div className=' max-w-screen-lg mx-auto'>{children}</div>
+          <div className=" max-w-screen-lg mx-auto">{children}</div>
 
           <div
             className={tw('max-w-screen-lg', 'h-10', 'hidden', 'md:block')}

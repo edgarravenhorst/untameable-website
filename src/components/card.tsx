@@ -15,13 +15,13 @@ export const Card = ({
   href,
 }: CardProps) => {
   return (
-    <div className='grid lg:flex-[45%]  p-8 bg-slate-900/30'>
-      <h3 className='!mt-0'>{title}</h3>
-      <p className='!mb-0'>{children}</p>
+    <div className="grid lg:flex-[45%]  p-8 bg-slate-900/30">
+      <h3 className="mt-0!">{title}</h3>
+      <p className="mb-0!">{children}</p>
       {href && (
         <Link
           href={href}
-          className='self-end justify-self-end inline-block no-underline bg-[--color-primary] text-[--background] font-bold py-1 px-3 rounded mt-4'
+          className="self-end justify-self-end inline-block no-underline bg-primary text-(--background) font-bold py-1 px-3 rounded mt-4"
         >
           Learn more
         </Link>

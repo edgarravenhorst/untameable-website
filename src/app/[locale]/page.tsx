@@ -1,10 +1,10 @@
+import type { Metadata } from 'next';
 import { Divider } from '@/app/[locale]/decoration/divider';
 import { LogoIcon } from '@/app/[locale]/decoration/logo-icon';
 import { StripedOverlay } from '@/app/[locale]/decoration/overlay-stripes';
 import { Footer } from '@/components/footer';
 import { MissionStatement } from '@/components/misison-statement';
 import { tw } from '@/helper/tw';
-import { Metadata } from 'next';
 import { GetStarted } from '../../components/get-started';
 import { Hero } from '../../components/hero';
 import { HowWeHelp } from '../../components/how-we-help';
@@ -39,7 +39,7 @@ const i18nNamespaces = ['home', 'common'];
 export default async function Home(props: HomeProps) {
   const params = await props.params;
   const { locale } = params;
-  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+  const { resources } = await initTranslations(locale, i18nNamespaces);
 
   return (
     <TranslationsProvider
@@ -47,7 +47,7 @@ export default async function Home(props: HomeProps) {
       locale={locale}
       namespaces={i18nNamespaces}
     >
-      <div className='relative text-white text-opacity-80 text-lg h-fit'>
+      <div className="relative text-white/80 text-lg h-fit">
         <Spotlight
           className={tw(
             'top-[-3%]',
@@ -55,7 +55,7 @@ export default async function Home(props: HomeProps) {
             'lg:top-[-8%]',
             'sm:translate-y-[-50%]',
             'md:translate-y-[-55%]',
-            'xl:translate-y-[-60%]'
+            'xl:translate-y-[-60%]',
           )}
         />
 
@@ -68,7 +68,7 @@ export default async function Home(props: HomeProps) {
               'w-[40vw]',
               'h-[50vw]',
               '-mt-[35vw]',
-              'opacity-40'
+              'opacity-40',
             )}
           />
         </div>
@@ -80,10 +80,10 @@ export default async function Home(props: HomeProps) {
             'prose prose-invert',
             'prose-md',
             'md:prose-xl',
-            'max-w-full'
+            'max-w-full',
           )}
         >
-          <header className='relative'>
+          <header className="relative">
             <NavBar />
             <Hero />
             <Services />
@@ -96,7 +96,7 @@ export default async function Home(props: HomeProps) {
               'pt-0',
               'md:pt-0',
               'relative',
-              'max-md:p-6'
+              'max-md:p-6',
             )}
           >
             <SectionDivider />
@@ -118,6 +118,6 @@ export default async function Home(props: HomeProps) {
 
 const SectionDivider = () => {
   return (
-    <Divider orientation='vertical' className={'h-12 mx-auto my-[3.75rem]'} />
+    <Divider orientation="vertical" className={'h-12 mx-auto my-[3.75rem]'} />
   );
 };

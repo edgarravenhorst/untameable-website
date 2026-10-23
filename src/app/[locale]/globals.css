@@ -1,13 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: #ffe000;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background: #111b2b;
   --background-stripes: rgba(10, 17, 28, 40%);
   --spotlight: #2e466f;
-  --color-primary: #ffe000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,61 +48,79 @@ body {
   scroll-behavior: smooth;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@utility text-balance {
+  text-wrap: balance;
+}
 
-  .btn-arrow {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+@utility btn-arrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
 
-  .btn-arrow::before {
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
-    right: calc(100% - 1px);
+    right: 100%;
     top: 0;
     bottom: 0;
     width: 1rem;
     background-color: inherit;
     clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 100% 50%, 0% 0%);
     z-index: 0;
+    transform: translateZ(0);
   }
 
-  .btn-arrow::after {
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
-    left: calc(100% - 1px);
+    left: 100%;
     top: 0;
     bottom: 0;
-    width: calc(1rem + 1px);
+    width: 1rem;
     background-color: inherit;
-    clip-path: polygon(1px 0%, 100% 50%, 100% 50%, 1px 100%);
+    clip-path: polygon(0% 0%, 100% 50%, 100% 50%, 0% 100%);
     z-index: 0;
+    transform: translateZ(0);
   }
 
-  .btn-arrow > * {
+  & > * {
     position: relative;
     z-index: 1;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+}
 
-  .bg-stripes {
-    background-image: linear-gradient(
-      -45deg,
-      transparent 25%,
-      var(--background-stripes) 25%,
-      var(--background-stripes) 50%,
-      transparent 50%,
-      transparent 75%,
-      var(--background-stripes) 75%
-    );
-  }
+@utility bg-stripes {
+  background-image: linear-gradient(
+    -45deg,
+    transparent 25%,
+    var(--background-stripes) 25%,
+    var(--background-stripes) 50%,
+    transparent 50%,
+    transparent 75%,
+    var(--background-stripes) 75%
+  );
+}
+
+.prose-invert {
+  --tw-prose-invert-links: var(--color-primary);
+  --tw-prose-links: var(--color-primary);
+}
+
+.prose :where(.lead):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: #fff;
+}
+
+.prose :where(h3):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  font-weight: 600;
+}
+
+.prose
+  :where(strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  font-weight: 800;
 }

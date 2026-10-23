@@ -16,7 +16,7 @@ export const StripedOverlay: React.FC<StripedOverlayProps> = ({
         'bg-stripes',
         'bg-[length:8px_8px]',
         'sm:bg-[length:8px_8px]',
-        className
+        className,
       )}
     />
   );

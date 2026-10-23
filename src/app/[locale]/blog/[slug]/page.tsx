@@ -1,103 +1,101 @@
-import { Logo } from "@/components/logo";
-import { TLDR } from "@/components/tldr";
-import { LogoIcon } from "@/app/[locale]/decoration/logo-icon";
-import { StripedOverlay } from "@/app/[locale]/decoration/overlay-stripes";
-import { Spotlight } from "@/app/[locale]/decoration/spotlight";
-import { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { tw } from "@/helper/tw";
-import { Headline } from "@/components/headline";
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import { LogoIcon } from '@/app/[locale]/decoration/logo-icon';
+import { StripedOverlay } from '@/app/[locale]/decoration/overlay-stripes';
+import { Spotlight } from '@/app/[locale]/decoration/spotlight';
+import { Headline } from '@/components/headline';
+import { Logo } from '@/components/logo';
+import { TLDR } from '@/components/tldr';
+import { tw } from '@/helper/tw';
 
 export const metadata: Metadata = {
-  title: "Untameable - User & Developer experiences",
+  title: 'Untameable - User & Developer experiences',
   description:
-    "Build great Developer and User Experiences for digital products",
+    'Build great Developer and User Experiences for digital products',
   openGraph: {
-    title: "Untameable - User & Developer experiences",
+    title: 'Untameable - User & Developer experiences',
     description:
-      "Build great Developer and User Experiences for digital products",
-    type: "website",
-    url: "https://untameable.io",
-    locale: "en_US",
+      'Build great Developer and User Experiences for digital products',
+    type: 'website',
+    url: 'https://untameable.io',
+    locale: 'en_US',
   },
 };
 
 export default function BlogItem() {
   return (
-    <main
-      className={tw("relative", "text-white", "text-opacity-80", "text-lg")}
-    >
+    <main className={tw('relative', 'text-white/80', 'text-lg')}>
       <Spotlight
         className={tw(
-          "top-[5%]",
-          "lg:top-[-8%]",
-          "translate-y-[-50%]",
-          "sm:translate-y-[-50%]",
-          "lg:translate-y-[-50%]",
-          "xl:translate-y-[-60%]",
-          "lg:hidden"
+          'top-[5%]',
+          'lg:top-[-8%]',
+          'translate-y-[-50%]',
+          'sm:translate-y-[-50%]',
+          'lg:translate-y-[-50%]',
+          'xl:translate-y-[-60%]',
+          'lg:hidden',
         )}
       />
 
       <Spotlight
         followMouse
         className={tw(
-          "top-[5%]",
-          "lg:top-[-8%]",
-          "opacity-50",
-          "hidden",
-          "lg:block"
+          'top-[5%]',
+          'lg:top-[-8%]',
+          'opacity-50',
+          'hidden',
+          'lg:block',
         )}
       />
 
       <LogoIcon
         className={tw(
-          "absolute",
-          "w-[50%]",
-          "left-[50%]",
-          "translate-x-[-50%]",
-          "translate-y-[-10%]",
-          "opacity-80"
+          'absolute',
+          'w-[50%]',
+          'left-[50%]',
+          'translate-x-[-50%]',
+          'translate-y-[-10%]',
+          'opacity-80',
         )}
       />
 
       <StripedOverlay />
       <div
         className={tw(
-          "relative",
-          "max-w-full",
-          "flex",
-          "flex-col",
-          "items-center",
-          "min-h-svh",
-          "p-10"
+          'relative',
+          'max-w-full',
+          'flex',
+          'flex-col',
+          'items-center',
+          'min-h-svh',
+          'p-10',
         )}
       >
         <Logo />
         <article
           className={tw(
-            "relative",
-            "prose prose-invert prose-md md:prose-lg",
-            "max-w-screen-lg"
+            'relative',
+            'prose prose-invert prose-md md:prose-lg',
+            'max-w-screen-lg',
           )}
         >
-          <div className={tw("pt-[12vw] pb-[5vw]", "max-w-screen-lg")}>
+          <div className={tw('pt-[12vw] pb-[5vw]', 'max-w-screen-lg')}>
             <Headline
               className={tw(
-                "text-[6vw]",
-                "md:text-5xl",
-                "lg:text-6xl",
-                "xl:text-7xl",
-                "whitespace-normal",
-                "text-center",
-                "text-balance"
+                'text-[6vw]',
+                'md:text-5xl',
+                'lg:text-6xl',
+                'xl:text-7xl',
+                'whitespace-normal',
+                'text-center',
+                'text-balance',
               )}
               primary={
                 <>
                   <span className="whitespace-nowrap">
                     Developer Experience
-                  </span>{" "}
+                  </span>{' '}
                   and why it matters
                 </>
               }
@@ -145,13 +143,13 @@ export default function BlogItem() {
               developers easier and more enjoyable. DX is similar to User
               Experience (UX), but it focuses on the experience of developers
               rather than end users. It&apos;s about improving the process
-              creating software, so developers can get in their{" "}
+              creating software, so developers can get in their{' '}
               <Link
                 target="_blank"
                 href="https://en.wikipedia.org/wiki/Flow_(psychology)"
               >
                 flow
-              </Link>{" "}
+              </Link>{' '}
               where they will be more productive or creative and deliver
               higher-quality products.
             </p>
