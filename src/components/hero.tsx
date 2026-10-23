@@ -1,15 +1,17 @@
 'use client';
+
 import { useTranslation } from 'react-i18next';
 import { LogoIcon } from '@/app/[locale]/decoration/logo-icon';
+import { localePath } from '@/helper/locale-path';
 import { tw } from '@/helper/tw';
 import { ButtonLink } from './button-link';
 import { Section, SectionContainer } from './section';
 
 export const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
-    <Section className="not-prose max-sm:py-[20vw]">
+    <Section className="not-prose max-sm:py-[20vw] flex flex-col items-center">
       <div
         className={tw(
           'flex',
@@ -47,15 +49,13 @@ export const Hero = () => {
 
             <div className="flex max-sm:flex-col max-sm:gap-4">
               <ButtonLink
-                url="/mindset"
-                text={t('home:discoverOurMindset')}
-                className="bg-[#EB9A00] max-sm:ml-auto"
+                url={localePath(i18n.language, '/free-audit')}
+                text={t('home:freeAudit')}
               />
-              {/* <ButtonLink url='/cases' text={t('home:readExampleCases')} /> */}
               <ButtonLink
-                url="#get-started"
-                text={t('home:connectWithUs')}
-                className="  max-sm:ml-auto"
+                url={localePath(i18n.language, '/process')}
+                text={t('home:seeProcess')}
+                className="bg-[#EB9A00]"
               />
             </div>
           </div>

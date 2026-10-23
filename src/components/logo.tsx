@@ -3,7 +3,10 @@ import type { ComponentProps } from 'react';
 
 export const Logo: React.FC<ComponentProps<'svg'>> = (props) => {
   return (
-    <Link href="/" className="w-full max-w-[179px] h-auto max-md:max-w-[125px]">
+    <Link
+      href="/"
+      className="block max-w-[179px] h-auto max-md:max-w-[125px] shrink min-w-0"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="205.313"

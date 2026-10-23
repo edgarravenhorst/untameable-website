@@ -1,14 +1,15 @@
 'use client';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import { FaLinkedin } from 'react-icons/fa';
+import { localePath } from '@/helper/locale-path';
 import { tw } from '@/helper/tw';
+import { ButtonLink } from './button-link';
 import { Title } from './content';
+import { DirectContact } from './direct-contact';
 import { Section, SectionContainer } from './section';
 
 export const GetStarted = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <Section className="not-prose flex justify-center items-center min-h-[80vh] py-0">
       <SectionContainer className={tw('gap-24', 'max-md:gap-0 max-md:px-0')}>
@@ -51,42 +52,18 @@ export const GetStarted = () => {
             >
               {t('home:getStarted.text')}
             </p>
+            <ButtonLink
+              url={localePath(i18n.language, '/free-audit')}
+              text={t('home:freeAudit')}
+              className="mt-8 self-start"
+            />
           </div>
           <div>
-            <Title
-              title={t('home:contactUs.title')}
-              variant="section"
-              className=" mb-6 leading-none"
+            <DirectContact
+              callLabel={t('common:callMe')}
+              emailLabel={t('common:emailMe')}
+              linkedinLabel={t('common:linkedin')}
             />
-            <div className="font-bold text-white flex flex-col gap-6">
-              <p className="leading-none">
-                {t('home:contactUs.callUs')}{' '}
-                <Link href={'tel:+31627311410'} className="text-primary">
-                  +31 627 311 410
-                </Link>
-              </p>
-
-              <p className="leading-none">
-                {t('home:contactUs.emailUs')}{' '}
-                <Link
-                  className="text-primary"
-                  href={'mailto:info@untameable.io'}
-                >
-                  info@untameable.io
-                </Link>
-              </p>
-
-              <p className="leading-none">
-                {t('home:contactUs.connectWithUs')}
-              </p>
-
-              <Link
-                href="https://www.linkedin.com/company/untameable/"
-                className="text-primary"
-              >
-                <FaLinkedin size={31.5} />
-              </Link>
-            </div>
           </div>
         </div>
       </SectionContainer>

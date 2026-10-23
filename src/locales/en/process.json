@@ -1,0 +1,71 @@
+{
+  "page": {
+    "title": "Our approach",
+    "intro": "Four steps. Then we run them again. Each pass is there to move your people and your organization forward.",
+    "loop": "Finetune is not a finish line. It is Audit, Proof, and Implement again.",
+    "metaDescription": "Audit, Proof, Implement, and Finetune. Then we run them again."
+  },
+  "labels": {
+    "stepOf": "Step {{current}} of 4",
+    "whatHappens": "What happens",
+    "youLeaveWith": "What you leave with",
+    "whatIsNext": "What comes next",
+    "freeAudit": "Explore your business",
+    "orReachMe": "Or reach me directly",
+    "otherSteps": "All steps",
+    "nextStep": "Next: {{step}}"
+  },
+  "steps": {
+    "audit": {
+      "name": "Audit",
+      "promise": "You cannot improve what you have not seen. I sit with the people who do the work. Together we follow how time and money actually move.",
+      "happens1": "We follow the work as it really happens, not as a diagram describes it.",
+      "happens2": "I look at the tools you already use, and at the gaps between them.",
+      "happens3": "We look for the few places where a small change does the most. Simple beats a large rebuild.",
+      "leaveWith": "A clear picture of where efficiency and revenue are stuck, and a short list of what to try first. We start with an exploratory conversation, and it is free.",
+      "next": "Proof. You see a small working example before anything is rolled out."
+    },
+    "proof": {
+      "name": "Proof",
+      "promise": "Before anything rolls out, I build a small proof. It uses your real tools and a real slice of the work. You see the result, not a slide.",
+      "happens1": "We pick one place from the audit where a change can show its worth quickly.",
+      "happens2": "I build that example inside the tools your team already uses.",
+      "happens3": "We look at it together. If it does not earn its place, we stop.",
+      "leaveWith": "A working example, and a plain answer: keep going, or do not.",
+      "next": "Implement. The change that earned its place goes into daily work."
+    },
+    "implement": {
+      "name": "Implement",
+      "promise": "I put the proven change into the software your team already uses. Your people keep working in familiar places. The aim is less overhead, not another system to learn.",
+      "happens1": "The change lands in the tools people already open every day.",
+      "happens2": "A new tool only comes in when the current ones truly cannot do the job.",
+      "happens3": "We stay with it from the first version through to something your team can rely on.",
+      "leaveWith": "The change live, in the tools you have, with your team able to use it.",
+      "next": "Finetune. The first version is the start. We keep improving it."
+    },
+    "finetune": {
+      "name": "Finetune",
+      "promise": "Finetune means running Audit, Proof, and Implement again. On what we just changed, and on the next bottleneck. Each pass helps the organization move forward.",
+      "happens1": "We look again at what the change actually did for the people doing the work.",
+      "happens2": "The next improvement is proved the same way: small, in your tools, and only if it works.",
+      "happens3": "Each loop is smaller and sharper. The work keeps getting better.",
+      "leaveWith": "A rhythm of improvement. Efficiency and revenue keep moving, because the work stays close to how the company actually runs.",
+      "next": "Audit again. We take the next place where time or money leaks."
+    }
+  },
+  "freeAudit": {
+    "metaTitle": "Exploratory conversation - Untameable",
+    "metaDescription": "An exploratory conversation is a first look at how your company really works. It is free, and there is no obligation.",
+    "title": "An exploratory conversation",
+    "text": "An exploratory conversation is a first look at how your company really works. It is free, and there is no obligation. Tell me what is going on. I will reply by email.",
+    "name": "Name",
+    "company": "Company",
+    "email": "Email",
+    "message": "What is going on",
+    "submit": "Send",
+    "sending": "Sending...",
+    "success": "I have it. I will reply by email.",
+    "errorValidation": "Check the fields and try again.",
+    "errorDelivery": "That did not go through. Call or email me, and I will take it from there."
+  }
+}

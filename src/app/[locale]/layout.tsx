@@ -23,7 +23,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'Untameable',
   description:
-    'Build great Developer and User Experiences for digital products',
+    'Understand. Design. Build. More efficiency and more revenue, with the tools a company already uses.',
 };
 
 export async function generateStaticParams() {

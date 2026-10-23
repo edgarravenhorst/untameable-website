@@ -1,1 +1,8 @@
-{}
+{
+  "process": "Proces",
+  "freeAudit": "Verkennend gesprek",
+  "freeAuditShort": "Gesprek",
+  "callMe": "Bel me:",
+  "emailMe": "Mail me:",
+  "linkedin": "Stuur een bericht op LinkedIn"
+}

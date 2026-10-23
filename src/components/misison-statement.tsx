@@ -9,25 +9,14 @@ export const MissionStatement = () => {
   return (
     <Section>
       <SectionContainer
-        className={tw(
-          'flex-col py-[10vh] text-center leading-tight',
-          'max-md:py-0 max-md:px-0',
-        )}
+        className={tw('flex-col text-center leading-tight', 'max-md:px-0')}
       >
-        <h2
-          className={tw(
-            'font-extrabold text-white text-[3.125rem]',
-            'max-md:text-[2.8rem]',
-          )}
-        >
+        <h2 className={tw('font-extrabold text-white text-3xl', 'md:text-4xl')}>
           {t('home:trulyHelpPeople')}
         </h2>
 
         <p
-          className={tw(
-            'text-[1.625rem] font-semibold leading-normal',
-            'max-md:text-[1.3rem]',
-          )}
+          className={tw('text-xl font-semibold leading-normal', 'md:text-2xl')}
         >
           {t('home:byRemovingObstacles.firstPart')}
           <br className="max-md:hidden" />

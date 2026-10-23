@@ -1,9 +1,25 @@
 {
-  "title": "Full-Stack development, prototyping & UX design",
-  "subtitle": "Met heldere communicatie en doelgerichte ontwikkeling bouwen we software die je team en organisatie focust op groei, nieuwe functies en continu verbetering.",
-  "discoverOurMindset": "Ontdek onze mindset",
-  "readExampleCases": "Lees voorbeeld cases",
-  "connectWithUs": "Aan de slag!",
+  "meta": {
+    "title": "Untameable - Understand. Design. Build.",
+    "description": "Solution architecture, forward deployed engineering en software engineering. Meer efficiëntie en meer omzet, met de tools die je al gebruikt."
+  },
+  "title": "Understand. Design. Build.",
+  "subtitle": "Untameable helpt je knelpunten te herkennen, praktische oplossingen te ontwerpen, en die om te zetten in werkende software. Het doel is simpel: efficiënter werken en je bedrijf laten groeien.",
+  "freeAudit": "Plan een verkennend gesprek",
+  "seeProcess": "Onze aanpak",
+  "servicesTitle": "Diensten",
+  "solutionArchitecture": {
+    "title": "Solution Architecture",
+    "text": "Eisen begrijpen, mogelijkheden verkennen, en praktische technische oplossingen ontwerpen."
+  },
+  "forwardDeployed": {
+    "title": "Forward Deployed Engineering",
+    "text": "Direct met klanten werken om problemen op te lossen, prototypes te bouwen, en oplossingen in te passen in bestaande workflows."
+  },
+  "softwareEngineering": {
+    "title": "Software Engineering",
+    "text": "Applicaties, platformen en integraties bouwen en onderhouden."
+  },
   "weAimTo": "Wij richten ons op:",
   "whatWorks": {
     "title": "Doen wat werkt",
@@ -21,42 +37,27 @@
     "title": "Ontwikkelen",
     "text": "We ontwikkelen en verbeteren software van concept naar product."
   },
-  "howWeCanHelpYou": "Diensten die we aanbieden:",
-  "webAndPlatformDevelopment": {
-    "title": "Webontwikkeling",
-    "text": "We ontwikkelen online applicaties die eenvoudig te gebruiken zijn voor jouw gebruikers én je team. Onze ontwikkelingen zijn gericht op de gebruikerservaring, prestaties en inzetbaarheid van de applicatie. We vinden het belangrijk dat een applicatie schaalbaar is en in de toekomst gemakkelijk kan worden onderhouden én uitgebreid."
-  },
-  "processOptimization": {
-    "title": "Optimalisatie",
-    "text": "We optimaliseren workflows, verminderen handmatig werk en zorgen voor meer focus op wat echt waarde oplevert. Door processen te vereenvoudigen en slimme verbeteringen door te voeren, helpen we organisaties sneller, efficiënter en met meer plezier te werken. Het doel is om meer ruimte te creëren voor groei en nieuwe initiatieven."
-  },
-  "iotAndOptimization": {
-    "title": "Automatisering",
-    "text": "We automatiseren terugkerende taken en verbinden systemen en apparaten om tijd te besparen en fouten te verminderen. Onze oplossingen zorgen ervoor dat processen soepeler verlopen en dat je team meer ruimte krijgt om zich te richten op werk dat er écht toe doet. We bouwen integraties die betrouwbaar, veilig en schaalbaar zijn."
-  },
-  "strategicInnovation": {
-    "title": "Strategie & innovatie",
-    "text": "We helpen je nieuwe strategieën, features en productrichtingen te ontdekken én te realiseren. Samen verkennen we mogelijkheden voor groei, verbetering en vernieuwing. We denken mee op strategisch niveau, vertalen ideeën naar concrete stappen en ondersteunen je bij het vormgeven van oplossingen die passen bij je organisatie én je gebruikers."
-  },
-  "1-on-1Coaching&Support": {
-    "title": "Coaching",
-    "text": "We bieden gerichte begeleiding voor ontwikkelaars en stakeholders, met praktische feedback op code, UX en samenwerking. Onze coaching helpt teams beter samen te werken, technische keuzes scherper te maken en processen efficiënter in te richten. We ondersteunen je in het ontwikkelen van vaardigheden die direct bijdragen aan betere producten en prettigere workflows."
-  },
-  "weConnectWith": "Wij verbinden met:",
-  "growthAndEfficiency": {
-    "subtitle": "Bedrijven die gaan voor",
-    "title": "Groei & Optimalisatie",
-    "text": "Voor organisaties die slimmer, sneller en schaalbaarder willen werken."
-  },
-  "innovativeIdeas": {
-    "subtitle": "Ondernemers met",
-    "title": "Innovatieve ideeën",
-    "text": "Voor ondernemers en teams die kansen zien en durven vernieuwen."
-  },
-  "focusAndBalance": {
-    "subtitle": "Teams op zoek naar",
-    "title": "Focus & Balans",
-    "text": "Voor teams die rust, richting en efficiëntie willen in hun processen."
+  "process": {
+    "title": "Onze aanpak",
+    "intro": "Vier stappen. Daarna doen we ze opnieuw. Elke ronde is er om je mensen en je organisatie vooruit te helpen.",
+    "loop": "Finetune is geen eindpunt. Het is Audit, Proof en Implement, opnieuw.",
+    "readStep": "Lees deze stap",
+    "audit": {
+      "title": "Audit",
+      "text": "Samen volgen we hoe tijd en geld echt lopen, en waar een kleine verandering het meest doet."
+    },
+    "proof": {
+      "title": "Proof",
+      "text": "Een klein werkend voorbeeld, in je eigen tools. Werkt het niet, dan stoppen we."
+    },
+    "implement": {
+      "title": "Implement",
+      "text": "De verandering die werkt, komt in de software die je team al gebruikt."
+    },
+    "finetune": {
+      "title": "Finetune",
+      "text": "We ontwikkelen hem verder. Dezelfde stappen, op het volgende knelpunt."
+    }
   },
   "trulyHelpPeople": "Mensen en organisaties écht vooruit helpen!",
   "byRemovingObstacles": {
@@ -64,17 +65,11 @@
     "secondPart": "zodat jij stappen kan zetten en jouw organisatie kan groeien."
   },
   "shortIntroduction": {
-    "title": "Korte introductie",
-    "text": "“Mijn naam is Edgar Ravenhorst. Met meer dan tien jaar ervaring in full-stack development help ik teams sterke resultaten te behalen en duurzame groei te realiseren.”"
+    "title": "Wie ik ben",
+    "text": "Ik ben software engineer en solutions architect, met meer dan 10 jaar ervaring. Ik vind het fijn om complexe problemen te begrijpen, praktische oplossingen te vinden, en ze te bouwen."
   },
   "getStarted": {
-    "title": "Aan de slag,",
-    "text": "Samen zetten we de volgende stap voor jouw organisatie!"
-  },
-  "contactUs": {
-    "title": "Neem contact op",
-    "callUs": "Bel ons:",
-    "emailUs": "Mail ons:",
-    "connectWithUs": "Verbind met ons op social media"
+    "title": "Laten we de volgende stap zetten",
+    "text": "Een verkennend gesprek is gratis. Vertel wat er speelt, of bel of mail me."
   }
 }

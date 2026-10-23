@@ -1,9 +1,25 @@
 {
-  "title": "Full-Stack development, prototyping & UX design",
-  "subtitle": "With clear communication and purpose-driven development, we build online applications that keeps your team and organization focused on growth, new features, and continuous improvement.",
-  "discoverOurMindset": "Discover our mindset",
-  "readExampleCases": "Read example cases",
-  "connectWithUs": "Get started!",
+  "meta": {
+    "title": "Untameable - Understand. Design. Build.",
+    "description": "Solution architecture, forward deployed engineering, and software engineering. More efficiency and more revenue, with the tools you already use."
+  },
+  "title": "Understand. Design. Build.",
+  "subtitle": "Untameable helps you identify bottlenecks, design practical solutions, and turn them into working software. The goal is simple: improve efficiency and help your business grow.",
+  "freeAudit": "Explore your business",
+  "seeProcess": "Our approach",
+  "servicesTitle": "Services",
+  "solutionArchitecture": {
+    "title": "Solution Architecture",
+    "text": "Understanding requirements, exploring possibilities, and designing practical technical solutions."
+  },
+  "forwardDeployed": {
+    "title": "Forward Deployed Engineering",
+    "text": "Working directly with clients to solve problems, build prototypes, and integrate solutions into existing workflows."
+  },
+  "softwareEngineering": {
+    "title": "Software Engineering",
+    "text": "Building and maintaining applications, platforms, and integrations."
+  },
   "weAimTo": "We aim to:",
   "whatWorks": {
     "title": "Do what works",
@@ -21,42 +37,27 @@
     "title": "Develop",
     "text": "We develop and improve software from concept to product."
   },
-  "howWeCanHelpYou": "Services we offer:",
-  "webAndPlatformDevelopment": {
-    "title": "Web development",
-    "text": "We develop online applications that are easy to use for your customers and your team. Our work focuses on user experience, performance, and practical usability. We believe applications should be scalable and easy to maintain, so they can evolve and grow with your organization."
-  },
-  "processOptimization": {
-    "title": "Optimization",
-    "text": "We streamline workflows, reduce manual work, and shift the focus to what truly creates value. By simplifying processes and introducing smart improvements, we help organizations work faster, more efficiently, and with greater clarity. The goal is to create space for growth and new initiatives."
-  },
-  "iotAndOptimization": {
-    "title": "Automation",
-    "text": "We automate repetitive tasks and connect systems and devices to save time and reduce errors. Our solutions ensure smoother operations and free up your team to focus on work that really matters. We build integrations that are reliable, secure, and scalable for the future."
-  },
-  "strategicInnovation": {
-    "title": "Strategy & innovation",
-    "text": "We help you explore and realize new strategies, features, and product directions. Together we identify opportunities for growth, improvement, and innovation. We think along at a strategic level, translate ideas into concrete steps, and support you in shaping solutions that fit your organization and your users."
-  },
-  "1-on-1Coaching&Support": {
-    "title": "Coaching",
-    "text": "We provide targeted guidance for developers and stakeholders, offering practical feedback on code, UX, and collaboration. Our coaching helps teams work better together, make stronger technical decisions, and improve processes. We support you in developing skills that directly contribute to better products and smoother workflows."
-  },
-  "weConnectWith": "We connect with:",
-  "growthAndEfficiency": {
-    "subtitle": "Businesses focussed on:",
-    "title": "Growth & Optimization",
-    "text": "For organizations that want to become smarter, faster and more scalable."
-  },
-  "innovativeIdeas": {
-    "subtitle": "Entrepreneurs with",
-    "title": "Innovative Ideas",
-    "text": "For entrepreneurs and teams that see opportunities and dare to innovate."
-  },
-  "focusAndBalance": {
-    "subtitle": "Teams looking for",
-    "title": "Focus & Balance",
-    "text": "For teams that want to achieve peace, direction and efficiency in their processes."
+  "process": {
+    "title": "Our approach",
+    "intro": "Four steps. Then we run them again. Each pass is there to move your people and your organization forward.",
+    "loop": "Finetune is not a finish line. It is Audit, Proof, and Implement again.",
+    "readStep": "Read this step",
+    "audit": {
+      "title": "Audit",
+      "text": "Together we follow how time and money actually move, and where a small change does the most."
+    },
+    "proof": {
+      "title": "Proof",
+      "text": "A small working example, in your own tools. If it does not work, we stop."
+    },
+    "implement": {
+      "title": "Implement",
+      "text": "The change that works goes into the software your team already uses."
+    },
+    "finetune": {
+      "title": "Finetune",
+      "text": "We develop it further. The same steps, on the next bottleneck."
+    }
   },
   "trulyHelpPeople": "Truly helping people and organizations move forward!",
   "byRemovingObstacles": {
@@ -64,17 +65,11 @@
     "secondPart": "enabling you to make progress and grow your organization."
   },
   "shortIntroduction": {
-    "title": "Short introduction",
-    "text": "“My name is Edgar Ravenhorst. With more than 10 years of full-stack development experience, I help teams deliver great results and drive sustainable growth.”"
+    "title": "Who I am",
+    "text": "I'm a software engineer and solutions architect with over 10 years of experience. I enjoy understanding complex problems, finding practical solutions, and building them."
   },
   "getStarted": {
-    "title": "Get started!",
-    "text": "Together we take the next step for your organization!"
-  },
-  "contactUs": {
-    "title": "Contact us:",
-    "callUs": "Call us:",
-    "emailUs": "Email us:",
-    "connectWithUs": "Connect with us on social media"
+    "title": "Let's take the next step",
+    "text": "An exploratory conversation is free. Tell me what is going on, or call or email me."
   }
 }

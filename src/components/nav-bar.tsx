@@ -3,12 +3,13 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaLinkedin } from 'react-icons/fa';
+import { localePath } from '@/helper/locale-path';
 import { tw } from '@/helper/tw';
 import { LanguageChanger } from './language-changer';
 import { Logo } from './logo';
 
 export const NavBar = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -31,9 +32,23 @@ export const NavBar = () => {
     >
       <Logo className="logo max-w-[179px] max-md:max-w-[125px] transition-all duration-300" />
 
-      <div className="flex items-center gap-6 ">
-        <Link href="/mindset" className="no-underline text-white max-sm:hidden">
-          {t('common:ourMindset', { defaultValue: 'Onze mindset' })}
+      <div className="flex items-center gap-6 max-sm:gap-3 shrink-0">
+        <Link
+          href={localePath(i18n.language, '/process')}
+          className="no-underline text-white max-sm:hidden"
+        >
+          {t('common:process', { defaultValue: 'Proces' })}
+        </Link>
+        <Link
+          href={localePath(i18n.language, '/free-audit')}
+          className="no-underline bg-primary text-(--background) px-3 py-1 whitespace-nowrap"
+        >
+          <span className="sm:hidden">
+            {t('common:freeAuditShort', { defaultValue: 'Gesprek' })}
+          </span>
+          <span className="max-sm:hidden">
+            {t('common:freeAudit', { defaultValue: 'Verkennend gesprek' })}
+          </span>
         </Link>
 
         <Link
