@@ -11,7 +11,6 @@ import { Logo } from './logo';
 const navItems = [
   { key: 'approach', hash: '/#approach' },
   { key: 'services', hash: '/#services' },
-  { key: 'about', hash: '/#about' },
   { key: 'contact', hash: '/#contact' },
 ] as const;
 

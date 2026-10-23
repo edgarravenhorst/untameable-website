@@ -1,14 +1,15 @@
 {
   "meta": {
-    "title": "Untameable - Understand. Design. Build.",
+    "title": "Untameable - Begrijpen, ontwerpen, realiseren",
     "description": "Untameable helpt je knelpunten te herkennen, praktische oplossingen te ontwerpen en die om te zetten in werkende software."
   },
-  "title": "Understand. Design. Build.",
+  "title": "Begrijpen, ontwerpen, realiseren",
   "subtitle": "Untameable helpt je knelpunten te herkennen, praktische oplossingen te ontwerpen en die om te zetten in werkende software.",
   "goal": "Het doel is simpel: efficiënter werken en bedrijfswaarde creëren.",
   "discussChallenge": "Bespreek je uitdaging",
   "howWeWork": "Hoe we werken",
   "servicesTitle": "Diensten",
+  "servicesIntro": "Drie diensten die elkaar aanvullen, om complexe uitdagingen om te zetten in werkende software.",
   "solutionArchitecture": {
     "title": "Solution Architecture",
     "text": "Complexe eisen omzetten in heldere, praktische technische oplossingen. Van systeemontwerp en technologiekeuzes tot integratiestrategieën."
@@ -65,13 +66,8 @@
     }
   },
   "about": {
-    "title": "Achter Untameable",
-    "paragraphs": [
-      "Untameable is een klein, onafhankelijk softwarebedrijf, opgericht door Edgar Ravenhorst.",
-      "Met meer dan 10 jaar ervaring in softwareontwikkeling en solution architecture ligt de focus op het begrijpen van complexe problemen en het omzetten daarvan in praktische oplossingen.",
-      "Projecten worden hands-on aangepakt, met technische expertise en directe samenwerking. Waar nodig komen extra ontwikkelaars en specialisten erbij.",
-      "Geen onnodige lagen. Alleen de juiste mensen op de juiste oplossing."
-    ]
+    "name": "Edgar Ravenhorst",
+    "role": "Oprichter · Software engineer en solutions architect"
   },
   "contact": {
     "title": "Laten we praten.",

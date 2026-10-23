@@ -78,6 +78,7 @@ export default async function FreeAuditPage(props: FreeAuditProps) {
               callLabel={t('common:callMe')}
               emailLabel={t('common:emailMe')}
               linkedinLabel={t('common:linkedin')}
+              followLabel={t('common:follow')}
             />
           </div>
         </main>

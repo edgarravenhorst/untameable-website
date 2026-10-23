@@ -1,9 +1,9 @@
 {
   "approach": "Approach",
   "services": "Services",
-  "about": "About",
   "contact": "Contact",
   "callMe": "Call",
   "emailMe": "Email",
-  "linkedin": "LinkedIn"
+  "linkedin": "LinkedIn",
+  "follow": "Follow"
 }

@@ -2,16 +2,15 @@ import type { ReactNode } from 'react';
 import { Divider } from '@/app/[locale]/decoration/divider';
 import { LogoIcon } from '@/app/[locale]/decoration/logo-icon';
 import { StripedOverlay } from '@/app/[locale]/decoration/overlay-stripes';
-import { ProcessBackground } from '@/app/[locale]/decoration/process-background';
 import { Spotlight } from '@/app/[locale]/decoration/spotlight';
 import { tw } from '@/helper/tw';
 import { Footer } from './footer';
 import { NavBar } from './nav-bar';
+import { SignalProcessingBackground } from './signal-processing-background';
 
 export function SiteFrame({ children }: { children: ReactNode }) {
   return (
     <div className="relative text-white text-opacity-80 text-lg h-fit">
-      <ProcessBackground />
       <Spotlight
         className={tw(
           'top-[-3%]',
@@ -38,6 +37,17 @@ export function SiteFrame({ children }: { children: ReactNode }) {
       </div>
 
       <StripedOverlay className="pointer-events-none z-[1]" />
+
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-svh">
+        <LogoIcon
+          className={tw(
+            'absolute right-0 bottom-[-10%] h-auto w-[45%] opacity-40',
+            'max-md:w-[50%]',
+          )}
+        />
+      </div>
+
+      <SignalProcessingBackground />
 
       <div
         className={tw(

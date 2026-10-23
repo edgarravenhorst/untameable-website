@@ -103,6 +103,7 @@ export function ProcessOnePager() {
             callLabel={t('common:callMe')}
             emailLabel={t('common:emailMe')}
             linkedinLabel={t('common:linkedin')}
+            followLabel={t('common:follow')}
           />
         </div>
       </div>

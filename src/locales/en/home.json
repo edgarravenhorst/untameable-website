@@ -9,6 +9,7 @@
   "discussChallenge": "Discuss your challenge",
   "howWeWork": "How we work",
   "servicesTitle": "Services",
+  "servicesIntro": "Three complementary services to turn complex challenges into working solutions.",
   "solutionArchitecture": {
     "title": "Solution Architecture",
     "text": "Turning complex requirements into clear, practical technical solutions. From system design and technology choices to integration strategies."
@@ -65,13 +66,8 @@
     }
   },
   "about": {
-    "title": "Behind Untameable",
-    "paragraphs": [
-      "Untameable is a small, independent software engineering company founded by Edgar Ravenhorst.",
-      "With over 10 years of experience in software development and solution architecture, the focus is on understanding complex problems and turning them into practical solutions.",
-      "Projects are approached hands-on, combining technical expertise with direct collaboration. When needed, additional developers and specialists are brought in.",
-      "No unnecessary layers. Just the right people working on the right solution."
-    ]
+    "name": "Edgar Ravenhorst",
+    "role": "Founder · Software Engineer & Solutions Architect"
   },
   "contact": {
     "title": "Let's talk.",

@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
-import { About, Contact } from '@/components/get-started';
+import { Contact } from '@/components/get-started';
 import { Hero } from '@/components/hero';
 import { Offerings } from '@/components/offerings';
 import { ProcessOverview } from '@/components/process-overview';
 import { Services } from '@/components/services';
-import { SectionDivider, SiteFrame } from '@/components/site-frame';
-import { tw } from '@/helper/tw';
+import { SiteFrame } from '@/components/site-frame';
 import initTranslations from '../../i18n';
 import TranslationsProvider from '../../translations-provider';
 
@@ -51,23 +50,11 @@ export default async function Home(props: HomeProps) {
         </header>
 
         <main
-          className={tw(
-            'p-8',
-            'md:p-16',
-            'pt-0',
-            'md:pt-0',
-            'relative',
-            'max-md:p-6',
-          )}
+          className="relative pb-8 md:pb-16"
         >
           <ProcessOverview />
-          <SectionDivider />
           <Offerings />
-          <SectionDivider />
           <Services />
-          <SectionDivider />
-          <About />
-          <SectionDivider />
           <Contact />
         </main>
       </SiteFrame>
