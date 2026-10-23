@@ -10,7 +10,6 @@
     "whatHappens": "What happens",
     "youLeaveWith": "What you leave with",
     "whatIsNext": "What comes next",
-    "freeAudit": "Explore your business",
     "orReachMe": "Or reach out directly",
     "otherSteps": "All steps",
     "nextStep": "Next: {{step}}"
@@ -52,20 +51,5 @@
       "leaveWith": "A rhythm of improvement. Efficiency and revenue keep moving, because the work stays close to how the company actually runs.",
       "next": "Audit again. We take the next place where time or money leaks."
     }
-  },
-  "freeAudit": {
-    "metaTitle": "Get in touch - Untameable",
-    "metaDescription": "Have a challenge, an idea, or a project that needs a practical solution? Get in touch.",
-    "title": "Get in touch",
-    "text": "Have a challenge, an idea, or a project that needs a practical solution? Get in touch.",
-    "name": "Name",
-    "company": "Company",
-    "email": "Email",
-    "message": "What is going on",
-    "submit": "Send",
-    "sending": "Sending...",
-    "success": "Message received. A reply will follow by email.",
-    "errorValidation": "Check the fields and try again.",
-    "errorDelivery": "That did not go through. Call or email, and it will be picked up."
   }
 }

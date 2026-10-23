@@ -10,7 +10,6 @@
     "whatHappens": "Wat er gebeurt",
     "youLeaveWith": "Wat je meeneemt",
     "whatIsNext": "Wat daarna komt",
-    "freeAudit": "Plan een verkennend gesprek",
     "orReachMe": "Of neem direct contact op",
     "otherSteps": "Alle stappen",
     "nextStep": "Verder: {{step}}"
@@ -52,20 +51,5 @@
       "leaveWith": "Een ritme van verbeteren. Efficiëntie en omzet blijven bewegen, omdat het werk dicht bij hoe het bedrijf echt draait blijft.",
       "next": "Opnieuw Audit. We pakken de volgende plek waar tijd of geld weglekt."
     }
-  },
-  "freeAudit": {
-    "metaTitle": "Neem contact op - Untameable",
-    "metaDescription": "Een uitdaging, een idee, of een project dat een praktische oplossing nodig heeft? Neem contact op.",
-    "title": "Neem contact op",
-    "text": "Een uitdaging, een idee, of een project dat een praktische oplossing nodig heeft? Neem contact op.",
-    "name": "Naam",
-    "company": "Bedrijf",
-    "email": "E-mail",
-    "message": "Wat er speelt",
-    "submit": "Verstuur",
-    "sending": "Bezig met versturen...",
-    "success": "Bericht ontvangen. Er volgt een reactie per e-mail.",
-    "errorValidation": "Controleer de velden en probeer het opnieuw.",
-    "errorDelivery": "Dit is niet aangekomen. Bel of mail, dan wordt het opgepakt."
   }
 }

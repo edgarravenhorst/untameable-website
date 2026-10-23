@@ -2,14 +2,13 @@
 
 import { useTranslation } from 'react-i18next';
 import { processSteps } from '@/app/[locale]/process/steps';
-import { localePath } from '@/helper/locale-path';
 import { tw } from '@/helper/tw';
 import { ButtonLink } from './button-link';
 import { Card, Title } from './content';
 import { DirectContact } from './direct-contact';
 
 export function ProcessOnePager() {
-  const { t, i18n } = useTranslation('process');
+  const { t } = useTranslation('process');
 
   return (
     <main
@@ -88,11 +87,6 @@ export function ProcessOnePager() {
       <p className="font-semibold text-xl m-0 max-w-3xl">{t('page.loop')}</p>
 
       <div className="flex flex-col gap-8">
-        <ButtonLink
-          url={localePath(i18n.language, '/free-audit')}
-          text={t('labels.freeAudit')}
-          className="self-start"
-        />
         <div>
           <Title
             title={t('labels.orReachMe')}

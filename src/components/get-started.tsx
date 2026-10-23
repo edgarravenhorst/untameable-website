@@ -3,8 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { FiLinkedin, FiMail, FiPhone } from 'react-icons/fi';
-import { localePath } from '@/helper/locale-path';
-import { ButtonLink } from './button-link';
 import { Section, SectionContainer } from './section';
 
 const PHONE_HREF = 'tel:+31627311410';
@@ -13,7 +11,7 @@ const EMAIL = 'info@untameable.io';
 const LINKEDIN = 'https://www.linkedin.com/company/untameable/';
 
 export const Contact = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div id="contact" className="scroll-mt-40 w-full py-16 md:py-24 lg:py-32 xl:py-40">
@@ -27,11 +25,6 @@ export const Contact = () => {
               <p className="m-0 max-w-lg text-base font-medium leading-relaxed text-white/70 lg:text-[1.625rem] lg:font-semibold lg:leading-snug lg:text-white/90">
                 {t('home:contact.text')}
               </p>
-              <ButtonLink
-                url={localePath(i18n.language, '/free-audit')}
-                text={t('home:contact.cta')}
-                className="mt-2 self-start lg:mt-4"
-              />
             </div>
 
             <div
